@@ -8,17 +8,17 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>获取申请人的项目名</name>
+        <name>取得对应项目名</name>
         <order/>
-        <script><![CDATA[function onLoad() {
-   var currentUser = g_user.getUserID();
-   var currentUserName = g_user.getUserName();
-   g_form.setValue('opened_by',currentUser);
- //  g_form.setReadOnly('opened_by',true);
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
 
-   var ga = new GlideAjax('GetUserProject'); 
+   //Type appropriate comment here, and begin script below
+	var ga = new GlideAjax('GetUserProject'); 
    ga.addParam('sysparm_name','getProjectByUser');
-   ga.addParam('sysparm_user', currentUser);
+   ga.addParam('sysparm_user', newValue);
    ga.getXML(callback);
 
    function callback(response){
@@ -26,33 +26,30 @@
 	if (answer){
 		var projectInfo = answer.split(','); 
 		var projectSysId = 	projectInfo[0];
-		var projectName = projectInfo[1];
 
 		g_form.setValue('project_id',projectSysId);
 		g_form.setReadOnly('project_id',true);
 	}
 
    }
-
-
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-04-16 08:21:06</sys_created_on>
+        <sys_created_on>2026-04-22 05:56:32</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>ebfc921d93d00b10fd58f257dd03d6a0</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>获取申请人的项目名</sys_name>
+        <sys_id>b5c8bc9b93580310fd58f257dd03d69f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>取得对应项目名</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
         <sys_policy/>
         <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
-        <sys_update_name>sys_script_client_ebfc921d93d00b10fd58f257dd03d6a0</sys_update_name>
+        <sys_update_name>sys_script_client_b5c8bc9b93580310fd58f257dd03d69f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-22 05:20:25</sys_updated_on>
+        <sys_updated_on>2026-04-22 05:59:01</sys_updated_on>
         <table>x_1973840_leave_per_leave</table>
-        <type>onLoad</type>
+        <type>onChange</type>
         <ui_type>0</ui_type>
         <view/>
     </sys_script_client>
