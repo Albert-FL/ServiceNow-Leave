@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="91c889dd9318c710fd58f257dd03d6f6" label="M_PROJECT" max_length="40" name="x_1973840_leave_m_project" type="collection">
+        <element label="部门ID" max_length="20" name="department_id" type="string"/>
+        <element display="true" label="项目名" max_length="100" name="project_name" type="string"/>
+        <element label="项目ID" max_length="20" name="project_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+    </element>
+</database>

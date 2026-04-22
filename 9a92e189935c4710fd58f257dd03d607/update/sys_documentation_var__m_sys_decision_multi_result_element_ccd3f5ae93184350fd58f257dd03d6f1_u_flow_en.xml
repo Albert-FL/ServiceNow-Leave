@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_flow" label="FLOW" language="en" table="var__m_sys_decision_multi_result_element_ccd3f5ae93184350fd58f257dd03d6f1">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_flow</element>
+            <help/>
+            <hint/>
+            <label>FLOW</label>
+            <language>en</language>
+            <name>var__m_sys_decision_multi_result_element_ccd3f5ae93184350fd58f257dd03d6f1</name>
+            <plural>FLOW</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-21 02:25:30</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>FLOW</sys_name>
+            <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_decision_multi_result_element_ccd3f5ae93184350fd58f257dd03d6f1_u_flow_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-21 02:25:30</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

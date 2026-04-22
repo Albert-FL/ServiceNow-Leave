@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>bdc5f5e293584350fd58f257dd03d668</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>b57d976293188350fd58f257dd03d647</answer>
+        <condition table="var__m_sys_decision_input_ccd3f5ae93184350fd58f257dd03d6f1">u_=SKIP_L1__L2_L3_L4^EQ<item endquery="false" field="u_" goto="false" newquery="false" operator="=" or="false" value="SKIP_L1__L2_L3_L4"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_table display_value="Leave approval">ccd3f5ae93184350fd58f257dd03d6f1</decision_table>
+        <default_answer>false</default_answer>
+        <input_table>var__m_sys_decision_input_ccd3f5ae93184350fd58f257dd03d6f1</input_table>
+        <label>Leave approval_300</label>
+        <marked_for_deletion>false</marked_for_deletion>
+        <order>300</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 02:27:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bdc5f5e293584350fd58f257dd03d668</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Leave approval_300</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_decision_question_bdc5f5e293584350fd58f257dd03d668</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 10:00:26</sys_updated_on>
+    </sys_decision_question>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 02:27:23</sys_created_on>
+        <sys_id>fdc5f5e293584350fd58f257dd03d66a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Leave approval_300</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_metadata_link_fdc5f5e293584350fd58f257dd03d66a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 10:00:26</sys_updated_on>
+        <tablename>sys_decision_question</tablename>
+    </sys_metadata_link>
+</record_update>

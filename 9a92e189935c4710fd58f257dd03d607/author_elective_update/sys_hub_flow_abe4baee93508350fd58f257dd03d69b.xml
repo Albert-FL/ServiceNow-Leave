@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from>52dcd2d993d00b10fd58f257dd03d6f2</copied_from>
+        <copied_from_name>请假审批流程</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>copy_of_</internal_name>
+        <label_cache>[{"name":"flow_variable.l1","label":"Flow Variables➛l1","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"240f55e8-8d3a-4c86-a186-213906af82f9":["approval_conditions"],"bc3ee911-4a58-4055-a5aa-bd50a282f431":["approval_conditions"],"48db1469-9599-4549-a289-447dd76882bb":["approval_conditions"],"a6e42391-41d9-43c7-b272-860f19c7c536":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"bdcae242-0657-4b89-8021-1b56c21dec46","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.l2","label":"Flow Variables➛l2","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"c021657b-f8df-452f-9d52-8e9913acd2a9":["approval_conditions"],"7c088d6e-e08c-4827-8813-6cf8dd37193f":["approval_conditions"],"97655068-cfcc-4c8b-be15-06e9d8b9d3b5":["approval_conditions"],"42582ca4-7c3c-42e7-8614-e35a1e336a0e":["approval_conditions"],"bf424084-802e-4f6e-839c-eb9350283fc4":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"90d67b08-4184-4c05-8dbb-771e42d64c30","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"240f55e8-8d3a-4c86-a186-213906af82f9.approval_state","label":"37 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"98350fa8-cb4a-43b7-a3e8-08d9602f9a1e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"97655068-cfcc-4c8b-be15-06e9d8b9d3b5.approval_state","label":"7 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.l5","label":"Flow Variables➛l5","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"fc424636-eac0-456c-9089-73f6ad249e32":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b816e84d-95b7-407a-8ffc-770d9210b7d5","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛PER_LEAVE Record","reference":"x_1973840_leave_per_leave","reference_display":"PER_LEAVE","type":"reference","base_type":"reference","usedInstances":{"ccbec845-b3cf-4b35-b0ad-0a8e8319c7cb":["record"],"c021657b-f8df-452f-9d52-8e9913acd2a9":["record"],"c36f7859-2189-4811-b2ab-ef22782b9b87":["record"],"97655068-cfcc-4c8b-be15-06e9d8b9d3b5":["record"],"a6a38cd6-7a22-4650-9e16-4a57d4a53d87":["record"],"ca1c0945-2ce2-4f29-8793-1ae6fbb86e92":["record"],"5f01249e-9ba5-49a1-adc3-ec1dee84e56b":["record"],"b2b06072-a2a7-449e-9afd-ece94a337956":["record"],"56cd1212-6a97-45c4-b250-3e4cf9e197cd":["record"],"7c088d6e-e08c-4827-8813-6cf8dd37193f":["record"],"248bded8-ddce-4631-92c1-d1ec77a58189":["record"],"8fc1bb5c-c1e7-400b-8e3f-363d839c2c42":["record"],"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["trigger_title"],"1f58f835-978e-4091-b246-8d86db790d21":["record"],"2dd73212-ef81-43aa-93dd-969cb6811a02":["record"],"fd44ee00-2829-4d81-8b2d-fd5cf74dba31":["u_requester"],"3d269137-35c0-40cd-a0e1-9f19e97336c5":["record"],"240f55e8-8d3a-4c86-a186-213906af82f9":["record"],"31a27bd7-643a-4b74-91ee-053629c99e94":["record"],"0ce56f44-24ea-42b3-9e2a-98ce8eb7b537":["record"],"bc3ee911-4a58-4055-a5aa-bd50a282f431":["record"],"42582ca4-7c3c-42e7-8614-e35a1e336a0e":["record"],"411b3ff1-e4d7-4760-bc5f-9e614a833b98":["record"],"261fa34e-f38f-45a0-86ff-75635df8d97c":["record"],"765514d2-763d-4056-b51c-f87e148a6803":["record"],"48db1469-9599-4549-a289-447dd76882bb":["record"],"bf424084-802e-4f6e-839c-eb9350283fc4":["record"],"365687db-c002-465a-94d2-b707a4c3153a":["record"],"40696d9d-aaf5-48ea-a50c-900baf628ef6":["record"],"fc424636-eac0-456c-9089-73f6ad249e32":["record"],"d1e9e4fd-2e48-47c6-a56f-bd63e5351423":["record"],"13023b7b-6add-42e3-8820-1a962aa6f27a":["record"],"102dd143-61e8-42cf-abd0-5c4f6dda8eb6":["record"],"02f417f2-767a-447c-91f3-e11d98563a03":["record"],"ed971762-dc9b-401f-999a-28f8d26bfbe4":["record"],"a6e42391-41d9-43c7-b272-860f19c7c536":["record"],"d3168c64-604f-430f-ae2e-fa00c2ab5edf":["record"],"31fc6770-3bdb-4200-a4ce-9bb8c88495d1":["record"]},"attributes":{}},{"name":"flow_variable.l3","label":"Flow Variables➛l3","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"8fc1bb5c-c1e7-400b-8e3f-363d839c2c42":["approval_conditions"],"3d269137-35c0-40cd-a0e1-9f19e97336c5":["approval_conditions"],"365687db-c002-465a-94d2-b707a4c3153a":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"49640852-1547-4ee4-ae4c-d3069dd19d84","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.l4","label":"Flow Variables➛l4","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"248bded8-ddce-4631-92c1-d1ec77a58189":["approval_conditions"],"40696d9d-aaf5-48ea-a50c-900baf628ef6":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ca03f6a5-7b75-4298-9908-757a53371f3c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"7c088d6e-e08c-4827-8813-6cf8dd37193f.approval_state","label":"21 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"42582ca4-7c3c-42e7-8614-e35a1e336a0e.approval_state","label":"45 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"0befba6f-7c11-46ae-855c-e84d31dcd32e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.project_id","label":"Trigger - Record Created or Updated➛PER_LEAVE Record➛项目名","reference":"x_1973840_leave_m_project","reference_display":"M_PROJECT","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_per_leave","column_name":"project_id","usedInstances":{"db1c952b-9538-4d87-9d55-08d017c0ca5f":[null]}},{"name":"Created or Updated_1.current.project_id.project_id","label":"Trigger - Record Created or Updated➛PER_LEAVE Record➛项目名➛项目ID","reference":"","reference_display":"项目ID","type":"string","base_type":"string","parent_table_name":"x_1973840_leave_m_project","column_name":"project_id","usedInstances":{"db1c952b-9538-4d87-9d55-08d017c0ca5f":[null]}},{"name":"flow_variable.isl1_approver","label":"Flow Variables➛IsL1_Approver","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["u_l1_approver"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a81373a7-10b2-41d5-a5da-d3902142d37d"}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_1","label":"1 - Look Up Record➛PROJECT RES MANA Record➛1级责任者","reference":"sys_user","reference_display":"1级责任者","type":"reference","base_type":"reference","usedInstances":{},"attributes":{}},{"name":"flow_variable.leave_days","label":"Flow Variables➛Leave_Days","reference":"","reference_display":"","type":"decimal","base_type":"decimal","usedInstances":{"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["flow_variables_leave_days"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"372f8a5b-2ee4-4c9d-9fe3-0edf2f649a3d"}},{"name":"8fc1bb5c-c1e7-400b-8e3f-363d839c2c42.approval_state","label":"23 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a6e42391-41d9-43c7-b272-860f19c7c536.approval_state","label":"31 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"5b387423-bef6-4b39-a4b9-71bd14ada598":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"365687db-c002-465a-94d2-b707a4c3153a.approval_state","label":"59 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"d24ab881-9faf-423f-87eb-8d4af92eb56f":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.opened_by","label":"Trigger - Record Created or Updated➛PER_LEAVE Record➛申请人","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_per_leave","column_name":"opened_by","usedInstances":{"fd44ee00-2829-4d81-8b2d-fd5cf74dba31":["u_requester"],"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["u_"]}},{"name":"31a27bd7-643a-4b74-91ee-053629c99e94.record","label":"39 - Update Record➛PER_LEAVE Record","reference":"x_1973840_leave_per_leave","reference_display":"PER_LEAVE","type":"reference","base_type":"reference","usedInstances":{"ffbcf146-2752-43d0-a532-881ec8b850b5":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"40696d9d-aaf5-48ea-a50c-900baf628ef6.approval_state","label":"61 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"6f608fa3-cbf0-417e-ae04-bcf5e8d600c7":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c021657b-f8df-452f-9d52-8e9913acd2a9.approval_state","label":"53 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"51171d1d-ec9a-40d7-86cd-a683360778f9":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bf424084-802e-4f6e-839c-eb9350283fc4.approval_state","label":"57 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"d758184a-5787-401e-942e-ccfd411292c6":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bc3ee911-4a58-4055-a5aa-bd50a282f431.approval_state","label":"43 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"e01102ad-bf1e-4ec3-a4bd-02a28ee6798e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"undefined","label":"2 - Set Flow Variables","type":"SETFLOWVARIABLES","base_type":"SETFLOWVARIABLES","usedInstances":{},"attributes":{}},{"name":"3d269137-35c0-40cd-a0e1-9f19e97336c5.approval_state","label":"9 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.approval_path","label":"Flow Variables➛approval_path","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"818c04f4-0311-4f0d-a88a-303bc6f6562d":["u_"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"118bb37f-2bfc-4153-9be8-8ecec438ad96","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"248bded8-ddce-4631-92c1-d1ec77a58189.approval_state","label":"11 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record","label":"1 - Look Up Record➛PROJECT RES MANA Record","reference":"x_1973840_leave_project_res_mana","reference_display":"PROJECT RES MANA Record","type":"reference","base_type":"reference","usedInstances":{"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["user_id","u_l1_approver"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.approver_list1","label":"Flow Variables➛Approver_List1","reference":"","reference_display":"","type":"array.object","base_type":"array.object","usedInstances":{},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"52331344-3938-433e-ad6a-71265c6990ca"}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_2","label":"1 - Look Up Record➛PROJECT RES MANA Record➛2级责任者","reference":"sys_user","reference_display":"2级责任者","type":"reference","base_type":"reference","usedInstances":{"1503a691-0f1f-4845-b393-77a19c9df6cf":["l2-1"]},"attributes":{}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_3","label":"1 - Look Up Record➛PROJECT RES MANA Record➛3级责任者","reference":"sys_user","reference_display":"3级责任者","type":"reference","base_type":"reference","usedInstances":{"1503a691-0f1f-4845-b393-77a19c9df6cf":["l3-2"]},"attributes":{}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_4","label":"1 - Look Up Record➛PROJECT RES MANA Record➛4级责任者","reference":"sys_user","reference_display":"4级责任者","type":"reference","base_type":"reference","usedInstances":{"1503a691-0f1f-4845-b393-77a19c9df6cf":["l4-3"]},"attributes":{}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_5","label":"1 - Look Up Record➛PROJECT RES MANA Record➛5级责任者","reference":"sys_user","reference_display":"5级责任者","type":"reference","base_type":"reference","usedInstances":{"1503a691-0f1f-4845-b393-77a19c9df6cf":["l5-4"]},"attributes":{}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Copy of 请假审批流程</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>abe4baee93508350fd58f257dd03d69b</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Copy of 请假审批流程</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_hub_flow_abe4baee93508350fd58f257dd03d69b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 08:13:51</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>75b04baa93d08350fd58f257dd03d641</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_variable_value action="DELETE" query="document_key=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN27e4baee93508350fd58f257dd03d69d"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>abe4baee93508350fd58f257dd03d69b</id>
+        <name>Copy of 请假审批流程</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:17</sys_created_on>
+        <sys_id>27e4baee93508350fd58f257dd03d69d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:17</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=27e4baee93508350fd58f257dd03d69d"/>
+    <sys_hub_flow_input action="DELETE" query="model=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN0bf4beee93508350fd58f257dd03d62f,6bf4beee93508350fd58f257dd03d636,f7f4beee93508350fd58f257dd03d6c5"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:32</sys_created_on>
+        <sys_id>0bf4beee93508350fd58f257dd03d62f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:29:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=0bf4beee93508350fd58f257dd03d62f"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:34</sys_created_on>
+        <sys_id>6bf4beee93508350fd58f257dd03d636</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:29:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=6bf4beee93508350fd58f257dd03d636"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:35</sys_created_on>
+        <sys_id>f7f4beee93508350fd58f257dd03d6c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=f7f4beee93508350fd58f257dd03d6c5"/>
+    <sys_hub_flow_output action="DELETE" query="model=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN7f05b22293908350fd58f257dd03d65e"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:52</sys_created_on>
+        <sys_id>7f05b22293908350fd58f257dd03d65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:52</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VaXW/bNhT9K4KeNsAd9GFbcfaUJc4aIE0Kx+0eikKgSMrmJlOuRCn1iv73XerDlvUVO5I7ty+xSJo89/Lcc0irn76pHnKop16qc+R4VB2ojAsacOTNN2sKzUI22xytZN8KcYKEH2zUSxFEdKC6gb+a09XaQwIGu8gLodEPCA3US32gxsiL6NMmvCMwE3w/mSabU8264fmrrU8s82Ko2R5FMbXXNEg/wRjCQph98zEb+n46s++nVx+n0IWXzCMB5erlp88DdY0CmF3Ilb+VuphcHrs61ScXGjYN+KdpxsVQd8amoxvERBRpMGE5FSW4oiYju1jpV0E5oWSbhkqyAorII/c2hRFfQ/YvzHmhyV6XAmJM01RtH+0sA2kzXvoM08e1YD5PW1J0aafvRSv+kKKWuaMuijyR5w5aohDmo2sJlIstDvdp6T/P8gVvGU9iyjo9HyNv+4SECJgTCRrKNLvMg4TbaUZCPwoS9LPp9ePsxv7ran79FrZrNn2az+6u59Mb9XsSl/0lkjOmCDMsdhrO9+2G3zLqyW3j0coBNAM1xAFbiyssWJxT7ftgR99rnxOWZKVCYZx3hfsUzqNv47CmNbIYF1bMmYzW68CHh7sH7gsloF8iGgpKBgH9m2L4UCX00Ty2NIsQvYnH2CnwuJiTGtCiJj3FuNsYnbU0U3qoaf8TqTNlei2n86htH2RIRgut6ser++u3Vw9/Tp9+z/7ezh7f5Z/nj4DiGXER2sK3ESF2IacgGABIMs8n1LvZ4YR2tlhA+TC+jkT4YnGkOalWyMu1EUQcprC3+1mtkGQDtjtxz0LA9wnq+0kyONm+NyBxbp70LCL3PltgFnHF5wqOAsi2UIAmSr6YksCW1HLvVmiRbRlM7KUFsa3CD2Hx6R0LQ8YXhWCasCQDqmC8TRFRLuFdMHzuUzyqWxKX4umqEzoeGprpjDVLqoQOH11ds7QRcompac5FQSeqYBpRihJhetSL49QiTAjqHbDn5cRmkLVihRxE4Hif/XnokhiZKF33A03vCZohoZXE1TxKXbdkTJtv9jnZFlrPJw1EYgTfIHmMh5wkDlBF1/OfQX+7K6LrB3QR+BEnZSmSSygM/u6NOI0WOgj/045iN0L5JdvUX89NF3ebsj1W8U0PimiYOrXGw7EGQmhKDRxNJg5GhutaY4vqekkRdzBqsZ2xEr6w2XEdW5pUsZa+cR3rj9DDDgAr2ng0wO6qmNGxVhPTvp9D/Z6XlNsAFW7bUt8qIrjwGKF5X781Xlk63lV11zrHzoSMRpaFLbgdQZ27Q+ogfWiM0MQam9Qt1XkFShtMUZOZE96Zwk2YLN+gAR/SrvP6UeCUZA2pENJ6Ovt18nWUrlewSrkvSqIqfqDI7Cp3u4HKEwXjS67Op/JvXywrzg1I/oD2PSTyFPjg8zc16E541eJwFzgkcQ3Izu2cUWJUvL8JXVUIGQaa6GaDClnjOhXagWmGeabnjgMJEDdSqe4Acmg5xrVV3XhieEVFlchRPEq0nHX6Soree1KM0yXF7Hy+yiuw8dL5GrA/kcslB47erM7n1PbdWrFmrpL9CEmJ4mwUsaSQWw9O1LCyImGc0E3Sk3LF66BZyY48J7MxuSflpNz4SvKb/Q9Jy2m8rMSbfm/PlJh4Qpr8bGg1nqqbTa3UfabOdjQx4jqetdrbcfOW56w1uEIZ7fPgQOvqNep6/+oWda2DvRR1d29qu/vXoDh/15Gg5+k29OE1uHQtwF1fu7QIOY1psOcht5D8pFGJ1kSq6MmWjjiDdhsvEV+kb7f2MCC8VNIhSjrkhDbqPaNNuJ90KDAoLlm/2c/y0ACVzFOd/aHGZbQYV/4CNBQBfHOxKVRtJb+df/x1JlC0Iw2bum5WXpuPiq/N9yuiGWuDXxmv9aslS14LF5bPyCzYiibquH2trKyQwEsaDhRgW/IKJhFPFoQiGf2b2uPFDhdfVWUVXmdnjcxv3NRGe2hhb1zmfZ0f1AhBXBKNoiO0XuFawtd7Cd/oI3zzdeEPOxtilpF6R8yy17MLZsZ27H8lUuu98PN/vvvTsAUnAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=abe4baee93508350fd58f257dd03d69b^sys_idNOT INe605722293908350fd58f257dd03d64d"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:46</sys_created_on>
+        <sys_id>e605722293908350fd58f257dd03d64d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:29:47</sys_updated_on>
+        <ui_id>db1c952b-9538-4d87-9d55-08d017c0ca5f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VY23LiOBD9FZefCWtjwJC3VDJUzdZOspVk5iWbUsmSHLQrJI8skwvFv2/LsoFwDyE1mTck9eV09+mWzN3E59Q/9Wk/6Kf9fqcXB0EUBUG3GxEcJknUJUmQ4Lbf8CUeMZA0OBEMlmMsCrt+QmE/jnrtAAmGxwxlWv3LiEGa5WiEJQZRyvNM4Ocflcbf11d/fjm/9a6/3Hjfzi7PQIIMuaCaSf/07r7hZ1iDL8O0fzpZOjLPGUMCJ0yAoVsLxbu0uBp7h/FKeTUs66BeIulMK00tlqDhsyfDJGXgKsUiZw0fIqTYKP0829EM0ysp5htDLg1Y9K3wU85fwHwvsHIpg7AIc2ezJaqy5bbJUHHCrjLDlXQ7Dqg7VKIYyUsXgM0zS3EhTJ1n2ClysMcyi9mCqBClN0P1eF07HHBZhlcdCkWwmK2wMZonhWG5rQUTbASGoK5ZxuWDrfWYl8qAZdR8ELBopkI9gtOcP8gmJhZ4E1KEmwPYvyi3f2DNbRTfwAwoAyAuoNrIJT1XhS6zMkZEFHl5oLHMnS1/WuYK/SwsShd1FR9yKQKBnGiemTNQGLMqlGmjZnpnK0X6c0oQJSm3PvMFutf05rQ5//lPAbboZHIOxTeMekp73zNqf6KwSQoNeTbNtZrT6Wp/fISLwxrsfDED+2ZvrfK6lFat9mqvarXwaK3WDoJf1GxGF5+v13Z1jwt4RwuFdCsJ6LzeudIGucwt9NAq5Q9m6IAzQV9dAXuAq5WvLNm85HkT3oqgqfWxdBe0fvu74FPSEwBR5PLNpeCyvIoB6HF429lKjSRc4kFZ/jlryz2ck1X2Ys8o7+XwKVvWtebvHiBrxRtA5N06lGuA1/O1Nl9RNzoadaPW26gLxLmbzNDPsrYmwfWLy5auln+x8nhZHti1oBBO72fUPz/MZ/hWny3rc6k3ozc15yKz3MnFBoId+T23odkaH9ndQ1Ct/CHXrOiR0wdm5t5rKarMIxb/rTuv2DXroTK8d78Nw62fD8nC25CnaAR14hk8WDUjQIUcYc1QqgpJUfVUndPG1i3lOjeV8OoMuWam0NJT0HKeGTKvlPZm0seYLHtEVyt+Tb06vApD7kF4XhmeNwvvbcnYMI/aR3zrvWceDTAXZerhkyNbqB3TWukNM2lH1baUf8+BtSeo8Kig3j/R1vF97WTbgfW3+H5979QhDCftFu7GURgGQRjQOOjFcdjrJmkXx+103mgI5ZLAWATLKRADzKOaCHVVg9XR4mbjwX+ywMz9Y1CZ2BdvrXyhpP1wbcXGs4Chzl4NeHdI1bxIlBIMyzk9O79sYHyW/2EKfrucG7f117qifdRlXvDvkv8s2FdLih4LWr2QkpNeHMYn7ZR2T/oUd05wP+nEEWWknR5+P9//D5jrqrKnFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=e605722293908350fd58f257dd03d64d"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN4005feee93508350fd58f257dd03d606"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">9d88b7ed935c8b10fd58f257dd03d644</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</flow>
+        <flow_variables_assigned>l1,l2,l3,l4,l5,approval_path</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:37</sys_created_on>
+        <sys_id>4005feee93508350fd58f257dd03d606</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 08:13:51</sys_updated_on>
+        <ui_id>1503a691-0f1f-4845-b393-77a19c9df6cf</ui_id>
+        <updation_source/>
+        <values>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</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_hub_flow_variable action="DELETE" query="model=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN34f4faee93508350fd58f257dd03d6e3,39f43eee93508350fd58f257dd03d69d,65f43eee93508350fd58f257dd03d695,a0f4faee93508350fd58f257dd03d6db,c0f4faee93508350fd58f257dd03d60b,c6f47eee93508350fd58f257dd03d65e,ddf43eee93508350fd58f257dd03d64e"/>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=49640852-1547-4ee4-ae4c-d3069dd19d84</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>l3</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>l3</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:23</sys_created_on>
+        <sys_id>34f4faee93508350fd58f257dd03d6e3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=118bb37f-2bfc-4153-9be8-8ecec438ad96</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approval_path</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>approval_path</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:27</sys_created_on>
+        <sys_id>39f43eee93508350fd58f257dd03d69d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=b816e84d-95b7-407a-8ffc-770d9210b7d5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>l5</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>l5</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:26</sys_created_on>
+        <sys_id>65f43eee93508350fd58f257dd03d695</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:26</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=90d67b08-4184-4c05-8dbb-771e42d64c30</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>l2</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>l2</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:22</sys_created_on>
+        <sys_id>a0f4faee93508350fd58f257dd03d6db</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=bdcae242-0657-4b89-8021-1b56c21dec46</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>l1</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>l1</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:20</sys_created_on>
+        <sys_id>c0f4faee93508350fd58f257dd03d60b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=decimal,uiTypeLabel=Decimal,uiUniqueId=372f8a5b-2ee4-4c9d-9fe3-0edf2f649a3d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>leave_days</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Decimal">decimal</internal_type>
+        <label>Leave_Days</label>
+        <mandatory>false</mandatory>
+        <max_length>15</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>7</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:28</sys_created_on>
+        <sys_id>c6f47eee93508350fd58f257dd03d65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=ca03f6a5-7b75-4298-9908-757a53371f3c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>l4</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>l4</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Copy of 请假审批流程">abe4baee93508350fd58f257dd03d69b</model>
+        <model_id>abe4baee93508350fd58f257dd03d69b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:25</sys_created_on>
+        <sys_id>ddf43eee93508350fd58f257dd03d64e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:34</sys_created_on>
+        <sys_id>17f4beee93508350fd58f257dd03d634</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:34</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:36</sys_created_on>
+        <sys_id>8005beee93508350fd58f257dd03d6ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:03:35</sys_created_on>
+        <sys_id>b3f4beee93508350fd58f257dd03d6c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:03:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_abe4baee93508350fd58f257dd03d69b"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=abe4baee93508350fd58f257dd03d69b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_hub_flow_abe4baee93508350fd58f257dd03d69b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;29000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build/&gt;&lt;copied_from&gt;52dcd2d993d00b10fd58f257dd03d6f2&lt;/copied_from&gt;&lt;copied_from_name&gt;请假审批流程&lt;/copied_from_name&gt;&lt;description/&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;copy_of_&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"flow_variable.l1","label":"Flow Variables➛l1","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"240f55e8-8d3a-4c86-a186-213906af82f9":["approval_conditions"],"bc3ee911-4a58-4055-a5aa-bd50a282f431":["approval_conditions"],"48db1469-9599-4549-a289-447dd76882bb":["approval_conditions"],"a6e42391-41d9-43c7-b272-860f19c7c536":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"bdcae242-0657-4b89-8021-1b56c21dec46","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.l2","label":"Flow Variables➛l2","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"c021657b-f8df-452f-9d52-8e9913acd2a9":["approval_conditions"],"7c088d6e-e08c-4827-8813-6cf8dd37193f":["approval_conditions"],"97655068-cfcc-4c8b-be15-06e9d8b9d3b5":["approval_conditions"],"42582ca4-7c3c-42e7-8614-e35a1e336a0e":["approval_conditions"],"bf424084-802e-4f6e-839c-eb9350283fc4":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"90d67b08-4184-4c05-8dbb-771e42d64c30","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"240f55e8-8d3a-4c86-a186-213906af82f9.approval_state","label":"37 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"98350fa8-cb4a-43b7-a3e8-08d9602f9a1e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"97655068-cfcc-4c8b-be15-06e9d8b9d3b5.approval_state","label":"7 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.l5","label":"Flow Variables➛l5","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"fc424636-eac0-456c-9089-73f6ad249e32":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b816e84d-95b7-407a-8ffc-770d9210b7d5","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛PER_LEAVE Record","reference":"x_1973840_leave_per_leave","reference_display":"PER_LEAVE","type":"reference","base_type":"reference","usedInstances":{"ccbec845-b3cf-4b35-b0ad-0a8e8319c7cb":["record"],"c021657b-f8df-452f-9d52-8e9913acd2a9":["record"],"c36f7859-2189-4811-b2ab-ef22782b9b87":["record"],"97655068-cfcc-4c8b-be15-06e9d8b9d3b5":["record"],"a6a38cd6-7a22-4650-9e16-4a57d4a53d87":["record"],"ca1c0945-2ce2-4f29-8793-1ae6fbb86e92":["record"],"5f01249e-9ba5-49a1-adc3-ec1dee84e56b":["record"],"b2b06072-a2a7-449e-9afd-ece94a337956":["record"],"56cd1212-6a97-45c4-b250-3e4cf9e197cd":["record"],"7c088d6e-e08c-4827-8813-6cf8dd37193f":["record"],"248bded8-ddce-4631-92c1-d1ec77a58189":["record"],"8fc1bb5c-c1e7-400b-8e3f-363d839c2c42":["record"],"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["trigger_title"],"1f58f835-978e-4091-b246-8d86db790d21":["record"],"2dd73212-ef81-43aa-93dd-969cb6811a02":["record"],"fd44ee00-2829-4d81-8b2d-fd5cf74dba31":["u_requester"],"3d269137-35c0-40cd-a0e1-9f19e97336c5":["record"],"240f55e8-8d3a-4c86-a186-213906af82f9":["record"],"31a27bd7-643a-4b74-91ee-053629c99e94":["record"],"0ce56f44-24ea-42b3-9e2a-98ce8eb7b537":["record"],"bc3ee911-4a58-4055-a5aa-bd50a282f431":["record"],"42582ca4-7c3c-42e7-8614-e35a1e336a0e":["record"],"411b3ff1-e4d7-4760-bc5f-9e614a833b98":["record"],"261fa34e-f38f-45a0-86ff-75635df8d97c":["record"],"765514d2-763d-4056-b51c-f87e148a6803":["record"],"48db1469-9599-4549-a289-447dd76882bb":["record"],"bf424084-802e-4f6e-839c-eb9350283fc4":["record"],"365687db-c002-465a-94d2-b707a4c3153a":["record"],"40696d9d-aaf5-48ea-a50c-900baf628ef6":["record"],"fc424636-eac0-456c-9089-73f6ad249e32":["record"],"d1e9e4fd-2e48-47c6-a56f-bd63e5351423":["record"],"13023b7b-6add-42e3-8820-1a962aa6f27a":["record"],"102dd143-61e8-42cf-abd0-5c4f6dda8eb6":["record"],"02f417f2-767a-447c-91f3-e11d98563a03":["record"],"ed971762-dc9b-401f-999a-28f8d26bfbe4":["record"],"a6e42391-41d9-43c7-b272-860f19c7c536":["record"],"d3168c64-604f-430f-ae2e-fa00c2ab5edf":["record"],"31fc6770-3bdb-4200-a4ce-9bb8c88495d1":["record"]},"attributes":{}},{"name":"flow_variable.l3","label":"Flow Variables➛l3","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"8fc1bb5c-c1e7-400b-8e3f-363d839c2c42":["approval_conditions"],"3d269137-35c0-40cd-a0e1-9f19e97336c5":["approval_conditions"],"365687db-c002-465a-94d2-b707a4c3153a":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"49640852-1547-4ee4-ae4c-d3069dd19d84","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.l4","label":"Flow Variables➛l4","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"248bded8-ddce-4631-92c1-d1ec77a58189":["approval_conditions"],"40696d9d-aaf5-48ea-a50c-900baf628ef6":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ca03f6a5-7b75-4298-9908-757a53371f3c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"7c088d6e-e08c-4827-8813-6cf8dd37193f.approval_state","label":"21 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"42582ca4-7c3c-42e7-8614-e35a1e336a0e.approval_state","label":"45 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"0befba6f-7c11-46ae-855c-e84d31dcd32e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.project_id","label":"Trigger - Record Created or Updated➛PER_LEAVE Record➛项目名","reference":"x_1973840_leave_m_project","reference_display":"M_PROJECT","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_per_leave","column_name":"project_id","usedInstances":{"db1c952b-9538-4d87-9d55-08d017c0ca5f":[null]}},{"name":"Created or Updated_1.current.project_id.project_id","label":"Trigger - Record Created or Updated➛PER_LEAVE Record➛项目名➛项目ID","reference":"","reference_display":"项目ID","type":"string","base_type":"string","parent_table_name":"x_1973840_leave_m_project","column_name":"project_id","usedInstances":{"db1c952b-9538-4d87-9d55-08d017c0ca5f":[null]}},{"name":"flow_variable.isl1_approver","label":"Flow Variables➛IsL1_Approver","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["u_l1_approver"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a81373a7-10b2-41d5-a5da-d3902142d37d"}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_1","label":"1 - Look Up Record➛PROJECT RES MANA Record➛1级责任者","reference":"sys_user","reference_display":"1级责任者","type":"reference","base_type":"reference","usedInstances":{},"attributes":{}},{"name":"flow_variable.leave_days","label":"Flow Variables➛Leave_Days","reference":"","reference_display":"","type":"decimal","base_type":"decimal","usedInstances":{"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["flow_variables_leave_days"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"372f8a5b-2ee4-4c9d-9fe3-0edf2f649a3d"}},{"name":"8fc1bb5c-c1e7-400b-8e3f-363d839c2c42.approval_state","label":"23 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a6e42391-41d9-43c7-b272-860f19c7c536.approval_state","label":"31 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"5b387423-bef6-4b39-a4b9-71bd14ada598":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"365687db-c002-465a-94d2-b707a4c3153a.approval_state","label":"59 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"d24ab881-9faf-423f-87eb-8d4af92eb56f":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.opened_by","label":"Trigger - Record Created or Updated➛PER_LEAVE Record➛申请人","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_per_leave","column_name":"opened_by","usedInstances":{"fd44ee00-2829-4d81-8b2d-fd5cf74dba31":["u_requester"],"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["u_"]}},{"name":"31a27bd7-643a-4b74-91ee-053629c99e94.record","label":"39 - Update Record➛PER_LEAVE Record","reference":"x_1973840_leave_per_leave","reference_display":"PER_LEAVE","type":"reference","base_type":"reference","usedInstances":{"ffbcf146-2752-43d0-a532-881ec8b850b5":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"40696d9d-aaf5-48ea-a50c-900baf628ef6.approval_state","label":"61 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"6f608fa3-cbf0-417e-ae04-bcf5e8d600c7":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c021657b-f8df-452f-9d52-8e9913acd2a9.approval_state","label":"53 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"51171d1d-ec9a-40d7-86cd-a683360778f9":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bf424084-802e-4f6e-839c-eb9350283fc4.approval_state","label":"57 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"d758184a-5787-401e-942e-ccfd411292c6":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bc3ee911-4a58-4055-a5aa-bd50a282f431.approval_state","label":"43 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"e01102ad-bf1e-4ec3-a4bd-02a28ee6798e":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"undefined","label":"2 - Set Flow Variables","type":"SETFLOWVARIABLES","base_type":"SETFLOWVARIABLES","usedInstances":{},"attributes":{}},{"name":"3d269137-35c0-40cd-a0e1-9f19e97336c5.approval_state","label":"9 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.approval_path","label":"Flow Variables➛approval_path","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"818c04f4-0311-4f0d-a88a-303bc6f6562d":["u_"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"118bb37f-2bfc-4153-9be8-8ecec438ad96","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"248bded8-ddce-4631-92c1-d1ec77a58189.approval_state","label":"11 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record","label":"1 - Look Up Record➛PROJECT RES MANA Record","reference":"x_1973840_leave_project_res_mana","reference_display":"PROJECT RES MANA Record","type":"reference","base_type":"reference","usedInstances":{"68a0098d-2f20-45ba-9c12-b1b2f13ec084":["user_id","u_l1_approver"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.approver_list1","label":"Flow Variables➛Approver_List1","reference":"","reference_display":"","type":"array.object","base_type":"array.object","usedInstances":{},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"52331344-3938-433e-ad6a-71265c6990ca"}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_2","label":"1 - Look Up Record➛PROJECT RES MANA Record➛2级责任者","reference":"sys_user","reference_display":"2级责任者","type":"reference","base_type":"reference","usedInstances":{"1503a691-0f1f-4845-b393-77a19c9df6cf":["l2-1"]},"attributes":{}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_3","label":"1 - Look Up Record➛PROJECT RES MANA Record➛3级责任者","reference":"sys_user","reference_display":"3级责任者","type":"reference","base_type":"reference","usedInstances":{"1503a691-0f1f-4845-b393-77a19c9df6cf":["l3-2"]},"attributes":{}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_4","label":"1 - Look Up Record➛PROJECT RES MANA Record➛4级责任者","reference":"sys_user","reference_display":"4级责任者","type":"reference","base_type":"reference","usedInstances":{"1503a691-0f1f-4845-b393-77a19c9df6cf":["l4-3"]},"attributes":{}},{"name":"db1c952b-9538-4d87-9d55-08d017c0ca5f.Record.responsible_per_5","label":"1 - Look Up Record➛PROJECT RES MANA Record➛5级责任者","reference":"sys_user","reference_display":"5级责任者","type":"reference","base_type":"reference","usedInstances":{"1503a691-0f1f-4845-b393-77a19c9df6cf":["l5-4"]},"attributes":{}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Copy of 请假审批流程&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:17&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/sys_id&gt;&lt;sys_mod_count&gt;21&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy of 请假审批流程&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_abe4baee93508350fd58f257dd03d69b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 08:13:51&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record&gt;75b04baa93d08350fd58f257dd03d641&lt;/version_record&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN27e4baee93508350fd58f257dd03d69d"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;abe4baee93508350fd58f257dd03d69b&lt;/id&gt;&lt;name&gt;Copy of 请假审批流程&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:17&lt;/sys_created_on&gt;&lt;sys_id&gt;27e4baee93508350fd58f257dd03d69d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:17&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=27e4baee93508350fd58f257dd03d69d"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN0bf4beee93508350fd58f257dd03d62f,6bf4beee93508350fd58f257dd03d636,f7f4beee93508350fd58f257dd03d6c5"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:32&lt;/sys_created_on&gt;&lt;sys_id&gt;0bf4beee93508350fd58f257dd03d62f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:29:46&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0bf4beee93508350fd58f257dd03d62f"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:34&lt;/sys_created_on&gt;&lt;sys_id&gt;6bf4beee93508350fd58f257dd03d636&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:29:46&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6bf4beee93508350fd58f257dd03d636"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:35&lt;/sys_created_on&gt;&lt;sys_id&gt;f7f4beee93508350fd58f257dd03d6c5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:35&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f7f4beee93508350fd58f257dd03d6c5"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN7f05b22293908350fd58f257dd03d65e"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Created or Updated&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:52&lt;/sys_created_on&gt;&lt;sys_id&gt;7f05b22293908350fd58f257dd03d65e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:52&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created or Updated"&gt;a45d9180c32222002841b63b12d3aea7&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/9VaXW/bNhT9K4KeNsAd9GFbcfaUJc4aIE0Kx+0eikKgSMrmJlOuRCn1iv73XerDlvUVO5I7ty+xSJo89/Lcc0irn76pHnKop16qc+R4VB2ojAsacOTNN2sKzUI22xytZN8KcYKEH2zUSxFEdKC6gb+a09XaQwIGu8gLodEPCA3US32gxsiL6NMmvCMwE3w/mSabU8264fmrrU8s82Ko2R5FMbXXNEg/wRjCQph98zEb+n46s++nVx+n0IWXzCMB5erlp88DdY0CmF3Ilb+VuphcHrs61ScXGjYN+KdpxsVQd8amoxvERBRpMGE5FSW4oiYju1jpV0E5oWSbhkqyAorII/c2hRFfQ/YvzHmhyV6XAmJM01RtH+0sA2kzXvoM08e1YD5PW1J0aafvRSv+kKKWuaMuijyR5w5aohDmo2sJlIstDvdp6T/P8gVvGU9iyjo9HyNv+4SECJgTCRrKNLvMg4TbaUZCPwoS9LPp9ePsxv7ran79FrZrNn2az+6u59Mb9XsSl/0lkjOmCDMsdhrO9+2G3zLqyW3j0coBNAM1xAFbiyssWJxT7ftgR99rnxOWZKVCYZx3hfsUzqNv47CmNbIYF1bMmYzW68CHh7sH7gsloF8iGgpKBgH9m2L4UCX00Ty2NIsQvYnH2CnwuJiTGtCiJj3FuNsYnbU0U3qoaf8TqTNlei2n86htH2RIRgut6ser++u3Vw9/Tp9+z/7ezh7f5Z/nj4DiGXER2sK3ESF2IacgGABIMs8n1LvZ4YR2tlhA+TC+jkT4YnGkOalWyMu1EUQcprC3+1mtkGQDtjtxz0LA9wnq+0kyONm+NyBxbp70LCL3PltgFnHF5wqOAsi2UIAmSr6YksCW1HLvVmiRbRlM7KUFsa3CD2Hx6R0LQ8YXhWCasCQDqmC8TRFRLuFdMHzuUzyqWxKX4umqEzoeGprpjDVLqoQOH11ds7QRcompac5FQSeqYBpRihJhetSL49QiTAjqHbDn5cRmkLVihRxE4Hif/XnokhiZKF33A03vCZohoZXE1TxKXbdkTJtv9jnZFlrPJw1EYgTfIHmMh5wkDlBF1/OfQX+7K6LrB3QR+BEnZSmSSygM/u6NOI0WOgj/045iN0L5JdvUX89NF3ebsj1W8U0PimiYOrXGw7EGQmhKDRxNJg5GhutaY4vqekkRdzBqsZ2xEr6w2XEdW5pUsZa+cR3rj9DDDgAr2ng0wO6qmNGxVhPTvp9D/Z6XlNsAFW7bUt8qIrjwGKF5X781Xlk63lV11zrHzoSMRpaFLbgdQZ27Q+ogfWiM0MQam9Qt1XkFShtMUZOZE96Zwk2YLN+gAR/SrvP6UeCUZA2pENJ6Ovt18nWUrlewSrkvSqIqfqDI7Cp3u4HKEwXjS67Op/JvXywrzg1I/oD2PSTyFPjg8zc16E541eJwFzgkcQ3Izu2cUWJUvL8JXVUIGQaa6GaDClnjOhXagWmGeabnjgMJEDdSqe4Acmg5xrVV3XhieEVFlchRPEq0nHX6Soree1KM0yXF7Hy+yiuw8dL5GrA/kcslB47erM7n1PbdWrFmrpL9CEmJ4mwUsaSQWw9O1LCyImGc0E3Sk3LF66BZyY48J7MxuSflpNz4SvKb/Q9Jy2m8rMSbfm/PlJh4Qpr8bGg1nqqbTa3UfabOdjQx4jqetdrbcfOW56w1uEIZ7fPgQOvqNep6/+oWda2DvRR1d29qu/vXoDh/15Gg5+k29OE1uHQtwF1fu7QIOY1psOcht5D8pFGJ1kSq6MmWjjiDdhsvEV+kb7f2MCC8VNIhSjrkhDbqPaNNuJ90KDAoLlm/2c/y0ACVzFOd/aHGZbQYV/4CNBQBfHOxKVRtJb+df/x1JlC0Iw2bum5WXpuPiq/N9yuiGWuDXxmv9aslS14LF5bPyCzYiibquH2trKyQwEsaDhRgW/IKJhFPFoQiGf2b2uPFDhdfVWUVXmdnjcxv3NRGe2hhb1zmfZ0f1AhBXBKNoiO0XuFawtd7Cd/oI3zzdeEPOxtilpF6R8yy17MLZsZ27H8lUuu98PN/vvvTsAUnAAA=&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create_or_update&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=abe4baee93508350fd58f257dd03d69b^sys_idNOT INe605722293908350fd58f257dd03d64d"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Record"&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Record"&gt;b93f42810b30030085c083eb37673a63&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:46&lt;/sys_created_on&gt;&lt;sys_id&gt;e605722293908350fd58f257dd03d64d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:29:47&lt;/sys_updated_on&gt;&lt;ui_id&gt;db1c952b-9538-4d87-9d55-08d017c0ca5f&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VY23LiOBD9FZefCWtjwJC3VDJUzdZOspVk5iWbUsmSHLQrJI8skwvFv2/LsoFwDyE1mTck9eV09+mWzN3E59Q/9Wk/6Kf9fqcXB0EUBUG3GxEcJknUJUmQ4Lbf8CUeMZA0OBEMlmMsCrt+QmE/jnrtAAmGxwxlWv3LiEGa5WiEJQZRyvNM4Ocflcbf11d/fjm/9a6/3Hjfzi7PQIIMuaCaSf/07r7hZ1iDL8O0fzpZOjLPGUMCJ0yAoVsLxbu0uBp7h/FKeTUs66BeIulMK00tlqDhsyfDJGXgKsUiZw0fIqTYKP0829EM0ysp5htDLg1Y9K3wU85fwHwvsHIpg7AIc2ezJaqy5bbJUHHCrjLDlXQ7Dqg7VKIYyUsXgM0zS3EhTJ1n2ClysMcyi9mCqBClN0P1eF07HHBZhlcdCkWwmK2wMZonhWG5rQUTbASGoK5ZxuWDrfWYl8qAZdR8ELBopkI9gtOcP8gmJhZ4E1KEmwPYvyi3f2DNbRTfwAwoAyAuoNrIJT1XhS6zMkZEFHl5oLHMnS1/WuYK/SwsShd1FR9yKQKBnGiemTNQGLMqlGmjZnpnK0X6c0oQJSm3PvMFutf05rQ5//lPAbboZHIOxTeMekp73zNqf6KwSQoNeTbNtZrT6Wp/fISLwxrsfDED+2ZvrfK6lFat9mqvarXwaK3WDoJf1GxGF5+v13Z1jwt4RwuFdCsJ6LzeudIGucwt9NAq5Q9m6IAzQV9dAXuAq5WvLNm85HkT3oqgqfWxdBe0fvu74FPSEwBR5PLNpeCyvIoB6HF429lKjSRc4kFZ/jlryz2ck1X2Ys8o7+XwKVvWtebvHiBrxRtA5N06lGuA1/O1Nl9RNzoadaPW26gLxLmbzNDPsrYmwfWLy5auln+x8nhZHti1oBBO72fUPz/MZ/hWny3rc6k3ozc15yKz3MnFBoId+T23odkaH9ndQ1Ct/CHXrOiR0wdm5t5rKarMIxb/rTuv2DXroTK8d78Nw62fD8nC25CnaAR14hk8WDUjQIUcYc1QqgpJUfVUndPG1i3lOjeV8OoMuWam0NJT0HKeGTKvlPZm0seYLHtEVyt+Tb06vApD7kF4XhmeNwvvbcnYMI/aR3zrvWceDTAXZerhkyNbqB3TWukNM2lH1baUf8+BtSeo8Kig3j/R1vF97WTbgfW3+H5979QhDCftFu7GURgGQRjQOOjFcdjrJmkXx+103mgI5ZLAWATLKRADzKOaCHVVg9XR4mbjwX+ywMz9Y1CZ2BdvrXyhpP1wbcXGs4Chzl4NeHdI1bxIlBIMyzk9O79sYHyW/2EKfrucG7f117qifdRlXvDvkv8s2FdLih4LWr2QkpNeHMYn7ZR2T/oUd05wP+nEEWWknR5+P9//D5jrqrKnFAAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=e605722293908350fd58f257dd03d64d"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN4005feee93508350fd58f257dd03d606"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;9d88b7ed935c8b10fd58f257dd03d644&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/flow&gt;&lt;flow_variables_assigned&gt;l1,l2,l3,l4,l5,approval_path&lt;/flow_variables_assigned&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Set Flow Variables"&gt;4f787d1e0f9b0010ecf0cc52ff767ea0&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:37&lt;/sys_created_on&gt;&lt;sys_id&gt;4005feee93508350fd58f257dd03d606&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 08:13:51&lt;/sys_updated_on&gt;&lt;ui_id&gt;1503a691-0f1f-4845-b393-77a19c9df6cf&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;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&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=abe4baee93508350fd58f257dd03d69b^sys_idNOT IN34f4faee93508350fd58f257dd03d6e3,39f43eee93508350fd58f257dd03d69d,65f43eee93508350fd58f257dd03d695,a0f4faee93508350fd58f257dd03d6db,c0f4faee93508350fd58f257dd03d60b,c6f47eee93508350fd58f257dd03d65e,ddf43eee93508350fd58f257dd03d64e"/&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=49640852-1547-4ee4-ae4c-d3069dd19d84&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sys_user&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;l3&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;l3&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;3&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_user"&gt;sys_user&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:23&lt;/sys_created_on&gt;&lt;sys_id&gt;34f4faee93508350fd58f257dd03d6e3&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:24&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=118bb37f-2bfc-4153-9be8-8ecec438ad96&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;approval_path&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;label&gt;approval_path&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;6&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:27&lt;/sys_created_on&gt;&lt;sys_id&gt;39f43eee93508350fd58f257dd03d69d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:27&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=b816e84d-95b7-407a-8ffc-770d9210b7d5&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sys_user&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;l5&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;l5&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;5&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_user"&gt;sys_user&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:26&lt;/sys_created_on&gt;&lt;sys_id&gt;65f43eee93508350fd58f257dd03d695&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:26&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=90d67b08-4184-4c05-8dbb-771e42d64c30&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sys_user&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;l2&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;l2&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;2&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_user"&gt;sys_user&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:22&lt;/sys_created_on&gt;&lt;sys_id&gt;a0f4faee93508350fd58f257dd03d6db&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:22&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=bdcae242-0657-4b89-8021-1b56c21dec46&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sys_user&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;l1&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;l1&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_user"&gt;sys_user&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:20&lt;/sys_created_on&gt;&lt;sys_id&gt;c0f4faee93508350fd58f257dd03d60b&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:21&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=decimal,uiTypeLabel=Decimal,uiUniqueId=372f8a5b-2ee4-4c9d-9fe3-0edf2f649a3d&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;leave_days&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Decimal"&gt;decimal&lt;/internal_type&gt;&lt;label&gt;Leave_Days&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;15&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;7&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:28&lt;/sys_created_on&gt;&lt;sys_id&gt;c6f47eee93508350fd58f257dd03d65e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:28&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=ca03f6a5-7b75-4298-9908-757a53371f3c&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;sys_user&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;l4&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;l4&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Copy of 请假审批流程"&gt;abe4baee93508350fd58f257dd03d69b&lt;/model&gt;&lt;model_id&gt;abe4baee93508350fd58f257dd03d69b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;4&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sys_user"&gt;sys_user&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:25&lt;/sys_created_on&gt;&lt;sys_id&gt;ddf43eee93508350fd58f257dd03d64e&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:25&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:34&lt;/sys_created_on&gt;&lt;sys_id&gt;17f4beee93508350fd58f257dd03d634&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:34&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;changed_fields&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Changed Fields&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:36&lt;/sys_created_on&gt;&lt;sys_id&gt;8005beee93508350fd58f257dd03d6ca&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:36&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-20 07:03:35&lt;/sys_created_on&gt;&lt;sys_id&gt;b3f4beee93508350fd58f257dd03d6c3&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-04-20 07:03:35&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=abe4baee93508350fd58f257dd03d69b"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>669039554</payload_hash>
+        <record_name>Copy of 请假审批流程</record_name>
+        <reverted_from/>
+        <source>9a92e189935c4710fd58f257dd03d63d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 08:13:51</sys_created_on>
+        <sys_id>8d15c7e293148350fd58f257dd03d66c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19da9f3f8db0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 08:13:51</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>4d15c7e25d148350e13739198e892a6b</update_guid>
+        <update_guid_history>4d15c7e25d148350e13739198e892a6b:669039554,c8c0cbaa00d083501539c7f7b7198a83:276689232,9310c36a9dd083506cbf3fc573cd59b0:2138578676,cace72a6ffd0835069abb8250cab188a:-359772724,f88d76e296d0835088336fa7c65d8d7d:36798964,e3cc7e62e6d083506da2c58c9416fa9b:175195443,abfbb22238d08350ae6e3a67ceb218c9:300507414,da8b36ee78908350e35c56d3694ca731:1065633988,8b1bf2ae4790835030f09884eeac7f7c:-1937722943,e7fafa6e0790835071939e00b2adb5a4:1339270624,beb97eaad29083501c52ebce4b226203:-856479812,4d59be6ac19083500124d9ca9660305e:1780326329,42e8fe2ac2908350cee5bb9caf16e6b3:2027911229,2cb8f62a4f9083506b27c73a44e4d269:280960425,45d73ea630908350896bd5f589ecde13:35108021,8617f2661190835038b9d217ee88e4d8:30492614,4eb5b2a2e490835061c002daede23e1b:1891709961,e5857a6286908350814412af777e5915:178343899,4675b6627290835020004e9c391f4d51:-1710333962,3c25b622f3908350101a609b6f1c8f5b:-584633605,fbe4faeefc5083504dfc81be2ccdbf07:1003296533</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-21 01:15:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>43af90e25d32441cacd5bcf49c317410</sys_id>
+        <sys_metadata>abe4baee93508350fd58f257dd03d69b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of 请假审批流程</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_abe4baee93508350fd58f257dd03d69b</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_abe4baee93508350fd58f257dd03d69b">8d15c7e293148350fd58f257dd03d66c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-21 01:15:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

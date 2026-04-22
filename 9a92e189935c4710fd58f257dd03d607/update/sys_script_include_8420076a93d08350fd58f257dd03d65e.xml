@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1973840_leave.LeaveApprovalLogic </api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LeaveApprovalLogic </name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LeaveApprovalLogic = Class.create();
+LeaveApprovalLogic.prototype = {
+    initialize: function() {},
+
+    // 核心计算函数
+    calculateApprovalPath: function(leaveRecord, l1, l2, l3, l4, l5) {
+        if (!leaveRecord) return "L1";
+
+        var requesterId = "" + leaveRecord.opened_by;
+        var hours = leaveRecord.leave_hour || 0;
+        var days = parseFloat((hours / 8).toFixed(2));
+
+        var m1 = this.getMax(l1);
+        var m2 = this.getMax(l2);
+        var m3 = this.getMax(l3);
+        var m4 = this.getMax(l4);
+        var m5 = this.getMax(l5);
+
+        // 逻辑判断
+        if (l1 && requesterId === "" + l1) {
+            if (days <= m2) return "SKIP_L1__L2";
+            if (days <= m3) return "SKIP_L1__L2_L3";
+            if (days <= m4) return "SKIP_L1__L2_L3_L4";
+            return "SKIP_L1__L2_L3_L4_L5";
+        }
+
+        if (days <= m1) return "L1";
+        if (days <= m2) return "L1_L2";
+        if (days <= m3) return "L1_L2_L3";
+        if (days <= m4) return "L1_L2_L3_L4";
+        return "L1_L2_L3_L4_L5";
+    },
+
+    // 辅助函数
+    getMax: function(user) {
+        if (!user) return 0;
+        // 注意：这里user是sys_id字符串，如果传入的是GlideRecord对象，需要用 user.getDisplayValue('title')
+        // 但在这种跨域调用中，通常只传sys_id或简单对象，获取Title比较麻烦。
+        // 建议：如果可能，在Flow里把Title也查出来传进来，或者在这里重新查询User表。
+        // 为了简化，假设我们在Flow里把Title也作为参数传进来了，或者在这里做GlideRecord查询：
+        
+        if (typeof user == 'string') {
+             var u = new GlideRecord('sys_user');
+             if (u.get(user)) {
+                 user = u; // 替换为对象
+             } else {
+                 return 0;
+             }
+        }
+        
+        var title = ("" + user.title).trim(); 
+        if (title === 'PM') return 1;
+        if (title === '开发部长') return 2;
+        if (title === '开发本部长') return 4.999;
+        if (title === "总经理") return 999;
+        return 0;
+    },
+
+    type: 'LeaveApprovalLogic'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 07:53:00</sys_created_on>
+        <sys_id>8420076a93d08350fd58f257dd03d65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LeaveApprovalLogic </sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_include_8420076a93d08350fd58f257dd03d65e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 07:53:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

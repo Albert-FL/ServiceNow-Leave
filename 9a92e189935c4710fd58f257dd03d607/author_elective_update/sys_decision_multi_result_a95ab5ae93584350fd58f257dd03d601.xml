@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result">
+    <sys_decision_multi_result action="DELETE">
+        <decision_table display_value="Leave approval">ccd3f5ae93184350fd58f257dd03d6f1</decision_table>
+        <label>审批流程: L1</label>
+        <result_elements/>
+        <sys_class_name>sys_decision_multi_result</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 02:47:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a95ab5ae93584350fd58f257dd03d601</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>审批流程: L1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_decision_multi_result_a95ab5ae93584350fd58f257dd03d601</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 02:47:17</sys_updated_on>
+    </sys_decision_multi_result>
+    <sys_variable_value action="DELETE" query="document_key=a95ab5ae93584350fd58f257dd03d601"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_decision_multi_result</document>
+        <document_key>a95ab5ae93584350fd58f257dd03d601</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 02:47:17</sys_created_on>
+        <sys_id>615ab5ae93584350fd58f257dd03d602</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 02:47:17</sys_updated_on>
+        <value>l1</value>
+        <variable display_value="审批流程">8ca4fd2293584350fd58f257dd03d6ed</variable>
+    </sys_variable_value>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_decision_multi_result_a95ab5ae93584350fd58f257dd03d601</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result"><sys_decision_multi_result action="INSERT_OR_UPDATE"><decision_table display_value="Leave approval">ccd3f5ae93184350fd58f257dd03d6f1</decision_table><label>审批流程: L1</label><result_elements/><sys_class_name>sys_decision_multi_result</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-04-20 02:47:17</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>a95ab5ae93584350fd58f257dd03d601</sys_id><sys_mod_count>0</sys_mod_count><sys_name>审批流程: L1</sys_name><sys_overrides/><sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package><sys_policy/><sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope><sys_update_name>sys_decision_multi_result_a95ab5ae93584350fd58f257dd03d601</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-04-20 02:47:17</sys_updated_on></sys_decision_multi_result><sys_variable_value action="delete_multiple" query="document_key=a95ab5ae93584350fd58f257dd03d601"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_decision_multi_result</document><document_key>a95ab5ae93584350fd58f257dd03d601</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-04-20 02:47:17</sys_created_on><sys_id>615ab5ae93584350fd58f257dd03d602</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-04-20 02:47:17</sys_updated_on><value>l1</value><variable display_value="审批流程">8ca4fd2293584350fd58f257dd03d6ed</variable></sys_variable_value></record_update>]]></payload>
+        <payload_hash>920111295</payload_hash>
+        <record_name>审批流程: L1</record_name>
+        <reverted_from/>
+        <source>9a92e189935c4710fd58f257dd03d63d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 02:47:17</sys_created_on>
+        <sys_id>a95ab5ae93584350fd58f257dd03d61e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19da8c8fee90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 02:47:17</sys_updated_on>
+        <type>Decision Table Multiple Result</type>
+        <update_guid>e95ab5aeb758435030303dc8cb0cc204</update_guid>
+        <update_guid_history>e95ab5aeb758435030303dc8cb0cc204:920111295</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-21 01:28:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_decision_multi_result">sys_decision_multi_result</sys_db_object>
+        <sys_id>17c0d62d05f447d787a86e70d0e36289</sys_id>
+        <sys_metadata>a95ab5ae93584350fd58f257dd03d601</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>审批流程: L1</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_decision_multi_result_a95ab5ae93584350fd58f257dd03d601</sys_update_name>
+        <sys_update_version display_value="sys_decision_multi_result_a95ab5ae93584350fd58f257dd03d601">a95ab5ae93584350fd58f257dd03d61e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-21 01:28:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

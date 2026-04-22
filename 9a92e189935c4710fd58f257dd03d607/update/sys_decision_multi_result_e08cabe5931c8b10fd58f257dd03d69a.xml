@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result">
+    <sys_decision_multi_result action="INSERT_OR_UPDATE">
+        <decision_table display_value="请假审批流程">25ec9fe593988b10fd58f257dd03d663</decision_table>
+        <label>Route: GM</label>
+        <result_elements/>
+        <sys_class_name>sys_decision_multi_result</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-17 08:32:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e08cabe5931c8b10fd58f257dd03d69a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Route: GM</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_decision_multi_result_e08cabe5931c8b10fd58f257dd03d69a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-17 08:32:12</sys_updated_on>
+    </sys_decision_multi_result>
+    <sys_variable_value action="delete_multiple" query="document_key=e08cabe5931c8b10fd58f257dd03d69a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>e08cabe5931c8b10fd58f257dd03d69a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-17 08:32:12</sys_created_on>
+        <sys_id>a88cabe5931c8b10fd58f257dd03d69a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-17 08:32:12</sys_updated_on>
+        <value>GM</value>
+        <variable display_value="Route">86ec936993988b10fd58f257dd03d6e0</variable>
+    </sys_variable_value>
+</record_update>

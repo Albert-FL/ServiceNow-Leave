@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="74e8755d939cc710fd58f257dd03d6a3" label="CROP MANA" max_length="40" name="x_1973840_leave_crop_mana" type="collection">
+        <element label="项目 ID" max_length="32" name="project_id" reference="x_1973840_leave_m_project" type="reference"/>
+        <element label="社员ID" max_length="32" name="employe_id" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="employe_id"/>
+        </index>
+        <index name="index2">
+            <element name="project_id"/>
+        </index>
+    </element>
+</database>

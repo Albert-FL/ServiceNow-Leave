@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="9e626d11931cc710fd58f257dd03d632" label="PROJECT RES MANA" max_length="40" name="x_1973840_leave_project_res_mana" type="collection">
+        <element dependent="responsible_per_2.name" dependent_on_field="responsible_per_2.name" label="2级责任者" max_length="32" name="responsible_per_2" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <element label="项目ID" max_length="32" name="project_id" reference="x_1973840_leave_m_project" type="reference"/>
+        <element dependent="responsible_per_3.name" dependent_on_field="responsible_per_3.name" label="3级责任者" max_length="32" name="responsible_per_3" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <element dependent="responsible_per_4.name" dependent_on_field="responsible_per_4.name" label="4级责任者" max_length="32" name="responsible_per_4" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <element dependent="responsible_per_5.name" dependent_on_field="responsible_per_5.name" label="5级责任者" max_length="32" name="responsible_per_5" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <element dependent="responsible_per_1.name" dependent_on_field="responsible_per_1.name" label="1级责任者" max_length="32" name="responsible_per_1" reference="sys_user" type="reference" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="project_id"/>
+        </index>
+        <index name="index2">
+            <element name="responsible_per_1"/>
+        </index>
+        <index name="index3">
+            <element name="responsible_per_2"/>
+        </index>
+        <index name="index4">
+            <element name="responsible_per_3"/>
+        </index>
+        <index name="index5">
+            <element name="responsible_per_4"/>
+        </index>
+        <index name="index6">
+            <element name="responsible_per_5"/>
+        </index>
+    </element>
+</database>

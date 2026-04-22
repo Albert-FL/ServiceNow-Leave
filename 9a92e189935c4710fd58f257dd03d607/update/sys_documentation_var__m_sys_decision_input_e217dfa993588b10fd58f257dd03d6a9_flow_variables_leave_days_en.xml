@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="flow_variables_leave_days" label="Flow Variables_Leave_Days" language="en" table="var__m_sys_decision_input_e217dfa993588b10fd58f257dd03d6a9">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>flow_variables_leave_days</element>
+            <help/>
+            <hint/>
+            <label>Flow Variables_Leave_Days</label>
+            <language>en</language>
+            <name>var__m_sys_decision_input_e217dfa993588b10fd58f257dd03d6a9</name>
+            <plural>Flow Variables_Leave_Days</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-17 06:58:42</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Flow Variables_Leave_Days</sys_name>
+            <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_decision_input_e217dfa993588b10fd58f257dd03d6a9_flow_variables_leave_days_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-17 06:58:42</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

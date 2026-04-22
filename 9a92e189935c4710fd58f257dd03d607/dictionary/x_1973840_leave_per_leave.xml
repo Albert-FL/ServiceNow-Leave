@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="6924694d935c4710fd58f257dd03d646" extends="task" label="PER_LEAVE" max_length="40" name="x_1973840_leave_per_leave" type="collection">
+        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="请假开始日期" max_length="40" name="leave_date_start" type="glide_date" use_dynamic_default="true"/>
+        <element default="javascript:gs.now()" dynamic_default_value="fb7553e85f220100a9ad2572f2b477b4" label="请假结束日期" max_length="40" name="leave_date_end" type="glide_date" use_dynamic_default="true"/>
+        <element default="0" label="请假小时数" max_length="15" name="leave_hour" type="decimal"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="1" label="请假开始时间" max_length="40" name="leave_time_start" type="glide_time">
+            <choice>
+                <element inactive_on_update="false" label="12:00" sequence="2" value="12:00:00"/>
+                <element inactive_on_update="false" label="13:00" sequence="3" value="13:00:00"/>
+                <element inactive_on_update="false" label="09:00" sequence="0" value="09:00:00"/>
+                <element inactive_on_update="false" label="09:30" sequence="1" value="09:30:00"/>
+            </choice>
+        </element>
+        <element choice="3" label="请假类型" max_length="40" name="leave_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="事假" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="陪产假" sequence="7" value="8"/>
+                <element inactive_on_update="false" label="法定年假" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="病假" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="婚假" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="加班换休" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="福利年假" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="丧假" sequence="6" value="7"/>
+            </choice>
+        </element>
+        <element dependent="project_id.project_name" dependent_on_field="project_id.project_name" label="项目名" max_length="32" name="project_id" reference="x_1973840_leave_m_project" type="reference" use_dependent_field="true"/>
+        <element attributes="ro_collapsible=true" choice="1" label="请假结束时间" max_length="40" name="leave_time_end" type="glide_time">
+            <choice>
+                <element inactive_on_update="false" label="10:00" sequence="1" value="10:00:00"/>
+                <element inactive_on_update="false" label="18:00" sequence="7" value="18:00:00"/>
+                <element inactive_on_update="false" label="09:00" sequence="0" value="09:00:00"/>
+                <element inactive_on_update="false" label="13:00" sequence="2" value="13:00:00"/>
+                <element inactive_on_update="false" label="14:00" sequence="3" value="14:00:00"/>
+                <element inactive_on_update="false" label="15:00" sequence="4" value="15:00:00"/>
+                <element inactive_on_update="false" label="17:00" sequence="5" value="17:00:00"/>
+                <element inactive_on_update="false" label="17:30" sequence="6" value="17:30:00"/>
+            </choice>
+        </element>
+    </element>
+</database>

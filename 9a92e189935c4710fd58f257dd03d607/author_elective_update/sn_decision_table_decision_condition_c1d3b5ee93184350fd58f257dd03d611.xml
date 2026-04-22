@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_decision_table_decision_condition">
+    <sn_decision_table_decision_condition action="DELETE">
+        <decision_input/>
+        <decision_table display_value="Leave approval">ccd3f5ae93184350fd58f257dd03d6f1</decision_table>
+        <default_operator>=</default_operator>
+        <description/>
+        <field/>
+        <field_label/>
+        <field_parent_table/>
+        <label>Flow Variables_Leave_Days</label>
+        <order>200</order>
+        <parent/>
+        <reference/>
+        <sys_class_name>sn_decision_table_decision_condition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 02:18:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>c1d3b5ee93184350fd58f257dd03d611</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sn_decision_table_decision_condition_c1d3b5ee93184350fd58f257dd03d611</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 02:18:51</sys_updated_on>
+        <type display_value="Decimal">f52567c1bf3320001875647fcf07396a</type>
+    </sn_decision_table_decision_condition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sn_decision_table_decision_condition_c1d3b5ee93184350fd58f257dd03d611</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_decision_table_decision_condition"><sn_decision_table_decision_condition action="INSERT_OR_UPDATE"><decision_input/><decision_table display_value="Leave approval">ccd3f5ae93184350fd58f257dd03d6f1</decision_table><default_operator>=</default_operator><description/><field/><field_label/><field_parent_table/><label>Flow Variables_Leave_Days</label><order>200</order><parent/><reference/><sys_class_name>sn_decision_table_decision_condition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-04-20 02:18:51</sys_created_on><sys_domain>global</sys_domain><sys_id>c1d3b5ee93184350fd58f257dd03d611</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package><sys_policy/><sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope><sys_update_name>sn_decision_table_decision_condition_c1d3b5ee93184350fd58f257dd03d611</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-04-20 02:18:51</sys_updated_on><type display_value="Decimal">f52567c1bf3320001875647fcf07396a</type></sn_decision_table_decision_condition></record_update>]]></payload>
+        <payload_hash>193239402</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>9a92e189935c4710fd58f257dd03d63d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 02:22:19</sys_created_on>
+        <sys_id>e394fd2293584350fd58f257dd03d686</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19da8b221760000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 02:22:19</sys_updated_on>
+        <type>Decision Condition</type>
+        <update_guid>c5d3b5eeb518435079cb610f12676b13</update_guid>
+        <update_guid_history>c5d3b5eeb518435079cb610f12676b13:-231533123,c5d3b5eeb518435079cb610f12676b13:-231533123</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">24a4316293584350fd58f257dd03d64d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-20 02:22:22</sys_created_on>
+        <sys_db_object display_value="" name="sn_decision_table_decision_condition">sn_decision_table_decision_condition</sys_db_object>
+        <sys_id>083e0e024e9549a6816fb1f808ee2461</sys_id>
+        <sys_metadata>c1d3b5ee93184350fd58f257dd03d611</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sn_decision_table_decision_condition_c1d3b5ee93184350fd58f257dd03d611</sys_update_name>
+        <sys_update_version display_value="sn_decision_table_decision_condition_c1d3b5ee93184350fd58f257dd03d611">e394fd2293584350fd58f257dd03d686</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-20 02:22:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

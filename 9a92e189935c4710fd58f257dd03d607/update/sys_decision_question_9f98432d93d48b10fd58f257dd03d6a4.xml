@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>83980f2d93d48b10fd58f257dd03d68e</answer>
+        <condition table="var__m_sys_decision_input_80354b6593d48b10fd58f257dd03d63a">u_requester.title=总经理^EQ<item endquery="false" field="u_requester.title" goto="false" newquery="false" operator="=" or="false" value="总经理"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_table display_value="是不是总经理？">80354b6593d48b10fd58f257dd03d63a</decision_table>
+        <default_answer>false</default_answer>
+        <input_table>var__m_sys_decision_input_80354b6593d48b10fd58f257dd03d63a</input_table>
+        <label>是不是总经理？_100</label>
+        <marked_for_deletion>false</marked_for_deletion>
+        <order>100</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-17 05:55:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9f98432d93d48b10fd58f257dd03d6a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>是不是总经理？_100</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_decision_question_9f98432d93d48b10fd58f257dd03d6a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-17 05:55:22</sys_updated_on>
+    </sys_decision_question>
+</record_update>

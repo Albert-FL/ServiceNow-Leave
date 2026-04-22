@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result">
+    <sys_decision_multi_result action="INSERT_OR_UPDATE">
+        <decision_table display_value="是不是总经理？">80354b6593d48b10fd58f257dd03d63a</decision_table>
+        <label>Is_Manager: False</label>
+        <result_elements/>
+        <sys_class_name>sys_decision_multi_result</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-17 05:55:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cb980f2d93d48b10fd58f257dd03d695</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Is_Manager: False</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_decision_multi_result_cb980f2d93d48b10fd58f257dd03d695</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-17 05:55:21</sys_updated_on>
+    </sys_decision_multi_result>
+    <sys_variable_value action="delete_multiple" query="document_key=cb980f2d93d48b10fd58f257dd03d695"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>cb980f2d93d48b10fd58f257dd03d695</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-17 05:55:21</sys_created_on>
+        <sys_id>83980f2d93d48b10fd58f257dd03d696</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-17 05:55:21</sys_updated_on>
+        <value>false</value>
+        <variable display_value="Is_Manager">2c3543a593d48b10fd58f257dd03d6a4</variable>
+    </sys_variable_value>
+</record_update>

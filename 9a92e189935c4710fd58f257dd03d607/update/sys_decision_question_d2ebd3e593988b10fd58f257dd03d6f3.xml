@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>c6ebd3e593988b10fd58f257dd03d6c7</answer>
+        <condition table="var__m_sys_decision_input_e217dfa993588b10fd58f257dd03d6a9">u_.title!=总经理^flow_variables_leave_daysBETWEEN0@2^EQ<item endquery="false" field="u_.title" goto="false" newquery="false" operator="!=" or="false" value="总经理"/>
+            <item endquery="false" field="flow_variables_leave_days" goto="false" newquery="false" operator="BETWEEN" or="false" value="0@2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_table display_value="Leave_Approval_Route">e217dfa993588b10fd58f257dd03d6a9</decision_table>
+        <default_answer>false</default_answer>
+        <input_table>var__m_sys_decision_input_e217dfa993588b10fd58f257dd03d6a9</input_table>
+        <label>Leave_Approval_Route_200</label>
+        <marked_for_deletion>false</marked_for_deletion>
+        <order>200</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-17 07:19:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d2ebd3e593988b10fd58f257dd03d6f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave_Approval_Route_200</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_decision_question_d2ebd3e593988b10fd58f257dd03d6f3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-17 07:19:41</sys_updated_on>
+    </sys_decision_question>
+</record_update>
