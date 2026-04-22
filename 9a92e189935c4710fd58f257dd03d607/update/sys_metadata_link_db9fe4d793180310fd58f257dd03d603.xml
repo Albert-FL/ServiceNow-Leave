@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>0a34105393540310fd58f257dd03d6d2</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_1973840_leave_m_project">
+    <x_1973840_leave_m_project action="INSERT_OR_UPDATE">
+        <department_id>MA01</department_id>
+        <number>MPRO0001007</number>
+        <project_id>MA0101</project_id>
+        <project_name>管理部</project_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-22 03:17:12</sys_created_on>
+        <sys_id>0a34105393540310fd58f257dd03d6d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-22 03:17:12</sys_updated_on>
+    </x_1973840_leave_m_project>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-22 05:16:16</sys_created_on>
+        <sys_id>db9fe4d793180310fd58f257dd03d603</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>管理部</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_metadata_link_db9fe4d793180310fd58f257dd03d603</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-22 05:16:16</sys_updated_on>
+        <tablename>x_1973840_leave_m_project</tablename>
+    </sys_metadata_link>
+</record_update>

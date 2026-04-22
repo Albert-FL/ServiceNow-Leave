@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>e4b99e1593d00b10fd58f257dd03d620</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_1973840_leave_crop_mana">
+    <x_1973840_leave_crop_mana action="INSERT_OR_UPDATE">
+        <employe_id display_value="Beth Anglin">46d44a23a9fe19810012d100cca80666</employe_id>
+        <number>CRO1005</number>
+        <project_id display_value="测试项目1">2e269a5d93900b10fd58f257dd03d6f4</project_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-16 07:52:24</sys_created_on>
+        <sys_id>e4b99e1593d00b10fd58f257dd03d620</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-16 07:52:24</sys_updated_on>
+    </x_1973840_leave_crop_mana>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-22 05:16:24</sys_created_on>
+        <sys_id>99af28d793180310fd58f257dd03d6e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CRO1005</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_metadata_link_99af28d793180310fd58f257dd03d6e9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-22 05:16:24</sys_updated_on>
+        <tablename>x_1973840_leave_crop_mana</tablename>
+    </sys_metadata_link>
+</record_update>
