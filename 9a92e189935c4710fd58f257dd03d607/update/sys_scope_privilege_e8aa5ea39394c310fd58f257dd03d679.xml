@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>create</operation>
+        <source_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2026-04-23 07:42:19</sys_created_on>
+        <sys_id>e8aa5ea39394c310fd58f257dd03d679</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_vsc_client_push_notifications</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_scope_privilege_e8aa5ea39394c310fd58f257dd03d679</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-04-23 07:42:19</sys_updated_on>
+        <target_name>sn_vsc_client_push_notifications</target_name>
+        <target_scope display_value="Security Center">a51d46e3f2014110366b10017c5ba675</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

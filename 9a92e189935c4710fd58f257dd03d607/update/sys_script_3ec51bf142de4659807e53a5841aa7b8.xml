@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1973840_leave_per_leave</collection>
+        <condition/>
+        <description>Send push notifications for leave approval status changes</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Leave Push Notification Rule</name>
+        <order>150</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+    try {
+        // 检查审批状态是否发生变化
+        if (current.approval.changesTo('approved') || current.approval.changesTo('rejected')) {
+            
+            var applicant = current.opened_by.getRefRecord();
+            var applicantSysId = current.opened_by.toString();
+            var leaveNumber = current.number.toString();
+            var approvalStatus = current.approval.getDisplayValue();
+            var leaveReason = current.short_description.toString();
+            var applicantName = applicant ? applicant.getDisplayValue() : 'Unknown';
+            
+            if (applicantSysId && applicant) {
+                var pushMessage = '';
+                var pushTitle = '';
+                
+                if (current.approval.toString() === 'approved') {
+                    pushTitle = '请假申请已批准';
+                    pushMessage = ']]>🎉<![CDATA[ 您的请假申请 ' + leaveNumber + ' 已获得批准！';
+                } else if (current.approval.toString() === 'rejected') {
+                    pushTitle = '请假申请已被驳回';
+                    pushMessage = '❌ 很抱歉，您的请假申请 ' + leaveNumber + ' 已被驳回。';
+                }
+                
+                if (pushMessage) {
+                    try {
+                        gs.info('=== 推送通知调试信息 ===');
+                        gs.info('申请编号: ' + leaveNumber);
+                        gs.info('申请人: ' + applicantName + ' (' + applicantSysId + ')');
+                        gs.info('审批状态: ' + approvalStatus);
+                        gs.info('推送标题: ' + pushTitle);
+                        gs.info('推送内容: ' + pushMessage);
+                        
+                        // 方法1：尝试使用ServiceNow Mobile Connect推送API
+                        try {
+                            if (typeof sn_push !== 'undefined') {
+                                var pushNotification = new sn_push.PushNotification();
+                                pushNotification.setTitle(pushTitle);
+                                pushNotification.setMessage(pushMessage);
+                                pushNotification.setCategory('leave_management');
+                                pushNotification.addRecipient(applicantSysId);
+                                
+                                var pushResult = pushNotification.send();
+                                gs.info('Push API 发送结果: ' + JSON.stringify(pushResult));
+                            } else {
+                                gs.info('sn_push API 不可用，尝试其他方法');
+                            }
+                        } catch (pushApiError) {
+                            gs.warn('Push API 调用失败: ' + pushApiError.message);
+                        }
+                        
+                        // 方法2：使用GlideNotification API
+                        try {
+                            var notification = new GlideNotification();
+                            notification.setTitle(pushTitle);
+                            notification.setMessage(pushMessage);
+                            notification.setRecipient(applicantSysId);
+                            notification.setType('push');
+                            notification.send();
+                            gs.info('GlideNotification 推送已发送');
+                        } catch (glideError) {
+                            gs.warn('GlideNotification 失败: ' + glideError.message);
+                        }
+                        
+                        // 方法3：创建sys_notification记录
+                        try {
+                            var sysNotification = new GlideRecord('sys_notification');
+                            sysNotification.initialize();
+                            sysNotification.type = 'push';
+                            sysNotification.subject = pushTitle;
+                            sysNotification.message = pushMessage;
+                            sysNotification.user = applicantSysId;
+                            sysNotification.table = 'x_1973840_leave_per_leave';
+                            sysNotification.document_key = current.sys_id.toString();
+                            var notifId = sysNotification.insert();
+                            
+                            if (notifId) {
+                                gs.info('系统通知记录已创建: ' + notifId);
+                            } else {
+                                gs.error('创建系统通知记录失败');
+                            }
+                        } catch (sysNotifError) {
+                            gs.warn('创建系统通知记录失败: ' + sysNotifError.message);
+                        }
+                        
+                        // 方法4：使用事件系统
+                        var eventName = 'x_1973840_leave.push.notification';
+                        gs.eventQueue(eventName, current, applicantSysId, pushMessage, pushTitle);
+                        gs.info('事件已加入队列: ' + eventName);
+                        
+                    } catch (pushError) {
+                        gs.error('所有推送通知方法都失败: ' + pushError.message);
+                    }
+                }
+            } else {
+                gs.warn('无法获取申请者信息，申请编号: ' + leaveNumber);
+            }
+        }
+    } catch (globalError) {
+        gs.error('推送通知业务规则执行出错: ' + globalError.message);
+    }
+  ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 03:06:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3ec51bf142de4659807e53a5841aa7b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Push Notification Rule</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_3ec51bf142de4659807e53a5841aa7b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 03:06:11</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=3ec51bf142de4659807e53a5841aa7b8"/>
+</record_update>

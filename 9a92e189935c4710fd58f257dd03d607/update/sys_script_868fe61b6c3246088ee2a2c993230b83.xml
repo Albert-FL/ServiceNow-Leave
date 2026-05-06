@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1973840_leave_per_leave</collection>
+        <condition/>
+        <description>Create live feed and in-app notifications for leave approval status changes</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Leave Live Feed Notification Rule</name>
+        <order>160</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+    try {
+        // 检查审批状态是否发生变化
+        if (current.approval.changesTo('approved') || current.approval.changesTo('rejected')) {
+            
+            var applicant = current.opened_by.getRefRecord();
+            var applicantSysId = current.opened_by.toString();
+            var leaveNumber = current.number.toString();
+            var approvalStatus = current.approval.getDisplayValue();
+            var leaveReason = current.short_description.toString();
+            var applicantName = applicant ? applicant.getDisplayValue() : 'Unknown';
+            
+            if (applicantSysId && applicant) {
+                var feedMessage = '';
+                var feedType = '';
+                
+                if (current.approval.toString() === 'approved') {
+                    feedMessage = ']]>🎉<![CDATA[ ' + applicantName + ' 的请假申请 ' + leaveNumber + ' 已获得批准！';
+                    feedType = 'approved';
+                } else if (current.approval.toString() === 'rejected') {
+                    feedMessage = '❌ ' + applicantName + ' 的请假申请 ' + leaveNumber + ' 已被驳回。';
+                    feedType = 'rejected';
+                }
+                
+                if (feedMessage) {
+                    try {
+                        // 方法1：创建Live Feed消息 
+                        var liveFeed = new GlideRecord('live_message');
+                        liveFeed.initialize();
+                        liveFeed.message = feedMessage;
+                        liveFeed.group = 'all'; // 发送给所有用户，或者设置特定组
+                        liveFeed.user = applicantSysId; // 也直接发给申请人
+                        liveFeed.table = 'x_1973840_leave_per_leave';
+                        liveFeed.document = current.sys_id.toString();
+                        liveFeed.priority = '1'; // 高优先级
+                        
+                        var feedId = liveFeed.insert();
+                        if (feedId) {
+                            gs.info('Live Feed 通知已创建: ' + feedId + ', 消息: ' + feedMessage);
+                        } else {
+                            gs.error('创建Live Feed通知失败');
+                        }
+                        
+                    } catch (liveFeedError) {
+                        gs.warn('Live Feed 通知创建失败: ' + liveFeedError.message);
+                    }
+                    
+                    try {
+                        // 方法2：创建系统消息给用户
+                        var userMessage = new GlideRecord('sys_user_message');
+                        userMessage.initialize();
+                        userMessage.user = applicantSysId;
+                        userMessage.message = feedMessage;
+                        userMessage.priority = 'high';
+                        userMessage.type = 'notification';
+                        
+                        var messageId = userMessage.insert();
+                        if (messageId) {
+                            gs.info('用户消息已创建: ' + messageId);
+                        } else {
+                            gs.warn('创建用户消息失败');
+                        }
+                        
+                    } catch (userMessageError) {
+                        gs.warn('用户消息创建失败: ' + userMessageError.message);
+                    }
+                    
+                    try {
+                        // 方法3：使用通知表创建个人通知
+                        var notification = new GlideRecord('sys_notification');
+                        notification.initialize();
+                        notification.recipient = applicantSysId;
+                        notification.subject = (current.approval.toString() === 'approved') ? '请假申请已批准' : '请假申请已被驳回';
+                        notification.message = feedMessage;
+                        notification.type = 'alert';
+                        notification.table = 'x_1973840_leave_per_leave';
+                        notification.document_key = current.sys_id.toString();
+                        
+                        var notifId = notification.insert();
+                        if (notifId) {
+                            gs.info('系统通知已创建: ' + notifId);
+                        } else {
+                            gs.warn('创建系统通知失败');
+                        }
+                        
+                    } catch (sysNotifError) {
+                        gs.warn('系统通知创建失败: ' + sysNotifError.message);
+                    }
+                    
+                    gs.info('=== 页面内通知调试完成 ===');
+                    gs.info('申请人: ' + applicantName + ' (' + applicantSysId + ')');
+                    gs.info('通知消息: ' + feedMessage);
+                    gs.info('审批状态: ' + approvalStatus);
+                }
+            } else {
+                gs.warn('无法获取申请者信息，申请编号: ' + leaveNumber);
+            }
+        }
+    } catch (globalError) {
+        gs.error('Live Feed通知业务规则执行出错: ' + globalError.message);
+    }
+  ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 03:38:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>868fe61b6c3246088ee2a2c993230b83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Live Feed Notification Rule</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_868fe61b6c3246088ee2a2c993230b83</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 03:38:44</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=868fe61b6c3246088ee2a2c993230b83"/>
+</record_update>

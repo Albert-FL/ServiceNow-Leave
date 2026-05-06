@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_1973840_leave_cancellation">x_1973840_leave_cancellation</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>LC</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:47</sys_created_on>
+        <sys_id>10800f1a09ad4cd496b76d50b24063ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LC</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_number_10800f1a09ad4cd496b76d50b24063ce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:47</sys_updated_on>
+    </sys_number>
+</record_update>

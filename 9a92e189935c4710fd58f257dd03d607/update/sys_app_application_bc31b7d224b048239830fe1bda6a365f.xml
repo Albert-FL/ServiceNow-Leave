@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <description>管理员工的请假申请、销假申请和年假额度</description>
+        <device_type>browser</device_type>
+        <hint>员工请假、销假和年假管理系统</hint>
+        <name/>
+        <order>0</order>
+        <roles/>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bc31b7d224b048239830fe1bda6a365f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>请假管理</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_app_application_bc31b7d224b048239830fe1bda6a365f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-06 02:12:08</sys_updated_on>
+        <title>请假管理</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

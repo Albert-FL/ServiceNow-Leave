@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element active="false" attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="026ebe4c62a34f53b7fddc3fa499c0c2" extends="task" label="请假申请" name="x_1973840_leave_request" type="collection">
+        <element label="请假开始时间" mandatory="true" max_length="40" name="start_date" type="glide_date_time"/>
+        <element label="可以销假" max_length="40" name="cancel_available" read_only="true" read_only_option="instance_configured" type="boolean"/>
+        <element label="剩余请假小时数" max_length="20" name="remaining_hours" read_only="true" read_only_option="instance_configured" type="decimal"/>
+        <element choice="3" default="draft" label="审批状态" max_length="40" name="approval_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="上级审批中" sequence="4" value="manager_pending"/>
+                <element inactive_on_update="false" label="人事审批中" sequence="3" value="hr_pending"/>
+                <element inactive_on_update="false" label="已提交" sequence="2" value="submitted"/>
+                <element inactive_on_update="false" label="已批准" sequence="5" value="approved"/>
+                <element inactive_on_update="false" label="已拒绝" sequence="6" value="rejected"/>
+                <element inactive_on_update="false" label="草稿" sequence="1" value="draft"/>
+            </choice>
+        </element>
+        <element label="请假原因" max_length="500" name="reason" type="string"/>
+        <element choice="3" label="请假类型" mandatory="true" max_length="40" name="leave_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="事假" sequence="3" value="personal"/>
+                <element inactive_on_update="false" label="丧假" sequence="6" value="bereavement"/>
+                <element inactive_on_update="false" label="年假" sequence="1" value="annual"/>
+                <element inactive_on_update="false" label="病假" sequence="2" value="sick"/>
+                <element inactive_on_update="false" label="婚假" sequence="4" value="marriage"/>
+                <element inactive_on_update="false" label="调休" sequence="7" value="compensatory"/>
+                <element inactive_on_update="false" label="产假" sequence="5" value="maternity"/>
+            </choice>
+        </element>
+        <element default="0" label="已销假小时数" max_length="20" name="cancelled_hours" read_only="true" read_only_option="instance_configured" type="decimal"/>
+        <element label="请假结束时间" mandatory="true" max_length="40" name="end_date" type="glide_date_time"/>
+        <element label="请假小时数" mandatory="true" max_length="20" name="leave_hours" type="decimal"/>
+    </element>
+</database>

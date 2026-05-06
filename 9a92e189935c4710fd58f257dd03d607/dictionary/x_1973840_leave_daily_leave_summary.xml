@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element active="false" db_object_id="5522ed53d71940f985f3769b42ebd14d" label="Daily Leave Summary" name="x_1973840_leave_daily_leave_summary" type="collection">
+        <element label="Original Leave Record" max_length="32" name="original_record_id" read_only="true" read_only_option="instance_configured" reference="x_1973840_leave_per_leave" type="reference"/>
+        <element label="Leave Type" max_length="50" name="leave_type" read_only="true" read_only_option="instance_configured" type="string"/>
+        <element default="1" label="Total Daily Records" max_length="40" name="total_records" read_only="true" read_only_option="instance_configured" type="integer"/>
+        <element label="Leave Reason" max_length="500" name="leave_reason" read_only="true" read_only_option="instance_configured" type="string"/>
+        <element label="Leave End Time" max_length="20" name="leave_end_time" read_only="true" read_only_option="instance_configured" type="string"/>
+        <element label="Summary Date" mandatory="true" max_length="40" name="summary_date" read_only="true" read_only_option="instance_configured" type="glide_date"/>
+        <element label="Leave End Date" max_length="40" name="leave_end_date" read_only="true" read_only_option="instance_configured" type="glide_date"/>
+        <element label="Leave Start Date" max_length="40" name="leave_start_date" read_only="true" read_only_option="instance_configured" type="glide_date"/>
+        <element label="Employee" max_length="32" name="employee_id" read_only="true" read_only_option="instance_configured" reference="sys_user" type="reference"/>
+        <element label="Leave Start Time" max_length="20" name="leave_start_time" read_only="true" read_only_option="instance_configured" type="string"/>
+        <element label="Employee Name" max_length="100" name="employee_name" read_only="true" read_only_option="instance_configured" type="string"/>
+        <element label="Approval Status" max_length="50" name="approval_status" read_only="true" read_only_option="instance_configured" type="string"/>
+        <index name="index">
+            <element name="employee_id"/>
+        </index>
+        <index name="index2">
+            <element name="original_record_id"/>
+        </index>
+    </element>
+</database>

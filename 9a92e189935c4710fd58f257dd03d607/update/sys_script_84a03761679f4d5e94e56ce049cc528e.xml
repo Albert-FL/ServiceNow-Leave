@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1973840_leave_per_leave</collection>
+        <condition/>
+        <description>Create in-app notifications using scope-allowed ServiceNow features only</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Leave Banner Notification Simple</name>
+        <order>160</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+    try {
+        // 检查审批状态是否发生变化
+        if (current.approval.changesTo('approved') || current.approval.changesTo('rejected')) {
+            
+            var applicant = current.opened_by.getRefRecord();
+            var applicantSysId = current.opened_by.toString();
+            var leaveNumber = current.number.toString();
+            var applicantName = applicant ? applicant.getDisplayValue() : 'Unknown';
+            var leaveReason = current.short_description.toString();
+            
+            if (applicantSysId) {
+                var bannerMessage = '';
+                var alertType = '';
+                
+                if (current.approval.toString() === 'approved') {
+                    bannerMessage = ']]>🎉<![CDATA[ 您的请假申请 ' + leaveNumber + ' 已获得批准！请查看邮件了解详细信息。';
+                    alertType = 'success';
+                } else if (current.approval.toString() === 'rejected') {
+                    bannerMessage = '❌ 很抱歉，您的请假申请 ' + leaveNumber + ' 已被驳回。请查看邮件了解后续步骤。';
+                    alertType = 'error';
+                }
+                
+                if (bannerMessage) {
+                    // 方法1：更新Work Notes（这个在作用域内是允许的）
+                    try {
+                        var currentWorkNotes = current.work_notes.toString();
+                        var timestamp = new GlideDateTime().getDisplayValueInternal();
+                        var newNote = '[' + timestamp + '] ' + bannerMessage;
+                        
+                        if (currentWorkNotes) {
+                            current.work_notes = currentWorkNotes + '\n' + newNote;
+                        } else {
+                            current.work_notes = newNote;
+                        }
+                        
+                        current.update();
+                        gs.info('✅ Work Notes已更新: ' + newNote);
+                        
+                    } catch (workNotesError) {
+                        gs.warn('Work Notes更新失败: ' + workNotesError.message);
+                    }
+                    
+                    // 方法2：创建用户特定的系统属性通知（这个应该是允许的）
+                    try {
+                        var timestamp = new GlideDateTime().getNumericValue();
+                        var propertyName = 'x_1973840_leave.notification.' + applicantSysId + '.' + timestamp;
+                        var notificationData = {
+                            message: bannerMessage,
+                            type: alertType,
+                            timestamp: timestamp,
+                            leave_number: leaveNumber,
+                            leave_reason: leaveReason,
+                            approval_status: current.approval.toString(),
+                            applicant_name: applicantName,
+                            read: false
+                        };
+                        
+                        gs.setProperty(propertyName, JSON.stringify(notificationData));
+                        gs.info('✅ 通知属性已设置: ' + propertyName);
+                        
+                        // 更新用户通知计数
+                        var countPropertyName = 'x_1973840_leave.notification.count.' + applicantSysId;
+                        var currentCount = parseInt(gs.getProperty(countPropertyName, '0'));
+                        gs.setProperty(countPropertyName, (currentCount + 1).toString());
+                        
+                        gs.info('✅ 用户通知计数已更新: ' + countPropertyName + ' = ' + (currentCount + 1));
+                        
+                    } catch (propertyError) {
+                        gs.error('设置通知属性失败: ' + propertyError.message);
+                    }
+                    
+                    // 方法3：触发自定义事件（作用域内事件）
+                    try {
+                        var eventName = 'x_1973840_leave.approval.notification';
+                        gs.eventQueue(eventName, current, applicantSysId, bannerMessage, alertType);
+                        gs.info('✅ 自定义事件已触发: ' + eventName);
+                        
+                    } catch (eventError) {
+                        gs.warn('触发自定义事件失败: ' + eventError.message);
+                    }
+                    
+                    gs.info('=== 页面通知处理完成 ===');
+                    gs.info('申请人: ' + applicantName + ' (' + applicantSysId + ')');
+                    gs.info('通知消息: ' + bannerMessage);
+                    gs.info('审批状态: ' + current.approval.getDisplayValue());
+                    gs.info('已避免跨作用域访问，仅使用作用域内允许的操作');
+                }
+            } else {
+                gs.warn('无法获取申请者用户ID，申请编号: ' + leaveNumber);
+            }
+        }
+    } catch (globalError) {
+        gs.error('页面通知业务规则执行出错: ' + globalError.message);
+    }
+  ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 03:38:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>84a03761679f4d5e94e56ce049cc528e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Banner Notification Simple</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_84a03761679f4d5e94e56ce049cc528e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 03:38:44</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=84a03761679f4d5e94e56ce049cc528e"/>
+</record_update>

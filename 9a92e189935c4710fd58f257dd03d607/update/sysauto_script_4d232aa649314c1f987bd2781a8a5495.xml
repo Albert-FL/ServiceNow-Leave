@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>每日销假报告生成</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month>1</run_month>
+        <run_period/>
+        <run_start>2026-04-28 07:57:20</run_start>
+        <run_time>2026-04-28 07:57:50</run_time>
+        <run_type>daily</run_type>
+        <run_weekinmonth>1</run_weekinmonth>
+        <script><![CDATA[/**
+ * 每日销假报告生成脚本
+ * 生成前一天的销假报告数据
+ */
+
+(function() {
+  try {
+    gs.info('开始生成每日销假报告...');
+    
+    // 获取昨天的日期范围
+    const yesterday = new GlideDateTime();
+    yesterday.addDaysUTC(-1);
+    const startOfDay = new GlideDateTime(yesterday);
+    startOfDay.setTime('00:00:00');
+    const endOfDay = new GlideDateTime(yesterday);
+    endOfDay.setTime('23:59:59');
+    
+    gs.info(`生成报告时间范围: ${startOfDay.getDisplayValue()} 到 ${endOfDay.getDisplayValue()}`);
+    
+    // 查找昨天获得批准的销假记录
+    const approvedCancellations = new GlideRecord('x_1973840_leave_cancellation');
+    approvedCancellations.addQuery('approval_status', 'approved');
+    approvedCancellations.addQuery('sys_updated_on', '>=', startOfDay);
+    approvedCancellations.addQuery('sys_updated_on', '<=', endOfDay);
+    approvedCancellations.query();
+    
+    let reportCount = 0;
+    
+    while (approvedCancellations.next()) {
+      // 检查是否已经有相同的报告记录
+      const existingReport = new GlideRecord('x_1973840_leave_cancellation_report');
+      existingReport.addQuery('cancellation_record', approvedCancellations.sys_id);
+      existingReport.addQuery('report_date', startOfDay.getDate());
+      existingReport.query();
+      
+      if (!existingReport.hasNext()) {
+        // 获取员工当前的年假余额
+        const currentYear = new Date().getFullYear();
+        const annualLeaveRecord = new GlideRecord('x_1973840_leave_employee_annual_leave');
+        annualLeaveRecord.addQuery('employee', approvedCancellations.caller_id);
+        annualLeaveRecord.addQuery('year', currentYear);
+        annualLeaveRecord.addQuery('active', true);
+        annualLeaveRecord.query();
+        
+        let remainingAnnualLeave = 0;
+        if (annualLeaveRecord.next()) {
+          remainingAnnualLeave = annualLeaveRecord.remaining_hours || 0;
+        }
+        
+        // 创建报告记录
+        const report = new GlideRecord('x_1973840_leave_cancellation_report');
+        report.initialize();
+        report.report_date = yesterday.getDate();
+        report.employee = approvedCancellations.caller_id;
+        report.cancellation_record = approvedCancellations.sys_id;
+        report.cancel_hours = approvedCancellations.cancel_hours || 0;
+        report.annual_leave_deducted = approvedCancellations.annual_leave_deducted || 0;
+        report.remaining_annual_leave = remainingAnnualLeave;
+        report.auto_generated = true;
+        
+        if (report.insert()) {
+          reportCount++;
+          gs.info(`为员工 ${approvedCancellations.caller_id.getDisplayValue()} 创建销假报告，销假记录: ${approvedCancellations.number}`);
+        } else {
+          gs.error(`创建销假报告失败，销假记录: ${approvedCancellations.number}`);
+        }
+      } else {
+        gs.debug(`销假报告已存在，跳过记录: ${approvedCancellations.number}`);
+      }
+    }
+    
+    gs.info(`每日销假报告生成完成，共生成 ${reportCount} 条报告记录`);
+    
+    // 清理30天前的旧报告（可选）
+    const thirtyDaysAgo = new GlideDateTime();
+    thirtyDaysAgo.addDaysUTC(-30);
+    
+    const oldReports = new GlideRecord('x_1973840_leave_cancellation_report');
+    oldReports.addQuery('report_date', '<', thirtyDaysAgo.getDate());
+    oldReports.addQuery('auto_generated', true);
+    oldReports.query();
+    
+    let cleanupCount = 0;
+    while (oldReports.next()) {
+      if (oldReports.deleteRecord()) {
+        cleanupCount++;
+      }
+    }
+    
+    if (cleanupCount > 0) {
+      gs.info(`清理了 ${cleanupCount} 条30天前的旧报告记录`);
+    }
+    
+  } catch (e) {
+    gs.error(`每日销假报告生成失败: ${e.message}`);
+    gs.error(`错误详情: ${e.stack}`);
+  }
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:50</sys_created_on>
+        <sys_id>4d232aa649314c1f987bd2781a8a5495</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>每日销假报告生成</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sysauto_script_4d232aa649314c1f987bd2781a8a5495</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:50</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

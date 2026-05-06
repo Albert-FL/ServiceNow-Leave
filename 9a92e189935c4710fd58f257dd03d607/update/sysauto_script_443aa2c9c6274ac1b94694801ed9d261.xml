@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time>1970-01-01 23:30:00</entered_time>
+        <max_drift/>
+        <name>Daily Leave Summary Generator</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month>1</run_month>
+        <run_period/>
+        <run_start>2026-04-28 03:27:53</run_start>
+        <run_time>1970-01-01 23:30:00</run_time>
+        <run_type>daily</run_type>
+        <run_weekinmonth>1</run_weekinmonth>
+        <script><![CDATA[(function() {
+    try {
+        gs.info('Starting daily leave summary generation...');
+        
+        // Get yesterday's date
+        var yesterday = new GlideDateTime();
+        yesterday.addDaysLocalTime(-1);
+        var targetDate = yesterday.getDate().toString();
+        
+        // Query leave records for yesterday
+        var leaveRecords = new GlideRecord('x_1973840_leave_per_leave');
+        leaveRecords.addQuery('leave_date_start', '<=', targetDate);
+        leaveRecords.addQuery('leave_date_end', '>=', targetDate);
+        leaveRecords.addQuery('active', true);
+        leaveRecords.query();
+        
+        var summaryCount = 0;
+        
+        gs.info('Found ' + leaveRecords.getRowCount() + ' leave records for date: ' + targetDate);
+        
+        while (leaveRecords.next()) {
+            try {
+                // Get employee information
+                var employee = leaveRecords.opened_by.getRefRecord();
+                var employeeName = employee ? employee.getDisplayValue() : 'Unknown Employee';
+                
+                // Map leave type from choice field
+                var leaveTypeDisplay = leaveRecords.leave_type.getDisplayValue() || 'Unknown Type';
+                
+                // Map approval status  
+                var approvalStatus = leaveRecords.approval.getDisplayValue() || 'Not Set';
+                
+                gs.info('Processing record: ' + leaveRecords.number + ' for employee: ' + employeeName);
+                
+                // Check if summary already exists for this record and date
+                var existingSummary = new GlideRecord('x_1973840_leave_daily_leave_summary');
+                existingSummary.addQuery('summary_date', targetDate);
+                existingSummary.addQuery('original_record_id', leaveRecords.sys_id.toString());
+                existingSummary.query();
+                
+                if (!existingSummary.hasNext()) {
+                    // Create new summary record
+                    var summary = new GlideRecord('x_1973840_leave_daily_leave_summary');
+                    summary.initialize();
+                    
+                    summary.summary_date = targetDate;
+                    summary.employee_name = employeeName;
+                    summary.employee_id = leaveRecords.opened_by.toString();
+                    summary.leave_start_date = leaveRecords.leave_date_start.toString();
+                    summary.leave_end_date = leaveRecords.leave_date_end.toString();
+                    summary.leave_start_time = leaveRecords.leave_time_start.getDisplayValue() || '';
+                    summary.leave_end_time = leaveRecords.leave_time_end.getDisplayValue() || '';
+                    summary.leave_reason = leaveRecords.short_description.toString();
+                    summary.leave_type = leaveTypeDisplay;
+                    summary.approval_status = approvalStatus;
+                    summary.original_record_id = leaveRecords.sys_id.toString();
+                    
+                    var insertedId = summary.insert();
+                    if (insertedId) {
+                        summaryCount++;
+                        gs.info('Created summary record for employee: ' + employeeName + 
+                               ', Record ID: ' + insertedId + ', Leave: ' + leaveRecords.short_description);
+                    } else {
+                        gs.warn('Failed to create summary for leave record: ' + leaveRecords.number);
+                    }
+                } else {
+                    gs.info('Summary already exists for leave record: ' + leaveRecords.number + 
+                           ' on date: ' + targetDate);
+                }
+                
+            } catch (recordError) {
+                gs.error('Error processing leave record ' + leaveRecords.number + 
+                        ': ' + recordError.message);
+            }
+        }
+        
+        gs.info('Daily leave summary generation completed for ' + targetDate + '. Created ' + summaryCount + 
+               ' new summary records.');
+               
+    } catch (globalError) {
+        gs.error('Error in daily leave summary script: ' + globalError.message);
+    }
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 01:35:09</sys_created_on>
+        <sys_id>443aa2c9c6274ac1b94694801ed9d261</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Daily Leave Summary Generator</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sysauto_script_443aa2c9c6274ac1b94694801ed9d261</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 01:35:09</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Apply custom colors to VTB lanes based on approval status</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>VTB Lane Color Styling</name>
+        <order/>
+        <script><![CDATA[
+    function onLoad() {
+        // 等待VTB界面加载完成
+        setTimeout(function() {
+            applyLaneColors();
+            
+            // 监听VTB界面的动态变化
+            if (window.MutationObserver) {
+                var observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (mutation.addedNodes.length > 0) {
+                            applyLaneColors();
+                        }
+                    });
+                });
+                
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            }
+        }, 1000);
+    }
+
+    function applyLaneColors() {
+        try {
+            // 插入CSS样式到页面
+            var style = document.getElementById('vtb-lane-colors');
+            if (!style) {
+                style = document.createElement('style');
+                style.id = 'vtb-lane-colors';
+                style.textContent = `
+                    /* VTB Lane颜色样式 - 请假审批 */
+                    .vtb-lane:contains("]]>🕐<![CDATA[ 待审批"),
+                    .kanban-lane:contains("]]>🕐<![CDATA[ 待审批"),
+                    .lane-title:contains("待审批") {
+                        background-color: #FFEB99 !important;
+                        border-top: 4px solid #E6CC00 !important;
+                    }
+                    
+                    .vtb-lane:contains("]]>🔄<![CDATA[ 审批中"),
+                    .kanban-lane:contains("]]>🔄<![CDATA[ 审批中"),
+                    .lane-title:contains("审批中") {
+                        background-color: #B3D9FF !important;
+                        border-top: 4px solid #0066CC !important;
+                    }
+                    
+                    .vtb-lane:contains("✅ 已批准"),
+                    .kanban-lane:contains("✅ 已批准"),
+                    .lane-title:contains("已批准") {
+                        background-color: #CCFFCC !important;
+                        border-top: 4px solid #00CC00 !important;
+                    }
+                    
+                    .vtb-lane:contains("❌ 已拒绝"),
+                    .kanban-lane:contains("❌ 已拒绝"),
+                    .lane-title:contains("已拒绝") {
+                        background-color: #FFCCCC !important;
+                        border-top: 4px solid #CC0000 !important;
+                    }
+                    
+                    .vtb-card, .kanban-card {
+                        border-radius: 8px !important;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+                        margin: 8px !important;
+                        transition: all 0.3s ease !important;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            // 直接为元素应用颜色样式
+            var laneColors = {
+                '待审批': '#FFEB99',
+                '审批中': '#B3D9FF', 
+                '已批准': '#CCFFCC',
+                '已拒绝': '#FFCCCC'
+            };
+            
+            // 查找并应用样式到所有可能的VTB元素
+            setTimeout(function() {
+                var allElements = document.querySelectorAll('*');
+                allElements.forEach(function(element) {
+                    var text = element.textContent || element.innerText || '';
+                    
+                    Object.keys(laneColors).forEach(function(statusName) {
+                        if (text.includes(statusName) && element.className.includes('lane')) {
+                            element.style.backgroundColor = laneColors[statusName];
+                        }
+                    });
+                });
+            }, 500);
+            
+            console.log('VTB Lane颜色样式已应用');
+            
+        } catch (error) {
+            console.error('应用VTB颜色样式时出错:', error);
+        }
+    }
+  ]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:01:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f1121fc344f84b02b19f66d98f4a6248</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>VTB Lane Color Styling</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_client_f1121fc344f84b02b19f66d98f4a6248</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:01:23</sys_updated_on>
+        <table>vtb_board</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

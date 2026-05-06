@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_1973840_leave_per_leave</collection>
+        <condition table="x_1973840_leave_per_leave">approval=rejected<item display_value="Rejected" endquery="false" field="approval" goto="false" newquery="false" operator="=" or="false" value="rejected"/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_digest>false</default_digest>
+        <default_interval/>
+        <description>Notifies applicant when leave request is rejected via email and push notification</description>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[--------------------------------------------------------------------------------
+]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digest_type>single</digest_type>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name/>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from>noreply@company.com</from>
+        <generation_type>engine</generation_type>
+        <importance>high</importance>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="background-color: #f44336; color: white; padding: 20px; border-radius: 8px 8px 0 0; text-align: center;">
+          <h1 style="margin: 0; font-size: 24px;">❌ 请假申请已被驳回</h1>
+        </div>
+        <div style="background-color: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px;">
+          <p style="font-size: 16px; margin-bottom: 20px;">尊敬的 ${opened_by.name}，</p>
+          <div style="background-color: #ffebee; padding: 20px; border-radius: 8px; border-left: 4px solid #f44336; margin: 20px 0;">
+            <p style="margin: 0; font-size: 16px; color: #c62828;">很抱歉，您的请假申请已被驳回。</p>
+          </div>
+          <div style="background-color: white; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0;">
+            <h3 style="color: #333; margin-top: 0;">申请详情：</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-weight: bold; width: 30%;">申请编号：</td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">${number}</td></tr>
+              <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-weight: bold;">请假理由：</td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">${short_description}</td></tr>
+              <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-weight: bold;">请假日期：</td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">${leave_date_start} 至 ${leave_date_end}</td></tr>
+              <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-weight: bold;">请假时间：</td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">${leave_time_start} - ${leave_time_end}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">审批状态：</td><td style="padding: 8px 0;"><span style="color: #f44336; font-weight: bold;">${approval}</span></td></tr>
+            </table>
+          </div>
+          <div style="background-color: #e3f2fd; padding: 15px; border-radius: 8px; border-left: 4px solid #2196F3; margin: 20px 0;">
+            <p style="margin: 0; font-size: 14px;"><strong>]]>💡<![CDATA[ 下一步行动：</strong><br>• 如对驳回决定有疑问，请联系您的直属上级了解具体原因<br>• 您可以根据反馈意见修改后重新提交申请<br>• 如需紧急请假，请联系人力资源部门寻求替代方案</p>
+          </div>
+          <div style="background-color: #fff3cd; padding: 15px; border-radius: 8px; border-left: 4px solid #ffc107; margin: 20px 0;">
+            <p style="margin: 0; font-size: 14px;"><strong>]]>📞<![CDATA[ 联系方式：</strong><br>• 直属上级：请查看组织架构<br>• 人力资源部：hr@company.com<br>• 紧急联系：请拨打内部热线 8888</p>
+          </div>
+          <div style="background-color: #e8f5e8; padding: 15px; border-radius: 8px; border-left: 4px solid #4CAF50; margin: 20px 0;">
+            <p style="margin: 0; font-size: 14px;"><strong>]]>📱<![CDATA[ 通知提醒：</strong><br>• 您已收到推送通知，方便即时查看审批结果<br>• 此邮件包含完整的申请信息和后续指导<br>• 建议保存此邮件以备后续参考</p>
+          </div>
+          <p style="font-size: 16px; margin-top: 20px;">感谢您的理解与配合。</p>
+          <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;">
+          <p style="font-size: 12px; color: #666; text-align: center; margin: 0;">此邮件为系统自动发送，请勿直接回复。如有疑问，请联系 HR 部门。</p>
+        </div>
+      </div>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Leave Request Rejected Notification</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>opened_by</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>hr@company.com</reply_to>
+        <send_self>false</send_self>
+        <sms_alternate><![CDATA[❌ 请假申请已被驳回 - ${number}。请查看邮件了解详情和后续步骤。]]></sms_alternate>
+        <style/>
+        <subject>请假申请已被驳回 - ${number}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 02:56:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>35d1bd5618d64f6a8049ccdaedbe1611</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Request Rejected Notification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sysevent_email_action_35d1bd5618d64f6a8049ccdaedbe1611</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 02:56:37</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

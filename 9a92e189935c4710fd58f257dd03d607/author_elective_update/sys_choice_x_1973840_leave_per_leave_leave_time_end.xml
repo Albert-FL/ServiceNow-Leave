@@ -26,13 +26,32 @@
             <sequence>0</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-04-16 07:02:43</sys_created_on>
+            <sys_created_on>2026-04-27 01:41:17</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-04-16 07:02:43</sys_updated_on>
-            <value>09:00:00</value>
+            <sys_updated_on>2026-04-27 01:41:17</sys_updated_on>
+            <value>00</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>leave_time_end</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>09:30</label>
+            <language>en</language>
+            <name>x_1973840_leave_per_leave</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-27 01:41:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-27 01:41:17</sys_updated_on>
+            <value>30</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -42,16 +61,73 @@
             <label>10:00</label>
             <language>en</language>
             <name>x_1973840_leave_per_leave</name>
-            <sequence>1</sequence>
+            <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-04-16 07:02:43</sys_created_on>
+            <sys_created_on>2026-04-27 01:43:55</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-04-16 07:02:43</sys_updated_on>
-            <value>10:00:00</value>
+            <sys_updated_on>2026-04-27 01:43:55</sys_updated_on>
+            <value>1000</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>leave_time_end</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>10:30</label>
+            <language>en</language>
+            <name>x_1973840_leave_per_leave</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-27 01:43:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-27 01:43:55</sys_updated_on>
+            <value>10:30</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>leave_time_end</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>11:00</label>
+            <language>en</language>
+            <name>x_1973840_leave_per_leave</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-27 01:43:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-27 01:43:55</sys_updated_on>
+            <value>11:00</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>leave_time_end</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>12:00</label>
+            <language>en</language>
+            <name>x_1973840_leave_per_leave</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-27 01:43:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-27 01:43:55</sys_updated_on>
+            <value>12:00</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -61,16 +137,35 @@
             <label>13:00</label>
             <language>en</language>
             <name>x_1973840_leave_per_leave</name>
-            <sequence>2</sequence>
+            <sequence>6</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-04-16 07:02:43</sys_created_on>
+            <sys_created_on>2026-04-27 01:43:55</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-04-16 07:02:43</sys_updated_on>
-            <value>13:00:00</value>
+            <sys_updated_on>2026-04-27 01:43:55</sys_updated_on>
+            <value>13:00</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>leave_time_end</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>13:30</label>
+            <language>en</language>
+            <name>x_1973840_leave_per_leave</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-27 01:43:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-27 01:43:55</sys_updated_on>
+            <value>13:30</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -80,16 +175,35 @@
             <label>14:00</label>
             <language>en</language>
             <name>x_1973840_leave_per_leave</name>
-            <sequence>3</sequence>
+            <sequence>8</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-04-16 07:02:43</sys_created_on>
+            <sys_created_on>2026-04-27 01:43:55</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-04-16 07:02:43</sys_updated_on>
-            <value>14:00:00</value>
+            <sys_updated_on>2026-04-27 01:43:55</sys_updated_on>
+            <value>14:00</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>leave_time_end</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>14:30</label>
+            <language>en</language>
+            <name>x_1973840_leave_per_leave</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-27 01:43:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-27 01:43:55</sys_updated_on>
+            <value>14:30</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -99,16 +213,35 @@
             <label>15:00</label>
             <language>en</language>
             <name>x_1973840_leave_per_leave</name>
-            <sequence>4</sequence>
+            <sequence>10</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-04-16 07:02:44</sys_created_on>
+            <sys_created_on>2026-04-27 01:43:56</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-04-16 07:02:44</sys_updated_on>
-            <value>15:00:00</value>
+            <sys_updated_on>2026-04-27 01:43:56</sys_updated_on>
+            <value>15:00</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>leave_time_end</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16:00</label>
+            <language>en</language>
+            <name>x_1973840_leave_per_leave</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-27 01:43:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-04-27 01:43:56</sys_updated_on>
+            <value>16:00</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -118,16 +251,16 @@
             <label>17:00</label>
             <language>en</language>
             <name>x_1973840_leave_per_leave</name>
-            <sequence>5</sequence>
+            <sequence>12</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-04-16 07:02:44</sys_created_on>
+            <sys_created_on>2026-04-27 01:43:56</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-04-16 07:02:44</sys_updated_on>
-            <value>17:00:00</value>
+            <sys_updated_on>2026-04-27 01:43:56</sys_updated_on>
+            <value>17:00</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -137,16 +270,16 @@
             <label>17:30</label>
             <language>en</language>
             <name>x_1973840_leave_per_leave</name>
-            <sequence>6</sequence>
+            <sequence>13</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-04-16 07:02:44</sys_created_on>
+            <sys_created_on>2026-04-27 01:43:56</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-04-16 07:02:44</sys_updated_on>
-            <value>17:30:00</value>
+            <sys_updated_on>2026-04-27 01:43:56</sys_updated_on>
+            <value>17:30</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -156,16 +289,16 @@
             <label>18:00</label>
             <language>en</language>
             <name>x_1973840_leave_per_leave</name>
-            <sequence>7</sequence>
+            <sequence>14</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-04-16 07:02:44</sys_created_on>
+            <sys_created_on>2026-04-27 01:43:56</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-04-16 07:02:44</sys_updated_on>
-            <value>18:00:00</value>
+            <sys_updated_on>2026-04-27 01:43:56</sys_updated_on>
+            <value>18:00</value>
         </sys_choice>
     </sys_choice>
 </record_update>

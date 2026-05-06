@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1973840_leave_per_leave</collection>
+        <condition/>
+        <description>Send real-time notifications for leave approval status changes using available ServiceNow notification methods</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Leave Notification Rule</name>
+        <order>150</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+    try {
+        // 检查审批状态是否发生变化
+        if (current.approval.changesTo('approved') || current.approval.changesTo('rejected')) {
+            
+            var applicant = current.opened_by.getRefRecord();
+            var applicantSysId = current.opened_by.toString();
+            var leaveNumber = current.number.toString();
+            var approvalStatus = current.approval.getDisplayValue();
+            var leaveReason = current.short_description.toString();
+            var applicantName = applicant ? applicant.getDisplayValue() : 'Unknown';
+            
+            if (applicantSysId && applicant) {
+                var notificationMessage = '';
+                
+                if (current.approval.toString() === 'approved') {
+                    notificationMessage = ']]>🎉<![CDATA[ 您的请假申请 ' + leaveNumber + ' 已获得批准！';
+                } else if (current.approval.toString() === 'rejected') {
+                    notificationMessage = '❌ 很抱歉，您的请假申请 ' + leaveNumber + ' 已被驳回。';
+                }
+                
+                if (notificationMessage) {
+                    try {
+                        gs.info('=== 实时通知调试信息 ===');
+                        gs.info('申请编号: ' + leaveNumber);
+                        gs.info('申请人: ' + applicantName + ' (' + applicantSysId + ')');
+                        gs.info('审批状态: ' + approvalStatus);
+                        gs.info('通知内容: ' + notificationMessage);
+                        
+                        // 方法1：创建用户通知记录（在用户登录时显示）
+                        var userNotification = new GlideRecord('sys_user_notification');
+                        userNotification.initialize();
+                        userNotification.user = applicantSysId;
+                        userNotification.message = notificationMessage;
+                        userNotification.type = 'info';
+                        userNotification.source = 'Leave Management System';
+                        userNotification.source_table = 'x_1973840_leave_per_leave';
+                        userNotification.source_id = current.sys_id.toString();
+                        
+                        var notificationId = userNotification.insert();
+                        if (notificationId) {
+                            gs.info('用户通知已创建: ' + notificationId);
+                        } else {
+                            gs.error('创建用户通知失败');
+                        }
+                        
+                        // 方法2：创建Connect消息（如果用户使用Connect）
+                        try {
+                            var connectMsg = new GlideRecord('live_message');
+                            connectMsg.initialize();
+                            connectMsg.message = notificationMessage;
+                            connectMsg.profile = applicantSysId; 
+                            connectMsg.type = 'system_notification';
+                            connectMsg.group = 'leave_notifications';
+                            
+                            var connectId = connectMsg.insert();
+                            if (connectId) {
+                                gs.info('Connect消息已创建: ' + connectId);
+                            } else {
+                                gs.info('Connect消息创建失败或不支持');
+                            }
+                        } catch (connectError) {
+                            gs.info('Connect功能不可用: ' + connectError.message);
+                        }
+                        
+                        // 方法3：触发浏览器通知事件
+                        var eventName = 'x_1973840_leave.browser.notification';
+                        gs.eventQueue(eventName, current, applicantSysId, notificationMessage, 'leave_approval');
+                        gs.info('浏览器通知事件已触发: ' + eventName);
+                        
+                    } catch (notificationError) {
+                        gs.error('创建通知时出错: ' + notificationError.message);
+                    }
+                }
+            } else {
+                gs.warn('无法获取申请者信息，申请编号: ' + leaveNumber);
+            }
+        }
+    } catch (globalError) {
+        gs.error('通知业务规则执行出错: ' + globalError.message);
+    }
+  ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 03:48:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fd6ddf333ff04a1089f511af725720f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Leave Notification Rule</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_fd6ddf333ff04a1089f511af725720f3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 03:48:34</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=fd6ddf333ff04a1089f511af725720f3"/>
+</record_update>
