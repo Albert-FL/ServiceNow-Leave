@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script">
+  <sys_script action="DELETE">
+    <sys_id>21112405f8be42cab8cd60d99db0bdeb</sys_id>
+    <sys_scope display_value="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+    <sys_update_name>sys_script_21112405f8be42cab8cd60d99db0bdeb</sys_update_name>
+    <abort_action>false</abort_action>
+    <access>package_private</access>
+    <action_delete>false</action_delete>
+    <action_insert>false</action_insert>
+    <action_query>false</action_query>
+    <action_update>true</action_update>
+    <active>true</active>
+    <add_message>false</add_message>
+    <advanced>true</advanced>
+    <change_fields>false</change_fields>
+    <client_callable>false</client_callable>
+    <collection>x_1973840_leave_cancellation</collection>
+    <condition>current.approval_status.changesTo('approved')</condition>
+    <description/>
+    <execute_function>false</execute_function>
+    <filter_condition/>
+    <is_rest>false</is_rest>
+    <message/>
+    <name>销假申请审批处理</name>
+    <order>100</order>
+    <priority>100</priority>
+    <rest_method/>
+    <rest_method_text/>
+    <rest_service/>
+    <rest_service_text/>
+    <rest_variables/>
+    <role_conditions/>
+    <script><![CDATA[
+    try {
+      // 更新原请假记录
+      var leaveRecord = new GlideRecord('x_1973840_leave_request');
+      if (leaveRecord.get(current.original_leave_request)) {
+        var newCancelledHours = parseFloat(leaveRecord.cancelled_hours || 0) + parseFloat(current.cancel_hours);
+        leaveRecord.cancelled_hours = newCancelledHours;
+        leaveRecord.remaining_hours = parseFloat(leaveRecord.leave_hours) - newCancelledHours;
+        leaveRecord.update();
+      }
+      
+      // 如果是年假类型，扣除年假额度
+      if (leaveRecord.leave_type == 'annual') {
+        var currentYear = new Date().getFullYear();
+        
+        // 查找员工当年的年假记录
+        var annualLeaveRecord = new GlideRecord('x_1973840_leave_employee_annual_leave');
+        annualLeaveRecord.addQuery('employee', current.caller_id);
+        annualLeaveRecord.addQuery('year', currentYear);
+        annualLeaveRecord.addQuery('active', true);
+        annualLeaveRecord.query();
+        
+        if (annualLeaveRecord.next()) {
+          var newUsedHours = parseFloat(annualLeaveRecord.used_hours || 0) + parseFloat(current.cancel_hours);
+          var remainingHours = parseFloat(annualLeaveRecord.total_hours) - newUsedHours;
+          
+          if (remainingHours < 0) {
+            gs.warn('员工年假不足！当前剩余: ' + annualLeaveRecord.remaining_hours + '小时，需要扣除: ' + current.cancel_hours + '小时');
+          }
+          
+          annualLeaveRecord.used_hours = newUsedHours;
+          annualLeaveRecord.remaining_hours = remainingHours;
+          annualLeaveRecord.update();
+          
+          // 更新销假记录的扣除信息
+          current.annual_leave_deducted = current.cancel_hours;
+          current.deduction_processed = true;
+        }
+      }
+      
+      gs.info('销假申请 ' + current.number + ' 已获批准，年假已扣除');
+    } catch (e) {
+      gs.error('处理销假批准时发生错误: ' + e.message);
+    }
+  ]]></script>
+    <sys_policy/>
+    <template/>
+    <when>after</when>
+  </sys_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_script_21112405f8be42cab8cd60d99db0bdeb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script"&gt;
+  &lt;sys_script action="INSERT_OR_UPDATE"&gt;
+    &lt;sys_id&gt;21112405f8be42cab8cd60d99db0bdeb&lt;/sys_id&gt;
+    &lt;sys_scope display_value="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;
+    &lt;sys_update_name&gt;sys_script_21112405f8be42cab8cd60d99db0bdeb&lt;/sys_update_name&gt;
+    &lt;abort_action&gt;false&lt;/abort_action&gt;
+    &lt;access&gt;package_private&lt;/access&gt;
+    &lt;action_delete&gt;false&lt;/action_delete&gt;
+    &lt;action_insert&gt;false&lt;/action_insert&gt;
+    &lt;action_query&gt;false&lt;/action_query&gt;
+    &lt;action_update&gt;true&lt;/action_update&gt;
+    &lt;active&gt;true&lt;/active&gt;
+    &lt;add_message&gt;false&lt;/add_message&gt;
+    &lt;advanced&gt;true&lt;/advanced&gt;
+    &lt;change_fields&gt;false&lt;/change_fields&gt;
+    &lt;client_callable&gt;false&lt;/client_callable&gt;
+    &lt;collection&gt;x_1973840_leave_cancellation&lt;/collection&gt;
+    &lt;condition&gt;current.approval_status.changesTo('approved')&lt;/condition&gt;
+    &lt;description/&gt;
+    &lt;execute_function&gt;false&lt;/execute_function&gt;
+    &lt;filter_condition/&gt;
+    &lt;is_rest&gt;false&lt;/is_rest&gt;
+    &lt;message/&gt;
+    &lt;name&gt;销假申请审批处理&lt;/name&gt;
+    &lt;order&gt;100&lt;/order&gt;
+    &lt;priority&gt;100&lt;/priority&gt;
+    &lt;rest_method/&gt;
+    &lt;rest_method_text/&gt;
+    &lt;rest_service/&gt;
+    &lt;rest_service_text/&gt;
+    &lt;rest_variables/&gt;
+    &lt;role_conditions/&gt;
+    &lt;script&gt;&lt;![CDATA[
+    try {
+      // 更新原请假记录
+      var leaveRecord = new GlideRecord('x_1973840_leave_request');
+      if (leaveRecord.get(current.original_leave_request)) {
+        var newCancelledHours = parseFloat(leaveRecord.cancelled_hours || 0) + parseFloat(current.cancel_hours);
+        leaveRecord.cancelled_hours = newCancelledHours;
+        leaveRecord.remaining_hours = parseFloat(leaveRecord.leave_hours) - newCancelledHours;
+        leaveRecord.update();
+      }
+      
+      // 如果是年假类型，扣除年假额度
+      if (leaveRecord.leave_type == 'annual') {
+        var currentYear = new Date().getFullYear();
+        
+        // 查找员工当年的年假记录
+        var annualLeaveRecord = new GlideRecord('x_1973840_leave_employee_annual_leave');
+        annualLeaveRecord.addQuery('employee', current.caller_id);
+        annualLeaveRecord.addQuery('year', currentYear);
+        annualLeaveRecord.addQuery('active', true);
+        annualLeaveRecord.query();
+        
+        if (annualLeaveRecord.next()) {
+          var newUsedHours = parseFloat(annualLeaveRecord.used_hours || 0) + parseFloat(current.cancel_hours);
+          var remainingHours = parseFloat(annualLeaveRecord.total_hours) - newUsedHours;
+          
+          if (remainingHours &lt; 0) {
+            gs.warn('员工年假不足！当前剩余: ' + annualLeaveRecord.remaining_hours + '小时，需要扣除: ' + current.cancel_hours + '小时');
+          }
+          
+          annualLeaveRecord.used_hours = newUsedHours;
+          annualLeaveRecord.remaining_hours = remainingHours;
+          annualLeaveRecord.update();
+          
+          // 更新销假记录的扣除信息
+          current.annual_leave_deducted = current.cancel_hours;
+          current.deduction_processed = true;
+        }
+      }
+      
+      gs.info('销假申请 ' + current.number + ' 已获批准，年假已扣除');
+    } catch (e) {
+      gs.error('处理销假批准时发生错误: ' + e.message);
+    }
+  ]]&gt;&lt;/script&gt;
+    &lt;sys_policy/&gt;
+    &lt;template/&gt;
+    &lt;when&gt;after&lt;/when&gt;
+  &lt;/sys_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>2017565719</payload_hash>
+        <record_name>销假申请审批处理</record_name>
+        <reverted_from/>
+        <source>081ec095932c0310fd58f257dd03d602</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:47</sys_created_on>
+        <sys_id>bb1e8895932c0310fd58f257dd03d603</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19dd31823e70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:47</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>f71e8895cd2c03105aa69081a0552302</update_guid>
+        <update_guid_history>f71e8895cd2c03105aa69081a0552302:2017565719</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 08:17:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>5f6a6ca0e54b4262b8a6c3d257667b64</sys_id>
+        <sys_metadata>21112405f8be42cab8cd60d99db0bdeb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>销假申请审批处理</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent display_value="">68d9a33762a142598e1b0e620cc6e102</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_script_21112405f8be42cab8cd60d99db0bdeb</sys_update_name>
+        <sys_update_version display_value="sys_script_21112405f8be42cab8cd60d99db0bdeb">bb1e8895932c0310fd58f257dd03d603</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 08:17:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

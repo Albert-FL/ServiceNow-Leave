@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="销假申请表" section_id="2c5f4859932c0310fd58f257dd03d68a" sys_domain="global" table="x_1973840_leave_cancellation" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>leave_num</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>1b37fdd593700310fd58f257dd03d639</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>leave_num.leave_date_start</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>d337fdd593700310fd58f257dd03d63a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>leave_num.leave_time_start</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>9f37fdd593700310fd58f257dd03d63a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>leave_num.leave_hour</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>5b37fdd593700310fd58f257dd03d63b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cancel_start_date</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>1737fdd593700310fd58f257dd03d63c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cancel_hours</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>df37fdd593700310fd58f257dd03d63c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cancel_reason</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>9b37fdd593700310fd58f257dd03d63d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>5737fdd593700310fd58f257dd03d63e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>approval_status</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>1337fdd593700310fd58f257dd03d63f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>leave_num.leave_date_end</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>db37fdd593700310fd58f257dd03d63f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>leave_num.leave_time_end</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>9737fdd593700310fd58f257dd03d640</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>leave_num.leave_type</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>5337fdd593700310fd58f257dd03d641</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cancel_end_date</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>1f37fdd593700310fd58f257dd03d641</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cancel_type</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>d737fdd593700310fd58f257dd03d642</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>9337fdd593700310fd58f257dd03d643</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>15</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+            <sys_id>5f37fdd593700310fd58f257dd03d643</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>销假申请表</caption>
+            <header>false</header>
+            <name>x_1973840_leave_cancellation</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-04-28 08:03:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2c5f4859932c0310fd58f257dd03d68a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_1973840_leave_cancellation</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+            <sys_update_name>sys_ui_section_2c5f4859932c0310fd58f257dd03d68a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-07 09:11:21</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_ui_section_2c5f4859932c0310fd58f257dd03d68a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="销假申请表" section_id="2c5f4859932c0310fd58f257dd03d68a" sys_domain="global" table="x_1973840_leave_cancellation" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>leave_num</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>1b37fdd593700310fd58f257dd03d639</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>leave_num.leave_date_start</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>d337fdd593700310fd58f257dd03d63a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>leave_num.leave_time_start</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>9f37fdd593700310fd58f257dd03d63a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>leave_num.leave_hour</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>5b37fdd593700310fd58f257dd03d63b</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>cancel_start_date</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>1737fdd593700310fd58f257dd03d63c</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>cancel_hours</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>df37fdd593700310fd58f257dd03d63c</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>cancel_reason</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>9b37fdd593700310fd58f257dd03d63d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>7</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>5737fdd593700310fd58f257dd03d63e</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>approval_status</element><position>8</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>1337fdd593700310fd58f257dd03d63f</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>leave_num.leave_date_end</element><position>9</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>db37fdd593700310fd58f257dd03d63f</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>leave_num.leave_time_end</element><position>10</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>9737fdd593700310fd58f257dd03d640</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>leave_num.leave_type</element><position>11</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>5337fdd593700310fd58f257dd03d641</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>cancel_end_date</element><position>12</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>1f37fdd593700310fd58f257dd03d641</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>cancel_type</element><position>13</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>d737fdd593700310fd58f257dd03d642</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.end_split</element><position>14</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>9337fdd593700310fd58f257dd03d643</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type>.end_split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>work_notes</element><position>15</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-05-11 01:52:45</sys_created_on><sys_id>5f37fdd593700310fd58f257dd03d643</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="销假申请表" display_value="销假申请表" name="x_1973840_leave_cancellation" sys_domain="global" view="Default view">2c5f4859932c0310fd58f257dd03d68a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-11 01:52:45</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>销假申请表</caption><header>false</header><name>x_1973840_leave_cancellation</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-04-28 08:03:01</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>2c5f4859932c0310fd58f257dd03d68a</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_1973840_leave_cancellation</sys_name><sys_overrides/><sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package><sys_policy/><sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope><sys_update_name>sys_ui_section_2c5f4859932c0310fd58f257dd03d68a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-05-07 09:11:21</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>1331202088</payload_hash>
+        <record_name>销假申请</record_name>
+        <reverted_from/>
+        <source>7c3b7c1393980310fd58f257dd03d6e3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 01:52:45</sys_created_on>
+        <sys_id>1737fdd593700310fd58f257dd03d649</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e14bc9af80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 01:52:45</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>1737fdd5477003109efa079c470f9548</update_guid>
+        <update_guid_history>1737fdd5477003109efa079c470f9548:1331202088,da273dd593700310aa34b58e33ab133f:-856749129,16353dd1ad700310225ad637c76bb26d:-719799082,131539d17b70031069fb2cccb92cabcd:-51972829,99457a4c4674c310ad12c2e352dc5c0d:1345597788,01453a4cc974c310ee069f47295731d7:-1093189337</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 08:17:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>57112891077c455ea6ad59c30e707f04</sys_id>
+        <sys_metadata>2c5f4859932c0310fd58f257dd03d68a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>销假申请表</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent display_value="">68d9a33762a142598e1b0e620cc6e102</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_ui_section_2c5f4859932c0310fd58f257dd03d68a</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_2c5f4859932c0310fd58f257dd03d68a">1737fdd593700310fd58f257dd03d649</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 08:17:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

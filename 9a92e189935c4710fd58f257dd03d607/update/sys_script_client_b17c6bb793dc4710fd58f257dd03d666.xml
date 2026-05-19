@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description/>
@@ -10,38 +10,25 @@
         <messages/>
         <name>合并选择时间</name>
         <order/>
-        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
-    // 1. 防止加载时触发，或日期被清空时触发
-    if (isLoading || newValue === '') {
-        return;
-    }
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	// 1. 获取原始4个字段的显示值
+    var startDate = g_form.getValue('leave_start_date') || '';
+    var startTime = g_form.getValue('leave_start_time') || '';
+    var endDate = g_form.getValue('leave_end_date') || '';
+    var endTime = g_form.getValue('leave_end_time') || '';
 
-    // 2. 定义我们要设置的时间字段名称
-    var timeFieldName = 'leave_time_start';
+    // 2. 拼接开始时段 + 结束时段
+    var startFull = startDate + ' ' + startTime;
+    var endFull = endDate + ' ' + endTime;
 
-    // 3. 获取当前时间字段的值
-    // 注意：对于 Time 字段，g_form.getValue 通常返回 "HH:mm:ss" 格式的字符串
-    var currentTime = g_form.getValue(timeFieldName);
-
-    // 4. 逻辑判断：
-    // 如果当前没有时间值，或者你想强制每次改日期都重置为 09:00，
-    // 则直接设置。否则保持原样。
-
-    // 方案 A: 如果你想每次改日期都把时间重置为 09:00:00
-    // g_form.setValue(timeFieldName, '09:00:00');
-
-    // 方案 B (推荐): 保持当前选择的时间，但确保格式正确
-    if (!currentTime) {
-        // 如果时间是空的，给它一个默认值
-        g_form.setValue(timeFieldName, '09:00:00');
-    } else {
-        // 如果已经有时间（比如用户选了 14:00），我们确保它格式正确。
-        // 通常不需要额外操作，除非你要处理时区。
-        // 这里我们什么都不做，只是确保不报错。
-        
-        // 调试：可以在控制台看看取出的值是什么
-        // console.log("Current time is: " + currentTime);
-    }
+    // 3. 赋值到展示字段（实时更新）
+    g_form.setValue('leave_start_period', startFull.trim());
+    g_form.setValue('leave_end_period', endFull.trim());
+   //Type appropriate comment here, and begin script below
+   
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -49,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b17c6bb793dc4710fd58f257dd03d666</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>合并选择时间</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
@@ -57,7 +44,7 @@
         <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
         <sys_update_name>sys_script_client_b17c6bb793dc4710fd58f257dd03d666</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-27 01:44:55</sys_updated_on>
+        <sys_updated_on>2026-05-12 08:58:08</sys_updated_on>
         <table>x_1973840_leave_per_leave</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

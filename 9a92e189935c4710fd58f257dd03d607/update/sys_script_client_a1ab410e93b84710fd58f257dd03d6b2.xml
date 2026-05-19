@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>cancel_hours</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>销假小时数检查</name>
+        <order/>
+        <script><![CDATA[/**
+ * 销假小时数变更时的校验脚本
+ * 功能：校验销假小时数，不允许超过请假单的最大请假小时数
+ */
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    // 页面加载中 或 值为空时，不执行校验
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    // 清空表单上的所有错误提示信息
+    g_form.clearMessages();
+
+    // 获取当前输入的【销假小时数】，转为数字类型，空值默认为0
+    var cancelHour = parseFloat(newValue) || 0;
+
+    /**
+     * 通过Reference字段【leave_num】获取关联的请假单信息
+     * g_form.getReference( reference字段名, 回调函数 )
+     * grLeave：回调返回的请假单对象（包含所有关联表字段）
+     */
+    g_form.getReference('leave_num', function(grLeave) {
+        // 从关联的请假单中，获取【请假总小时数】，空值默认为0
+        var leaveHour = grLeave.leave_hour || 0;
+		
+        // 销假小时数 > 请假小时数 → 报错
+        if (cancelHour > leaveHour) {
+            g_form.addErrorMessage('• 销假小时数不能超过请假小时数(' + leaveHour + 'h)');
+        } 
+        // 数据正常 → 清空错误提示
+        else {
+            g_form.clearMessages();
+        }
+    });
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 06:38:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1ab410e93b84710fd58f257dd03d6b2</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>销假小时数检查</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_client_a1ab410e93b84710fd58f257dd03d6b2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-14 02:58:20</sys_updated_on>
+        <table>x_1973840_leave_leave_cancel</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

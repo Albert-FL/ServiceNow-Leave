@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="aaec8ffb93fcc350fd58f257dd03d607" label="Employee Year Leave" max_length="40" name="x_1973840_leave_employee_year_leave" type="collection">
+        <element label="年度" max_length="40" name="year" type="integer"/>
+        <element label="剩余年假小时数" max_length="38" name="remaining_hours" read_only="true" read_only_option="strict_read_only" type="decimal"/>
+        <element label="活跃" max_length="40" name="active" type="boolean"/>
+        <element label="员工" max_length="32" name="employee" reference="sys_user" type="reference"/>
+        <element default="0" label="已用年假小时数" max_length="38" name="used_hours" read_only="true" read_only_option="strict_read_only" type="decimal"/>
+        <element label="年假总小时数" mandatory="true" max_length="38" name="total_hours" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>

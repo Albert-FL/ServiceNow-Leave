@@ -6,9 +6,8 @@
         <advanced_condition/>
         <affected_field_on_event/>
         <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
-        <collection>x_1973840_leave_cancellation</collection>
-        <condition table="x_1973840_leave_cancellation">approval_status=approved<item display_value="已批准" endquery="false" field="approval_status" goto="false" newquery="false" operator="=" or="false" value="approved"/>
-        </condition>
+        <collection>x_1973840_leave_leave_cancel</collection>
+        <condition/>
         <content_type>text/html</content_type>
         <default_digest>false</default_digest>
         <default_interval/>
@@ -27,47 +26,45 @@
         <digest_type>single</digest_type>
         <digestable>false</digestable>
         <enable_dynamic_translation>false</enable_dynamic_translation>
-        <event_name/>
+        <event_name>activate.life.cycle.migration</event_name>
         <event_parm_1>false</event_parm_1>
         <event_parm_2>false</event_parm_2>
         <exclude_delegates>false</exclude_delegates>
         <force_delivery>false</force_delivery>
         <from/>
-        <generation_type>engine</generation_type>
+        <generation_type>triggered</generation_type>
         <importance/>
         <include_attachments>false</include_attachments>
         <item>event.parm1</item>
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[
-      <div style="font-family: Arial, sans-serif; max-width: 600px;">
-        <div style="background-color: #4caf50; color: white; padding: 15px; border-radius: 5px 5px 0 0;">
-          <h2 style="margin: 0;">✅ 销假申请已获批准</h2>
-        </div>
-        <div style="background-color: #f8f9fa; padding: 20px; border-radius: 0 0 5px 5px;">
-          <p>您好，</p>
-          <p>您的销假申请已获得批准：</p>
-          <div style="background-color: white; padding: 15px; margin: 15px 0; border-radius: 3px;">
-            <p><strong>销假编号：</strong>${number}</p>
-            <p><strong>销假时间：</strong>${cancel_start_date} - ${cancel_end_date}</p>
-            <p><strong>销假小时数：</strong>${cancel_hours} 小时</p>
-            <p><strong>销假原因：</strong>${cancel_reason}</p>
-          </div>
-          <p>年假扣除和相关处理已经自动完成。</p>
-          <p>如有疑问，请联系人事部门。</p>
-        </div>
-      </div>
-    ]]></message_html>
+        <message_html><![CDATA[<div style="font-family: Arial, sans-serif; max-width: 600px;">
+<div style="background-color: #4caf50; color: white; padding: 15px; border-radius: 5px 5px 0 0;">
+<h2 style="margin: 0;">✅ 销假申请已获批准</h2>
+</div>
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 0 0 5px 5px;">
+<p>您好，</p>
+<p>您的销假申请已获得批准：</p>
+<div style="background-color: white; padding: 15px; margin: 15px 0; border-radius: 3px;">
+<p><strong>销假编号：</strong>${number}</p>
+<p><strong>销假时间：</strong>${cancel_start_date} &nbsp;${cancel_start_time}- ${cancel_end_date} ${cancel_end_time}</p>
+<p><strong>销假小时数：</strong>${cancel_hours} 小时</p>
+<p><strong>销假原因：</strong>${short_description}</p>
+</div>
+<p>年假扣除和相关处理已经自动完成。</p>
+<p>如有疑问，请联系人事部门。</p>
+</div>
+</div>]]></message_html>
         <message_list/>
         <message_text/>
         <name>销假申请获批通知</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>caller_id</recipient_fields>
+        <recipient_fields>sys_created_by</recipient_fields>
         <recipient_groups/>
-        <recipient_users/>
+        <recipient_users>6816f79cc0a8016401c5a33be04be441</recipient_users>
         <reply_to/>
         <send_self>true</send_self>
         <sms_alternate/>
@@ -80,7 +77,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>32f18be32f694a5595f29193b6d5deda</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>销假申请获批通知</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
@@ -88,7 +85,7 @@
         <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
         <sys_update_name>sysevent_email_action_32f18be32f694a5595f29193b6d5deda</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-28 07:57:50</sys_updated_on>
+        <sys_updated_on>2026-05-14 07:15:06</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>

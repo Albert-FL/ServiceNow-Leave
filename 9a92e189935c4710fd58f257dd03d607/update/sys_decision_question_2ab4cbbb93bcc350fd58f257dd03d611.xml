@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>5ab48bbb93bcc350fd58f257dd03d6f1</answer>
+        <condition table="var__m_sys_decision_input_b1640f7b93bcc350fd58f257dd03d67a">flow_variables_approval_path=L2^EQ<item endquery="false" field="flow_variables_approval_path" goto="false" newquery="false" operator="=" or="false" value="L2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_table display_value="销假审批者审批">b1640f7b93bcc350fd58f257dd03d67a</decision_table>
+        <default_answer>false</default_answer>
+        <input_table>var__m_sys_decision_input_b1640f7b93bcc350fd58f257dd03d67a</input_table>
+        <label>销假审批者审批_200</label>
+        <marked_for_deletion>false</marked_for_deletion>
+        <order>200</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 01:56:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2ab4cbbb93bcc350fd58f257dd03d611</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>销假审批者审批_200</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_decision_question_2ab4cbbb93bcc350fd58f257dd03d611</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 01:56:06</sys_updated_on>
+    </sys_decision_question>
+</record_update>

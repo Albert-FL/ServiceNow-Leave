@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description/>
@@ -13,23 +13,23 @@
         <script><![CDATA[function onLoad() {
    //Type appropriate comment here, and begin script below
    var field = 'approval';
+   var visable_field = 'approval_visable';
    var cnMap = {
 		'not requested': '待申请',
         'requested': '审批中',
-        'approved': '已通过',
-        'rejected': '已拒绝'
+        'Approved': '已通过',
+        'Rejected': '已拒绝'
 
    };
-       // 1. 获取当前后端原始英文值（Flow判断用，完全不变）
-    var stateValue = g_form.getValue(field);
-	if(!stateValue){
-        return;
-    }
-
-    // 2. 替换只读模式下的显示文字
-    if(cnMap[stateValue]){
-        g_form.setValue(field, cnMap[stateValue]);
-    }
+    // 延迟300ms，等字段值加载完成
+    setTimeout(function(){
+        var stateValue = g_form.getValue(field);
+        if(stateValue && cnMap[stateValue]){
+            g_form.setValue(visable_field, cnMap[stateValue]);
+        }
+        // 隐藏原始英文审批字段
+        g_form.setDisplay(field, false);
+    }, 300);
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -37,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b459295793504310fd58f257dd03d6fa</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>显示中文状态</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
@@ -45,7 +45,7 @@
         <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
         <sys_update_name>sys_script_client_b459295793504310fd58f257dd03d6fa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-27 05:18:57</sys_updated_on>
+        <sys_updated_on>2026-05-13 02:47:31</sys_updated_on>
         <table>x_1973840_leave_per_leave</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

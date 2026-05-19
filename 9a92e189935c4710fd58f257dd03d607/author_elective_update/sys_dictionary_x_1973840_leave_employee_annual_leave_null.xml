@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="DELETE" element="" table="x_1973840_leave_employee_annual_leave">
+    <sys_id>c50a12b637c24079a3fe2de01f9f62ca</sys_id>
+    <sys_scope display_value="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+    <sys_update_name>sys_dictionary_x_1973840_leave_employee_annual_leave_null</sys_update_name>
+    <attributes/>
+    <audit>false</audit>
+    <element/>
+    <internal_type>collection</internal_type>
+    <name>x_1973840_leave_employee_annual_leave</name>
+    <read_only>false</read_only>
+    <text_index>false</text_index>
+  </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_dictionary_x_1973840_leave_employee_annual_leave_null</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_1973840_leave_employee_annual_leave">
+    <sys_id>c50a12b637c24079a3fe2de01f9f62ca</sys_id>
+    <sys_scope display_value="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+    <sys_update_name>sys_dictionary_x_1973840_leave_employee_annual_leave_null</sys_update_name>
+    <attributes/>
+    <audit>false</audit>
+    <element/>
+    <internal_type>collection</internal_type>
+    <name>x_1973840_leave_employee_annual_leave</name>
+    <read_only>false</read_only>
+    <text_index>false</text_index>
+  </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>-523204513</payload_hash>
+        <record_name>员工年假</record_name>
+        <reverted_from/>
+        <source>081ec095932c0310fd58f257dd03d602</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:40</sys_created_on>
+        <sys_id>821e8495932c0310fd58f257dd03d658</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19dd318067c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:40</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>821e8495f62c0310095c9b0761637c57</update_guid>
+        <update_guid_history>821e8495f62c0310095c9b0761637c57:-523204513</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 02:40:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>0cfba8aba59f492a890b35d71e6f6cc1</sys_id>
+        <sys_metadata>c50a12b637c24079a3fe2de01f9f62ca</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1973840_leave_employee_annual_leave</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent display_value="">b6b5d4024a54427783db3a32d6d7aeff</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1973840_leave_employee_annual_leave_null</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1973840_leave_employee_annual_leave_null">821e8495932c0310fd58f257dd03d658</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 02:40:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script">
+  <sys_script action="DELETE">
+    <sys_id>43c05710b2f6499f80fa9365113012e1</sys_id>
+    <sys_scope display_value="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+    <sys_update_name>sys_script_43c05710b2f6499f80fa9365113012e1</sys_update_name>
+    <abort_action>false</abort_action>
+    <access>package_private</access>
+    <action_delete>false</action_delete>
+    <action_insert>true</action_insert>
+    <action_query>false</action_query>
+    <action_update>true</action_update>
+    <active>true</active>
+    <add_message>false</add_message>
+    <advanced>true</advanced>
+    <change_fields>false</change_fields>
+    <client_callable>false</client_callable>
+    <collection>x_1973840_leave_cancellation</collection>
+    <condition/>
+    <description/>
+    <execute_function>false</execute_function>
+    <filter_condition/>
+    <is_rest>false</is_rest>
+    <message/>
+    <name>销假申请验证</name>
+    <order>10</order>
+    <priority>100</priority>
+    <rest_method/>
+    <rest_method_text/>
+    <rest_service/>
+    <rest_service_text/>
+    <rest_variables/>
+    <role_conditions/>
+    <script><![CDATA[
+    var leaveRecord = new GlideRecord('x_1973840_leave_request');
+    if (leaveRecord.get(current.original_leave_request)) {
+      var totalCancelledHours = parseFloat(leaveRecord.cancelled_hours || 0) + parseFloat(current.cancel_hours);
+      
+      if (totalCancelledHours > parseFloat(leaveRecord.leave_hours)) {
+        gs.addErrorMessage('销假小时数不能超过请假小时数。请假总时数: ' + leaveRecord.leave_hours + '小时，已销假: ' + (leaveRecord.cancelled_hours || 0) + '小时，本次销假: ' + current.cancel_hours + '小时');
+        current.setAbortAction(true);
+        return false;
+      }
+    }
+    return true;
+  ]]></script>
+    <sys_policy/>
+    <template/>
+    <when>before</when>
+  </sys_script>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_script_43c05710b2f6499f80fa9365113012e1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script"&gt;
+  &lt;sys_script action="INSERT_OR_UPDATE"&gt;
+    &lt;sys_id&gt;43c05710b2f6499f80fa9365113012e1&lt;/sys_id&gt;
+    &lt;sys_scope display_value="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;
+    &lt;sys_update_name&gt;sys_script_43c05710b2f6499f80fa9365113012e1&lt;/sys_update_name&gt;
+    &lt;abort_action&gt;false&lt;/abort_action&gt;
+    &lt;access&gt;package_private&lt;/access&gt;
+    &lt;action_delete&gt;false&lt;/action_delete&gt;
+    &lt;action_insert&gt;true&lt;/action_insert&gt;
+    &lt;action_query&gt;false&lt;/action_query&gt;
+    &lt;action_update&gt;true&lt;/action_update&gt;
+    &lt;active&gt;true&lt;/active&gt;
+    &lt;add_message&gt;false&lt;/add_message&gt;
+    &lt;advanced&gt;true&lt;/advanced&gt;
+    &lt;change_fields&gt;false&lt;/change_fields&gt;
+    &lt;client_callable&gt;false&lt;/client_callable&gt;
+    &lt;collection&gt;x_1973840_leave_cancellation&lt;/collection&gt;
+    &lt;condition/&gt;
+    &lt;description/&gt;
+    &lt;execute_function&gt;false&lt;/execute_function&gt;
+    &lt;filter_condition/&gt;
+    &lt;is_rest&gt;false&lt;/is_rest&gt;
+    &lt;message/&gt;
+    &lt;name&gt;销假申请验证&lt;/name&gt;
+    &lt;order&gt;10&lt;/order&gt;
+    &lt;priority&gt;100&lt;/priority&gt;
+    &lt;rest_method/&gt;
+    &lt;rest_method_text/&gt;
+    &lt;rest_service/&gt;
+    &lt;rest_service_text/&gt;
+    &lt;rest_variables/&gt;
+    &lt;role_conditions/&gt;
+    &lt;script&gt;&lt;![CDATA[
+    var leaveRecord = new GlideRecord('x_1973840_leave_request');
+    if (leaveRecord.get(current.original_leave_request)) {
+      var totalCancelledHours = parseFloat(leaveRecord.cancelled_hours || 0) + parseFloat(current.cancel_hours);
+      
+      if (totalCancelledHours &gt; parseFloat(leaveRecord.leave_hours)) {
+        gs.addErrorMessage('销假小时数不能超过请假小时数。请假总时数: ' + leaveRecord.leave_hours + '小时，已销假: ' + (leaveRecord.cancelled_hours || 0) + '小时，本次销假: ' + current.cancel_hours + '小时');
+        current.setAbortAction(true);
+        return false;
+      }
+    }
+    return true;
+  ]]&gt;&lt;/script&gt;
+    &lt;sys_policy/&gt;
+    &lt;template/&gt;
+    &lt;when&gt;before&lt;/when&gt;
+  &lt;/sys_script&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-462865158</payload_hash>
+        <record_name>销假申请验证</record_name>
+        <reverted_from/>
+        <source>081ec095932c0310fd58f257dd03d602</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:47</sys_created_on>
+        <sys_id>3f1e8895932c0310fd58f257dd03d607</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19dd31824110000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:47</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>7b1e88958f2c0310750484f59205cf06</update_guid>
+        <update_guid_history>7b1e88958f2c0310750484f59205cf06:-462865158</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 08:17:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>08fc9e5202c446e899e9f6a6ef6e9c64</sys_id>
+        <sys_metadata>43c05710b2f6499f80fa9365113012e1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>销假申请验证</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent display_value="">68d9a33762a142598e1b0e620cc6e102</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_script_43c05710b2f6499f80fa9365113012e1</sys_update_name>
+        <sys_update_version display_value="sys_script_43c05710b2f6499f80fa9365113012e1">3f1e8895932c0310fd58f257dd03d607</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 08:17:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

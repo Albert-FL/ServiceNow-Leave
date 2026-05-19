@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="leave_end_period" label="请假结束时间" language="en" table="x_1973840_leave_per_leave">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>leave_end_period</element>
+            <help/>
+            <hint/>
+            <label>请假结束时间</label>
+            <language>en</language>
+            <name>x_1973840_leave_per_leave</name>
+            <plural>请假结束时间s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-12 08:50:02</sys_created_on>
+            <sys_mod_count>6</sys_mod_count>
+            <sys_name>请假结束时间</sys_name>
+            <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+            <sys_update_name>sys_documentation_x_1973840_leave_per_leave_leave_end_period_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-13 03:23:01</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

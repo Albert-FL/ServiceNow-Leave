@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_multi_result">
+    <sys_decision_multi_result action="INSERT_OR_UPDATE">
+        <decision_table display_value="销假审批者审批">b1640f7b93bcc350fd58f257dd03d67a</decision_table>
+        <label>审批者: L1</label>
+        <result_elements/>
+        <sys_class_name>sys_decision_multi_result</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 01:56:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>16b48bbb93bcc350fd58f257dd03d6dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>审批者: L1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_decision_multi_result_16b48bbb93bcc350fd58f257dd03d6dd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 01:56:05</sys_updated_on>
+    </sys_decision_multi_result>
+    <sys_variable_value action="delete_multiple" query="document_key=16b48bbb93bcc350fd58f257dd03d6dd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_decision_multi_result</document>
+        <document_key>16b48bbb93bcc350fd58f257dd03d6dd</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 01:56:05</sys_created_on>
+        <sys_id>12b48bbb93bcc350fd58f257dd03d6df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 01:56:05</sys_updated_on>
+        <value>L1</value>
+        <variable display_value="审批者">42b487f393bcc350fd58f257dd03d6d9</variable>
+    </sys_variable_value>
+</record_update>

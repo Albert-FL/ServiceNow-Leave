@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1973840_leave_per_leave</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1973840_leave_per_leave">leave_date_startVALCHANGES^ORleave_time_startVALCHANGES^ORleave_date_endVALCHANGES^ORleave_time_endVALCHANGES^EQ<item endquery="false" field="leave_date_start" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="leave_time_start" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="false" field="leave_date_end" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item display_value="-- None --" endquery="false" field="leave_time_end" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>自动拼接请假时段（日期 + 时间）</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	// 拼接：开始日期 + 开始时间 → 存入【开始时段】字段
+    var startDate = current.leave_date_start.getDisplayValue();
+    var startTime = current.leave_time_start.getDisplayValue();
+    current.leave_start_period = (startDate + ' ' + startTime).trim();
+
+    // 拼接：结束日期 + 结束时间 → 存入【结束时段】字段
+    var endDate = current.leave_date_end.getDisplayValue();
+    var endTime = current.leave_time_end.getDisplayValue();
+    current.leave_end_period = (endDate + ' ' + endTime).trim();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 03:17:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ac4d9c8a93344710fd58f257dd03d64a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>自动拼接请假时段（日期 + 时间）</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_ac4d9c8a93344710fd58f257dd03d64a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 03:17:11</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=ac4d9c8a93344710fd58f257dd03d64a"/>
+</record_update>

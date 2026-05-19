@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>cancel_end_time</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>销假结束时间检查</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+   g_form.clearMessages();
+
+    var eDate = g_form.getValue('cancel_end_date');
+    var eTime = g_form.getValue('cancel_end_time');
+    var leaveStartDate = g_form.getDisplayValue('leave_start_time').split(' ')[0];
+    var leaveStartFull = g_form.getDisplayValue('leave_start_time');
+	var leaveEndDate = g_form.getDisplayValue('leave_end_time').split(' ')[0];
+    var leaveEndFull = g_form.getDisplayValue('leave_end_time');
+
+    if (!eDate) return;
+
+    // 1. 先校验日期范围
+    if (eDate < leaveStartDate || eDate > leaveEndDate) {
+        g_form.addErrorMessage('销假结束日期必须在请假日期内！');
+        return;
+    }
+
+    // 2. 校验完整时间
+    var cancelEnd = new Date(eDate + ' ' + eTime);
+    var leaveStart = new Date(leaveStartFull);
+	var leaveEnd   = new Date(leaveEndFull);
+    if (cancelEnd < leaveStart || cancelEnd > leaveEnd) {
+        g_form.addErrorMessage('销假结束时间不在请假时间范围内！');
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 06:37:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>988bc9ca93b84710fd58f257dd03d690</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>销假结束时间检查</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_client_988bc9ca93b84710fd58f257dd03d690</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 09:57:10</sys_updated_on>
+        <table>x_1973840_leave_leave_cancel</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

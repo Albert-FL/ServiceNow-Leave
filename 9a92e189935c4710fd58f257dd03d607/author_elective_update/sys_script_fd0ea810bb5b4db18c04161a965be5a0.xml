@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1973840_leave_cancellation</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>销假请假表关联</name>
+        <order>10</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[// 服务端读取URL参数，赋值给 g_scratchpad
+g_scratchpad.parentLeaveSysId = action.getURLParameter('sysparm_parent_leave');
+alert('parentLeaveSysId: '+ parentLeaveSysId);
+console.log('★★★★★★parentLeaveSysId: ', parentLeaveSysId);
+  ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fd0ea810bb5b4db18c04161a965be5a0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>销假请假表关联</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_fd0ea810bb5b4db18c04161a965be5a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 01:09:11</sys_updated_on>
+        <template/>
+        <when>before_display</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=fd0ea810bb5b4db18c04161a965be5a0"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_script_fd0ea810bb5b4db18c04161a965be5a0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_1973840_leave_cancellation&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;销假请假表关联&lt;/name&gt;&lt;order&gt;10&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[// 服务端读取URL参数，赋值给 g_scratchpad
+g_scratchpad.parentLeaveSysId = action.getURLParameter('sysparm_parent_leave');
+alert('parentLeaveSysId: '+ parentLeaveSysId);
+console.log('★★★★★★parentLeaveSysId: ', parentLeaveSysId);
+  ]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-04-28 07:57:48&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;fd0ea810bb5b4db18c04161a965be5a0&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;销假请假表关联&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_fd0ea810bb5b4db18c04161a965be5a0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-12 01:09:11&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before_display&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=fd0ea810bb5b4db18c04161a965be5a0"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1945688081</payload_hash>
+        <record_name>销假请假表关联</record_name>
+        <reverted_from/>
+        <source>7c3b7c1393980310fd58f257dd03d6e3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 01:09:11</sys_created_on>
+        <sys_id>f6d6fee193388310fd58f257dd03d6a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e19bb13c80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 01:09:11</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>fed6fee1fc38831063b070133a988fa6</update_guid>
+        <update_guid_history>fed6fee1fc38831063b070133a988fa6:1945688081,2a82175d0d3c0310fb082c7c97f5dadd:70207518,ce3e8e5568340310524da4cb8330530b:1365680048,042e8895012c03106256653ec8957317:231239226</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 08:17:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>9df5f98f40c445b6a971ac4224412399</sys_id>
+        <sys_metadata>fd0ea810bb5b4db18c04161a965be5a0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>销假请假表关联</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent display_value="">68d9a33762a142598e1b0e620cc6e102</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_script_fd0ea810bb5b4db18c04161a965be5a0</sys_update_name>
+        <sys_update_version display_value="sys_script_fd0ea810bb5b4db18c04161a965be5a0">f6d6fee193388310fd58f257dd03d6a8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 08:17:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

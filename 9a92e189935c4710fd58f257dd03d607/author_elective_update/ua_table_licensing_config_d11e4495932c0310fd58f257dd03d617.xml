@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="DELETE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_1973840_leave_cancellation</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:37</sys_created_on>
+        <sys_id>d11e4495932c0310fd58f257dd03d617</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1973840_leave_cancellation</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>ua_table_licensing_config_d11e4495932c0310fd58f257dd03d617</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:37</sys_updated_on>
+    </ua_table_licensing_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>ua_table_licensing_config_d11e4495932c0310fd58f257dd03d617</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config"><ua_table_licensing_config action="INSERT_OR_UPDATE"><is_fulfillment>false</is_fulfillment><license_condition/><license_model>none</license_model><license_roles/><name>x_1973840_leave_cancellation</name><op_delete>true</op_delete><op_insert>true</op_insert><op_update>true</op_update><owner_condition/><sys_class_name>ua_table_licensing_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-04-28 07:57:37</sys_created_on><sys_id>d11e4495932c0310fd58f257dd03d617</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1973840_leave_cancellation</sys_name><sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package><sys_policy/><sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope><sys_update_name>ua_table_licensing_config_d11e4495932c0310fd58f257dd03d617</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-04-28 07:57:37</sys_updated_on></ua_table_licensing_config></record_update>]]></payload>
+        <payload_hash>-376529846</payload_hash>
+        <record_name>x_1973840_leave_cancellation</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:51</sys_created_on>
+        <sys_id>b42e8895932c0310fd58f257dd03d6c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19dd31831660000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:51</sys_updated_on>
+        <type>Table Subscription Configuration</type>
+        <update_guid>742e8895482c0310ad34f48b86a8dac7</update_guid>
+        <update_guid_history>742e8895482c0310ad34f48b86a8dac7:-376529846</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 08:17:23</sys_created_on>
+        <sys_db_object display_value="" name="ua_table_licensing_config">ua_table_licensing_config</sys_db_object>
+        <sys_id>7593e330f44a40e8aa28158599730051</sys_id>
+        <sys_metadata>d11e4495932c0310fd58f257dd03d617</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1973840_leave_cancellation</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>ua_table_licensing_config_d11e4495932c0310fd58f257dd03d617</sys_update_name>
+        <sys_update_version display_value="ua_table_licensing_config_d11e4495932c0310fd58f257dd03d617">b42e8895932c0310fd58f257dd03d6c7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 08:17:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>update</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.isValidRecord() &amp;&amp; current.canWrite() &amp;&amp; gs.getProperty('glide.ui.update_is_submit') != 'true'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_icon/>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_button_icon/>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Update</name>
+        <onclick>onClick()</onclick>
+        <order>-100</order>
+        <script><![CDATA[function onClick() {
+    var status = g_form.getValue('approval');
+    if (status === 'Approved') {
+        alert('请假申请已通过，不允许修改！');
+        return false; // 阻止提交
+    }
+    current.update(); // 正常提交
+}]]></script>
+        <show_form_icon_only>false</show_form_icon_only>
+        <show_insert>true</show_insert>
+        <show_list_icon_only>false</show_list_icon_only>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 08:38:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b6a6a5c293bc4710fd58f257dd03d645</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Update</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_ui_action_b6a6a5c293bc4710fd58f257dd03d645</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 08:51:30</sys_updated_on>
+        <table>x_1973840_leave_per_leave</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_ui_action_b6a6a5c293bc4710fd58f257dd03d645</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;update&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt;current.isValidRecord() &amp;amp;&amp;amp; current.canWrite() &amp;amp;&amp;amp; gs.getProperty('glide.ui.update_is_submit') != 'true'&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_icon/&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_button_icon/&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Update&lt;/name&gt;&lt;onclick&gt;onClick()&lt;/onclick&gt;&lt;order&gt;-100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function onClick() {
+    var status = g_form.getValue('approval');
+    if (status === 'Approved') {
+        alert('请假申请已通过，不允许修改！');
+        return false; // 阻止提交
+    }
+    current.update(); // 正常提交
+}]]&gt;&lt;/script&gt;&lt;show_form_icon_only&gt;false&lt;/show_form_icon_only&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_list_icon_only&gt;false&lt;/show_list_icon_only&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-13 08:38:07&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;b6a6a5c293bc4710fd58f257dd03d645&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;Update&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_b6a6a5c293bc4710fd58f257dd03d645&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-13 08:51:30&lt;/sys_updated_on&gt;&lt;table&gt;x_1973840_leave_per_leave&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-535201132</payload_hash>
+        <record_name>Update</record_name>
+        <reverted_from/>
+        <source>7c3b7c1393980310fd58f257dd03d6e3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 08:51:31</sys_created_on>
+        <sys_id>414a21ca93bc4710fd58f257dd03d669</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e2088b78d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 08:51:31</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>8d4a21caafbc471058cac63f37c54a67</update_guid>
+        <update_guid_history>8d4a21caafbc471058cac63f37c54a67:-535201132,43d9694a42bc47107ccdbb67289bdbb3:-363214207,b169614a79bc47108de923d3116a2db7:1896206407,e539e90af4bc47109f34c19bcf45244c:-2021282876,a1d821c60ebc47109f0efa68780ff5b2:-1738365531,ca9865c68abc471054b31f95ba506a3d:-1323923790,3e58ed06f8bc47102980d838b71d4574:1553049893,aa67ad0682bc4710a4684c412755e151:-163054673,bc37a506ecbc47102bdfd45673e4e228:2059683370</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-13 08:51:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>085bb7cfb3f945bc8122e2c6af02db10</sys_id>
+        <sys_metadata>b6a6a5c293bc4710fd58f257dd03d645</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent display_value="PER_LEAVE">6924694d935c4710fd58f257dd03d646</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_ui_action_b6a6a5c293bc4710fd58f257dd03d645</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_b6a6a5c293bc4710fd58f257dd03d645">414a21ca93bc4710fd58f257dd03d669</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 08:51:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

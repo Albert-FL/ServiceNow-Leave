@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="DELETE">
+        <active>true</active>
+        <answer>销假申请</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>销假申请</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">4fe4d024f54003100a22c0b3dfa15116</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:36</sys_created_on>
+        <sys_id>cd1e0495932c0310fd58f257dd03d6ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>销假申请</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_wizard_answer_cd1e0495932c0310fd58f257dd03d6ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:36</sys_updated_on>
+        <table/>
+        <target_url>x_1973840_leave_cancellation.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_wizard_answer_cd1e0495932c0310fd58f257dd03d6ba</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>销假申请</answer><button_label/><dependent_value/><element/><name>销假申请</name><next_question/><order>100</order><payload_name/><question display_value="Task" name="Task">4fe4d024f54003100a22c0b3dfa15116</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-04-28 07:57:36</sys_created_on><sys_id>cd1e0495932c0310fd58f257dd03d6ba</sys_id><sys_mod_count>0</sys_mod_count><sys_name>销假申请</sys_name><sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package><sys_policy/><sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope><sys_update_name>sys_wizard_answer_cd1e0495932c0310fd58f257dd03d6ba</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-04-28 07:57:36</sys_updated_on><table/><target_url>x_1973840_leave_cancellation.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+        <payload_hash>692109756</payload_hash>
+        <record_name>销假申请</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 08:17:29</sys_created_on>
+        <sys_id>78e8d0319374c310fd58f257dd03d6e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e1b4334120000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 08:17:29</sys_updated_on>
+        <type>Answer</type>
+        <update_guid>38e8d031aa74c310fb384964a3ea6ee9</update_guid>
+        <update_guid_history>38e8d031aa74c310fb384964a3ea6ee9:692109756</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 08:17:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_wizard_answer">sys_wizard_answer</sys_db_object>
+        <sys_id>c6851873c67c40289ef49481c0a2a7e1</sys_id>
+        <sys_metadata>cd1e0495932c0310fd58f257dd03d6ba</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>销假申请</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent display_value="Task">4fe4d024f54003100a22c0b3dfa15116</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_wizard_answer_cd1e0495932c0310fd58f257dd03d6ba</sys_update_name>
+        <sys_update_version display_value="sys_wizard_answer_cd1e0495932c0310fd58f257dd03d6ba">78e8d0319374c310fd58f257dd03d6e9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 08:17:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

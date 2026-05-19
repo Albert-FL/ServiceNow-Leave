@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="DELETE" element="approval_status" table="x_1973840_leave_cancellation">
+    <sys_id>0e555f5317ee497d9b7a078c9e4c2988</sys_id>
+    <sys_scope display_value="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+    <sys_update_name>sys_dictionary_x_1973840_leave_cancellation_approval_status</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice>3</choice>
+    <choice_field/>
+    <choice_table/>
+    <column_label>审批状态</column_label>
+    <default_value>draft</default_value>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <element>approval_status</element>
+    <element_reference>false</element_reference>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>choice</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>40</max_length>
+    <name>x_1973840_leave_cancellation</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference/>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <virtual/>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_dictionary_x_1973840_leave_cancellation_approval_status</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary">
+  <sys_dictionary action="INSERT_OR_UPDATE" element="approval_status" table="x_1973840_leave_cancellation">
+    <sys_id>0e555f5317ee497d9b7a078c9e4c2988</sys_id>
+    <sys_scope display_value="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+    <sys_update_name>sys_dictionary_x_1973840_leave_cancellation_approval_status</sys_update_name>
+    <active>true</active>
+    <array>false</array>
+    <attributes/>
+    <audit>false</audit>
+    <calculation/>
+    <choice>3</choice>
+    <choice_field/>
+    <choice_table/>
+    <column_label>审批状态</column_label>
+    <default_value>draft</default_value>
+    <dependent/>
+    <dependent_on_field/>
+    <display>false</display>
+    <dynamic_creation/>
+    <dynamic_creation_script/>
+    <element>approval_status</element>
+    <element_reference>false</element_reference>
+    <function_definition/>
+    <function_field>false</function_field>
+    <internal_type>choice</internal_type>
+    <mandatory>false</mandatory>
+    <max_length>40</max_length>
+    <name>x_1973840_leave_cancellation</name>
+    <primary>false</primary>
+    <read_only>false</read_only>
+    <read_only_option/>
+    <reference/>
+    <reference_cascade_rule/>
+    <reference_floats/>
+    <reference_key/>
+    <reference_qual/>
+    <spell_check>false</spell_check>
+    <table_reference>false</table_reference>
+    <text_index>false</text_index>
+    <unique>false</unique>
+    <use_dependent_field>false</use_dependent_field>
+    <virtual/>
+    <widget/>
+    <xml_view>false</xml_view>
+  </sys_dictionary>
+</record_update>]]></payload>
+        <payload_hash>176793169</payload_hash>
+        <record_name>x_1973840_leave_cancellation.approval_status</record_name>
+        <reverted_from/>
+        <source>081ec095932c0310fd58f257dd03d602</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-04-28 07:57:35</sys_created_on>
+        <sys_id>781e0495932c0310fd58f257dd03d614</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19dd317f3470000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-04-28 07:57:35</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>b41e04953b2c0310b4d54f054ed39f13</update_guid>
+        <update_guid_history>b41e04953b2c0310b4d54f054ed39f13:176793169</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-12 08:17:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>0ccfedd6dacb459a88c97f56c24800b1</sys_id>
+        <sys_metadata>0e555f5317ee497d9b7a078c9e4c2988</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>审批状态</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent display_value="">68d9a33762a142598e1b0e620cc6e102</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1973840_leave_cancellation_approval_status</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1973840_leave_cancellation_approval_status">781e0495932c0310fd58f257dd03d614</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-12 08:17:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

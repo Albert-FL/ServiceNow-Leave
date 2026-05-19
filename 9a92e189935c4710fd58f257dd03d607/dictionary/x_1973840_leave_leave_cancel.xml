@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="a1dac87193f0c310fd58f257dd03d64d" extends="task" label="LEAVE CANCEL" max_length="40" name="x_1973840_leave_leave_cancel" type="collection">
+        <element choice="1" label="销假开始时间" max_length="40" name="cancel_start_time" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="13:00" sequence="7" value="13:00"/>
+                <element inactive_on_update="false" label="09:00" sequence="0" value="09:00"/>
+                <element inactive_on_update="false" label="09:30" sequence="1" value="09:30"/>
+                <element inactive_on_update="false" label="16:00" sequence="13" value="16:00"/>
+                <element inactive_on_update="false" label="11:00" sequence="4" value="11:00"/>
+                <element inactive_on_update="false" label="10:30" sequence="3" value="10:30"/>
+                <element inactive_on_update="false" label="13:30" sequence="8" value="13:30"/>
+                <element inactive_on_update="false" label="16:30" sequence="14" value="16:30"/>
+                <element inactive_on_update="false" label="14:30" sequence="10" value="14:30"/>
+                <element inactive_on_update="false" label="11:30" sequence="5" value="11:30"/>
+                <element inactive_on_update="false" label="14:00" sequence="9" value="14:00"/>
+                <element inactive_on_update="false" label="18:00" sequence="17" value="18:30"/>
+                <element inactive_on_update="false" label="17:00" sequence="15" value="17:00"/>
+                <element inactive_on_update="false" label="17:30" sequence="16" value="17:30"/>
+                <element inactive_on_update="false" label="15:30" sequence="12" value="15:30"/>
+                <element inactive_on_update="false" label="12:00" sequence="6" value="12:00"/>
+                <element inactive_on_update="false" label="10:00" sequence="2" value="10:00"/>
+                <element inactive_on_update="false" label="15:00" sequence="11" value="15:00"/>
+            </choice>
+        </element>
+        <element label="请假开始时间" max_length="40" name="leave_start_time" read_only="true" read_only_option="strict_read_only" type="string"/>
+        <element label="请假结束时间" max_length="40" name="leave_end_time" read_only="true" read_only_option="strict_read_only" type="string"/>
+        <element choice="1" label="销假结束时间" max_length="40" name="cancel_end_time" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="16:00" sequence="13" value="16:00"/>
+                <element inactive_on_update="false" label="13:30" sequence="8" value="13:30"/>
+                <element inactive_on_update="false" label="10:30" sequence="3" value="10:30"/>
+                <element inactive_on_update="false" label="11:00" sequence="4" value="11:00"/>
+                <element inactive_on_update="false" label="17:00" sequence="14" value="17:00"/>
+                <element inactive_on_update="false" label="11:30" sequence="5" value="11:30"/>
+                <element inactive_on_update="false" label="14:30" sequence="10" value="14:30"/>
+                <element inactive_on_update="false" label="14:00" sequence="9" value="14:00"/>
+                <element inactive_on_update="false" label="15:00" sequence="11" value="15:00"/>
+                <element inactive_on_update="false" label="17:30" sequence="15" value="17:30"/>
+                <element inactive_on_update="false" label="12:00" sequence="6" value="12:00"/>
+                <element inactive_on_update="false" label="09:30" sequence="1" value="09:30"/>
+                <element inactive_on_update="false" label="15:30" sequence="12" value="15:30"/>
+                <element inactive_on_update="false" label="18:00" sequence="16" value="18:00"/>
+                <element inactive_on_update="false" label="09:00" sequence="0" value="09:00"/>
+                <element inactive_on_update="false" label="13:00" sequence="7" value="13:00"/>
+                <element inactive_on_update="false" label="10:00" sequence="2" value="10:00"/>
+            </choice>
+        </element>
+        <element label="销假开始日期" mandatory="true" max_length="40" name="cancel_start_date" type="glide_date"/>
+        <element label="销假结束日期" mandatory="true" max_length="255" name="cancel_end_date" type="glide_date"/>
+        <element choice="1" label="销假类型" max_length="40" name="cancel_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="法定年假" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="事假" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="婚假" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="产假" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="加班换休" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="病假" sequence="5" value="6"/>
+            </choice>
+        </element>
+        <element label="请假番号" max_length="32" name="leave_num" read_only="true" read_only_option="strict_read_only" reference="x_1973840_leave_per_leave" type="reference"/>
+        <element default="0" label="销假小时数" mandatory="true" max_length="38" name="cancel_hours" type="decimal"/>
+    </element>
+</database>

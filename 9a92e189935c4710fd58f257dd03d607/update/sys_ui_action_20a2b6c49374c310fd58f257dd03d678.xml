@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>销假</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.approval == 'Approved' &amp;&amp; current.cancel_available == true</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_icon/>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_button_icon/>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>销假</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[(function() {
+    // 1. 获取当前请假单的唯一标识（用于销假表单关联）
+    var leaveSysId = current.getUniqueValue();  // 原请假单sys_id
+	var cancelTable = 'x_1973840_leave_leave_cancel';
+	var grCancel = new GlideRecord(cancelTable);
+	grCancel.addQuery('leave_num', leaveSysId);
+	grCancel.query();
+
+	if (grCancel.next()) {
+        // 已存在销假记录 → 直接打开该记录
+        action.setRedirectURL(grCancel);
+    }else{
+        // 不存在 → 新建销假记录，并自动关联当前请假单
+        var newCancel = new GlideRecord(cancelTable);
+        newCancel.initialize();
+        // 赋值关联字段（Reference类型，直接赋值current）
+        newCancel.leave_num = leaveSysId;
+		newCancel.leave_start_time = current.leave_start_period.toString();
+		newCancel.leave_end_time = current.leave_end_period.toString();
+        newCancel.insert();
+        // 打开新建的销假记录
+        action.setRedirectURL(newCancel);
+	}
+})();]]></script>
+        <show_form_icon_only>false</show_form_icon_only>
+        <show_insert>true</show_insert>
+        <show_list_icon_only>false</show_list_icon_only>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-07 09:00:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>20a2b6c49374c310fd58f257dd03d678</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>销假</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_ui_action_20a2b6c49374c310fd58f257dd03d678</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-13 09:12:48</sys_updated_on>
+        <table>x_1973840_leave_per_leave</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

@@ -3,17 +3,13 @@
         <element label="销假员工" mandatory="true" max_length="32" name="employee" reference="sys_user" type="reference"/>
         <element label="剩余年假小时数" mandatory="true" max_length="20" name="remaining_annual_leave" type="decimal"/>
         <element label="扣除年假小时数" mandatory="true" max_length="20" name="annual_leave_deducted" type="decimal"/>
-        <element label="销假记录" mandatory="true" max_length="32" name="cancellation_record" reference="x_1973840_leave_cancellation" type="reference"/>
         <element display="true" label="报告日期" mandatory="true" max_length="40" name="report_date" type="glide_date_time"/>
         <element label="销假小时数" mandatory="true" max_length="20" name="cancel_hours" type="decimal"/>
         <element default="true" label="自动生成" max_length="40" name="auto_generated" read_only="true" read_only_option="instance_configured" type="boolean"/>
         <index name="index">
-            <element name="cancellation_record"/>
-        </index>
-        <index name="index2">
             <element name="employee"/>
         </index>
-        <index name="index3" unique="true">
+        <index name="index2" unique="true">
             <element name="report_date"/>
             <element name="employee"/>
         </index>

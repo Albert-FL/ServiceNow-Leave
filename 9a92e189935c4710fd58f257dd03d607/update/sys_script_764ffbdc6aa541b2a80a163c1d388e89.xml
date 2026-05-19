@@ -6,7 +6,7 @@
         <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -27,8 +27,7 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[
-    try {
+        <script><![CDATA[    try {
         // 检查审批状态是否发生变化
         if (current.approval.changesTo('approved') || current.approval.changesTo('rejected')) {
             
@@ -107,7 +106,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>764ffbdc6aa541b2a80a163c1d388e89</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Leave Work Notes Notification</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
@@ -115,7 +114,7 @@
         <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
         <sys_update_name>sys_script_764ffbdc6aa541b2a80a163c1d388e89</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-28 05:22:34</sys_updated_on>
+        <sys_updated_on>2026-05-07 08:27:37</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

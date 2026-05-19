@@ -11,8 +11,8 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_1973840_leave_request</collection>
-        <condition>current.approval_status.changesTo('approved')</condition>
+        <collection>x_1973840_leave_per_leave</collection>
+        <condition>current.approval.changesTo('Approved')</condition>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
@@ -27,12 +27,12 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[
-    // 设置可以销假的标志
+        <script><![CDATA[    // 设置可以销假的标志
     current.cancel_available = true;
     current.remaining_hours = current.leave_hours;
     
     gs.info('请假申请 ' + current.number + ' 已获批准，可以销假');
+	gs.addInfoMessage("✅ 请假申请已批准！\n可销假功能已自动开启");
   ]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -40,7 +40,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a30f027970944ce6b513a946ee24a6e9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>请假申请审批处理</sys_name>
         <sys_overrides/>
         <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
@@ -48,9 +48,9 @@
         <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
         <sys_update_name>sys_script_a30f027970944ce6b513a946ee24a6e9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-04-28 07:57:47</sys_updated_on>
+        <sys_updated_on>2026-05-07 08:51:02</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>before</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=a30f027970944ce6b513a946ee24a6e9"/>
 </record_update>

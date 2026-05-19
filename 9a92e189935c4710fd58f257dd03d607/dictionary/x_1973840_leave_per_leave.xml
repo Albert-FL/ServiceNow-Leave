@@ -5,25 +5,26 @@
         <element default="0" label="请假小时数" max_length="15" name="leave_hour" type="decimal"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="3" default="09:00" label="请假开始时间" max_length="40" name="leave_time_start" type="choice">
             <choice>
-                <element inactive_on_update="false" label="15:00" sequence="11" value="15:00"/>
-                <element inactive_on_update="false" label="16:00" sequence="13" value="16:00"/>
-                <element inactive_on_update="false" label="13:00" sequence="7" value="13:00"/>
-                <element inactive_on_update="false" label="17:00" sequence="15" value="17:00"/>
+                <element inactive_on_update="false" label="15:00" sequence="11" value="1500"/>
+                <element inactive_on_update="false" label="16:00" sequence="13" value="1600"/>
+                <element inactive_on_update="false" label="13:00" sequence="7" value="1300"/>
+                <element inactive_on_update="false" label="17:00" sequence="15" value="1700"/>
                 <element inactive_on_update="false" label="09:30" sequence="1" value="0930"/>
-                <element inactive_on_update="false" label="14:00" sequence="9" value="14:00"/>
-                <element inactive_on_update="false" label="10:30" sequence="3" value="10:30"/>
-                <element inactive_on_update="false" label="11:30" sequence="5" value="11:30"/>
-                <element inactive_on_update="false" label="13:30" sequence="8" value="13:30"/>
-                <element inactive_on_update="false" label="17:30" sequence="16" value="17:30"/>
-                <element inactive_on_update="false" label="14:30" sequence="10" value="14:30"/>
-                <element inactive_on_update="false" label="15:30" sequence="12" value="15:30"/>
-                <element inactive_on_update="false" label="16:30" sequence="14" value="16:30"/>
+                <element inactive_on_update="false" label="14:00" sequence="9" value="1400"/>
+                <element inactive_on_update="false" label="10:30" sequence="3" value="1030"/>
+                <element inactive_on_update="false" label="11:30" sequence="5" value="1130"/>
+                <element inactive_on_update="false" label="13:30" sequence="8" value="1330"/>
+                <element inactive_on_update="false" label="17:30" sequence="16" value="1730"/>
+                <element inactive_on_update="false" label="14:30" sequence="10" value="1430"/>
+                <element inactive_on_update="false" label="15:30" sequence="12" value="1530"/>
+                <element inactive_on_update="false" label="16:30" sequence="14" value="1630"/>
                 <element inactive_on_update="false" label="09:00" sequence="0" value="0900"/>
-                <element inactive_on_update="false" label="12:00" sequence="6" value="12:00"/>
-                <element inactive_on_update="false" label="11:00" sequence="4" value="11:00"/>
-                <element inactive_on_update="false" label="10:00" sequence="2" value="10:00"/>
+                <element inactive_on_update="false" label="12:00" sequence="6" value="1200"/>
+                <element inactive_on_update="false" label="11:00" sequence="4" value="1100"/>
+                <element inactive_on_update="false" label="10:00" sequence="2" value="1000"/>
             </choice>
         </element>
+        <element label="可以销假" max_length="255" name="cancel_available" type="boolean"/>
         <element choice="3" label="请假类型" max_length="40" name="leave_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="事假" sequence="3" value="4"/>
@@ -36,25 +37,29 @@
                 <element inactive_on_update="false" label="丧假" sequence="6" value="7"/>
             </choice>
         </element>
+        <element label="申请状态" max_length="40" name="approval_visable" read_only="true" read_only_option="display_read_only" type="string"/>
+        <element label="剩余请假小时数" max_length="20" name="remaining_hours" type="decimal"/>
+        <element label="请假结束时间" max_length="40" name="leave_end_period" read_only="true" read_only_option="display_read_only" type="string"/>
         <element dependent="project_id.project_name" dependent_on_field="project_id.project_name" label="项目名" max_length="32" name="project_id" reference="x_1973840_leave_m_project" type="reference" use_dependent_field="true"/>
         <element attributes="ro_collapsible=true" choice="3" label="请假结束时间" max_length="40" name="leave_time_end" type="choice">
             <choice>
-                <element inactive_on_update="false" label="17:00" sequence="12" value="17:00"/>
-                <element inactive_on_update="false" label="10:30" sequence="3" value="10:30"/>
-                <element inactive_on_update="false" label="13:30" sequence="7" value="13:30"/>
-                <element inactive_on_update="false" label="09:00" sequence="0" value="00"/>
-                <element inactive_on_update="false" label="11:00" sequence="4" value="11:00"/>
-                <element inactive_on_update="false" label="14:00" sequence="8" value="14:00"/>
-                <element inactive_on_update="false" label="17:30" sequence="13" value="17:30"/>
-                <element inactive_on_update="false" label="09:30" sequence="1" value="30"/>
+                <element inactive_on_update="false" label="17:00" sequence="12" value="1700"/>
+                <element inactive_on_update="false" label="10:30" sequence="3" value="1030"/>
+                <element inactive_on_update="false" label="13:30" sequence="7" value="1330"/>
+                <element inactive_on_update="false" label="09:00" sequence="0" value="0900"/>
+                <element inactive_on_update="false" label="11:00" sequence="4" value="1100"/>
+                <element inactive_on_update="false" label="14:00" sequence="8" value="1400"/>
+                <element inactive_on_update="false" label="17:30" sequence="13" value="1730"/>
+                <element inactive_on_update="false" label="09:30" sequence="1" value="0930"/>
                 <element inactive_on_update="false" label="10:00" sequence="2" value="1000"/>
-                <element inactive_on_update="false" label="12:00" sequence="5" value="12:00"/>
-                <element inactive_on_update="false" label="14:30" sequence="9" value="14:30"/>
-                <element inactive_on_update="false" label="18:00" sequence="14" value="18:00"/>
-                <element inactive_on_update="false" label="13:00" sequence="6" value="13:00"/>
-                <element inactive_on_update="false" label="15:00" sequence="10" value="15:00"/>
-                <element inactive_on_update="false" label="16:00" sequence="11" value="16:00"/>
+                <element inactive_on_update="false" label="12:00" sequence="5" value="1200"/>
+                <element inactive_on_update="false" label="14:30" sequence="9" value="1430"/>
+                <element inactive_on_update="false" label="18:00" sequence="14" value="1800"/>
+                <element inactive_on_update="false" label="13:00" sequence="6" value="1300"/>
+                <element inactive_on_update="false" label="15:00" sequence="10" value="1500"/>
+                <element inactive_on_update="false" label="16:00" sequence="11" value="1600"/>
             </choice>
         </element>
+        <element label="请假开始时间" max_length="40" name="leave_start_period" read_only="true" read_only_option="display_read_only" type="string"/>
     </element>
 </database>

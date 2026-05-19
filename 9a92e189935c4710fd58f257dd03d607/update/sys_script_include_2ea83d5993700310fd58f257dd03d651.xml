@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1973840_leave.LeaveUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LeaveUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LeaveUtils = Class.create();
+LeaveUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	initialize: function() {},
+	// 给销假申请返回原请假单的核心信息
+	getLeaveInfoForCancel: function() {
+		var leaveSysId = this.getParameter('sysparm_leave_sysid');
+		if(!leaveSysId) return null;
+		// 读取原请假单数据	
+		var gr = new GlideRecord('x_1973840_leave_per_leave');
+		if(!gr.get(leaveSysId)) return null;
+
+		// 返回取得的信息
+		var leaveInfo = {
+			sys_id: gr.sys_id.toString(),
+			leave_date_start: gr.leave_date_start.toString(),
+			leave_date_end: gr.leave_date_end.toString()
+		};
+		return JSON.stringify(leaveInfo);	
+	},
+
+
+    type: 'LeaveUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-11 02:06:19</sys_created_on>
+        <sys_id>2ea83d5993700310fd58f257dd03d651</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>LeaveUtils</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_include_2ea83d5993700310fd58f257dd03d651</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-11 02:30:12</sys_updated_on>
+    </sys_script_include>
+</record_update>
