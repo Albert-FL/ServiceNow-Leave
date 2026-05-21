@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_relationship">
+    <sys_relationship action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_1973840_leave_employee_year_leave</basic_apply_to>
+        <basic_query_from>x_1973840_leave_leave_cancel</basic_query_from>
+        <insert_callback/>
+        <name>休假记录关联</name>
+        <query_from/>
+        <query_with><![CDATA[(function refineQuery(current, parent) {
+	// current = 当前查询的表：销假表 LEAVE CANCEL
+	// parent = 打开的主表：Employee Year Leave 年假表
+
+	// 筛选条件：销假表的 employee 字段 等于 年假表的 Opened_by 字段
+	current.addQuery('employee',parent.Opened_by);
+	
+	// 获取年假表中的年度，并转换为字符串类型
+	var year = parent.year.toString(); 
+	// 筛选条件：销假表的开始日期 cancel_start_date 以当前年度开头（同一年）
+    current.addQuery('cancel_start_date', 'STARTSWITH', year);
+	// 筛选条件：已审批通过的销假数据
+	current.addQuery('approval', 'Approved');
+
+})(current, parent);]]></query_with>
+        <reference_field/>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-20 08:48:32</sys_created_on>
+        <sys_id>60f32d549341c750fd58f257dd03d6ce</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>休假记录关联</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_relationship_60f32d549341c750fd58f257dd03d6ce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-20 09:14:24</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="delete_multiple" query="documentkey=60f32d549341c750fd58f257dd03d6ce"/>
+</record_update>

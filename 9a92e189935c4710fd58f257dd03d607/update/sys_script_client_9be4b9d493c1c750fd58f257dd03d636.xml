@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>UI - 禁止直接新建销假单</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   // 1. 获取当前表单状态：是否为新建记录
+    var isNewRecord = g_form.isNewRecord();
+
+    // 2. 获取关联请假单字段（必须通过请假单跳转才有值）
+    var leaveNum = g_form.getValue('leave_num');
+
+    // ============== 核心逻辑 ==============
+    // 如果是【新建记录】且【没有关联请假单】→ 禁止编辑 + 弹窗
+    if (isNewRecord && leaveNum == '') {
+        // 弹窗提示用户
+        alert("温馨提示：\n销假单不能直接新建！\n请从请假单页面点击【销假】按钮生成。");
+        // ========== 强制关闭页面 ==========
+        history.back();
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-20 09:27:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9be4b9d493c1c750fd58f257dd03d636</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>UI - 禁止直接新建销假单</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_script_client_9be4b9d493c1c750fd58f257dd03d636</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-20 09:30:15</sys_updated_on>
+        <table>x_1973840_leave_leave_cancel</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

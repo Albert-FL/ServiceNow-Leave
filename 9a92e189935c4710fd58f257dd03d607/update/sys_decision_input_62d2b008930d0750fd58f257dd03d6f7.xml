@@ -1,17 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="used_hours" table="x_1973840_leave_employee_year_leave">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_decision_input">
+    <sys_decision_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>element_mapping_provider=com.glide.decision_table.data.DecisionTableVariableMapper</attributes>
         <audit>false</audit>
-        <calculation/>
-        <choice>0</choice>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>已用年假小时数</column_label>
+        <column_label>Input_销假类型</column_label>
         <comments/>
         <create_roles/>
-        <default_value>0</default_value>
+        <default_value/>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -21,22 +26,30 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>used_hours</element>
+        <element>input</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Decimal">decimal</internal_type>
-        <mandatory>false</mandatory>
-        <max_length>38</max_length>
-        <name>x_1973840_leave_employee_year_leave</name>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Input_销假类型</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="根据销假类型处理年假扣除">e6d2b800930d0750fd58f257dd03d663</model>
+        <model_id>e6d2b800930d0750fd58f257dd03d663</model_id>
+        <model_table>sys_decision</model_table>
+        <name>var__m_sys_decision_input_e6d2b800930d0750fd58f257dd03d663</name>
         <next_element/>
+        <order>100</order>
+        <parent/>
         <primary>false</primary>
-        <read_only>true</read_only>
-        <read_only_option>display_read_only</read_only_option>
+        <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
-        <reference/>
+        <reference display_value="" name="x_1973840_leave_leave_cancel">x_1973840_leave_leave_cancel</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -45,16 +58,17 @@
         <reference_type/>
         <spell_check>false</spell_check>
         <staged>false</staged>
-        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_class_name>sys_decision_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-05-19 02:36:58</sys_created_on>
-        <sys_name>已用年假小时数</sys_name>
+        <sys_created_on>2026-05-19 09:57:16</sys_created_on>
+        <sys_id>62d2b008930d0750fd58f257dd03d6f7</sys_id>
+        <sys_name>Input_销假类型</sys_name>
         <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
         <sys_policy/>
         <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
-        <sys_update_name>sys_dictionary_x_1973840_leave_employee_year_leave_used_hours</sys_update_name>
+        <sys_update_name>sys_decision_input_62d2b008930d0750fd58f257dd03d6f7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-19 08:32:26</sys_updated_on>
+        <sys_updated_on>2026-05-19 09:57:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -66,5 +80,5 @@
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
-    </sys_dictionary>
+    </sys_decision_input>
 </record_update>

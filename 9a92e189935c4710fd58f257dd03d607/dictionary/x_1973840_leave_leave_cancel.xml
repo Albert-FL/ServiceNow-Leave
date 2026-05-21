@@ -58,6 +58,7 @@
             </choice>
         </element>
         <element label="请假番号" max_length="32" name="leave_num" read_only="true" read_only_option="strict_read_only" reference="x_1973840_leave_per_leave" type="reference"/>
+        <element label="员工" max_length="32" name="employee" reference="sys_user" type="reference"/>
         <element default="0" label="销假小时数" mandatory="true" max_length="38" name="cancel_hours" type="decimal"/>
     </element>
 </database>

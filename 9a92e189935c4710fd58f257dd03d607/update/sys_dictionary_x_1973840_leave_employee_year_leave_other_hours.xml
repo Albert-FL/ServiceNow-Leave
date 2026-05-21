@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="used_hours" table="x_1973840_leave_employee_year_leave">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="other_hours" table="x_1973840_leave_employee_year_leave">
         <active>true</active>
         <array>false</array>
         <attributes/>
@@ -8,7 +8,7 @@
         <choice>0</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>已用年假小时数</column_label>
+        <column_label>其他休假小时数</column_label>
         <comments/>
         <create_roles/>
         <default_value>0</default_value>
@@ -21,7 +21,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>used_hours</element>
+        <element>other_hours</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
@@ -47,14 +47,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2026-05-19 02:36:58</sys_created_on>
-        <sys_name>已用年假小时数</sys_name>
+        <sys_created_on>2026-05-19 09:34:37</sys_created_on>
+        <sys_name>其他休假小时数</sys_name>
         <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
         <sys_policy/>
         <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
-        <sys_update_name>sys_dictionary_x_1973840_leave_employee_year_leave_used_hours</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1973840_leave_employee_year_leave_other_hours</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-05-19 08:32:26</sys_updated_on>
+        <sys_updated_on>2026-05-20 02:53:51</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

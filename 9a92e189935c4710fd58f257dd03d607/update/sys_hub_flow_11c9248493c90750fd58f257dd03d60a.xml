@@ -1,0 +1,1175 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=152000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>c45bc3be93140750fd58f257dd03d65b</copied_from>
+        <copied_from_name>Common Approval for Leave</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>common_approval_for_leave_cancel</internal_name>
+        <label_cache>[{"name":"2cfe938f-4707-4094-9c2a-86a9a274895d.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"99b5dad0-ea0a-4a18-8bab-f0ea79bc8255":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.approver","label":"Input➛approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"2cfe938f-4707-4094-9c2a-86a9a274895d":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a3977f0d-cf06-4dea-ac82-36cb912869b8","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.leave_record","label":"Input➛leave_record","reference":"x_1973840_leave_leave_cancel","reference_display":"LEAVE CANCEL","type":"reference","base_type":"reference","column_name":"","usedInstances":{"a015df51-e500-41fe-8e6a-316940aa0e11":["record"],"2cfe938f-4707-4094-9c2a-86a9a274895d":["record"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"afd99eee-f150-4af3-9d8c-ac346a94065e","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master_snapshot>3e5a28c493c90750fd58f257dd03d624</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Common Approval for Leave Cancel</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>11c9248493c90750fd58f257dd03d60a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Common Approval for Leave Cancel</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_hub_flow_11c9248493c90750fd58f257dd03d60a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:13</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>296aa8c493c90750fd58f257dd03d6a6</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_11c9248493c90750fd58f257dd03d60a^id=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=11c9248493c90750fd58f257dd03d60a^sys_idNOT IN5dc9248493c90750fd58f257dd03d630"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>11c9248493c90750fd58f257dd03d60a</id>
+        <name>Common Approval for Leave Cancel</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:34</sys_created_on>
+        <sys_id>5dc9248493c90750fd58f257dd03d630</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:17:34</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=5dc9248493c90750fd58f257dd03d630"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=11c9248493c90750fd58f257dd03d60a^sys_idNOT IN59c9248493c90750fd58f257dd03d644,d5c9248493c90750fd58f257dd03d63b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a3977f0d-cf06-4dea-ac82-36cb912869b8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approver</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>approver</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</model>
+        <model_id>11c9248493c90750fd58f257dd03d60a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_11c9248493c90750fd58f257dd03d60a</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:34</sys_created_on>
+        <sys_id>59c9248493c90750fd58f257dd03d644</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:17:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=59c9248493c90750fd58f257dd03d644"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=afd99eee-f150-4af3-9d8c-ac346a94065e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_1973840_leave_leave_cancel</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>leave_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>leave_record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</model>
+        <model_id>11c9248493c90750fd58f257dd03d60a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_11c9248493c90750fd58f257dd03d60a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_1973840_leave_leave_cancel">x_1973840_leave_leave_cancel</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:34</sys_created_on>
+        <sys_id>d5c9248493c90750fd58f257dd03d63b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:18:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d5c9248493c90750fd58f257dd03d63b"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=11c9248493c90750fd58f257dd03d60a^sys_idNOT INa1c9248493c90750fd58f257dd03d685"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=d3728f97-c64b-4832-b781-aa6ad8776886</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approval_result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>approval_result</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</model>
+        <model_id>11c9248493c90750fd58f257dd03d60a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_11c9248493c90750fd58f257dd03d60a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:35</sys_created_on>
+        <sys_id>a1c9248493c90750fd58f257dd03d685</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:17:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a1c9248493c90750fd58f257dd03d685"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=11c9248493c90750fd58f257dd03d60a^sys_idNOT IN31c9248493c90750fd58f257dd03d6ae"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:36</sys_created_on>
+        <sys_id>31c9248493c90750fd58f257dd03d6ae</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-05-20 05:30:41</sys_updated_on>
+        <ui_id>2cfe938f-4707-4094-9c2a-86a9a274895d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YTVPjOBD9Kyof2WCcOAlO9pQiUDtbLFQRhguhXLIsE00psseyGbKp/PdtfdgxCWTDVubAMpeAWt3y69Z7Lcv3S4fFztA5DZIOHQw6XtT2PN/zgh7xAp9G/mn/1MfEc1qOwHMKnjklaR7D+AnzUhmWS1lGCU9/uJziJxoah9UKXGImM44Xd9YTLGTGeJxT4QzvH1pOhnNYtKC5M1xuTO2LiuOIcnC9qWBtwiwWmRrHKSnnVBQhq4yXNnJsZ9CXMcxAkILjtRz6XFARU8CRYC5py5ljEeMizRfOsMhLMOQUx9eCL2qPGROFyXOOnyX7Gx7sd5RfQiExYmtQD0NbH2NOxrjAE1iZFGVelytlhEpTkpgmuOTFWdNmHK6zgqXChBQ44lV0ysu5uDIFceoFGttRSgBBM5WnQm7SSiaz9MdNBfKCCV0RmyJPCeb1CBdFzqKyUHCWDuVUl3iOs4yJxzDL0yemgwHK3H3kMHAVU+CZkj0KFxOF24WqYvcC7GNtvsM5U0n8BctA8KrlyIU841jKdSpQw/B7qZCYxGwKoa6CKYGKIznLihE85YnWmI1R4bUcgf92OjonR1NxdDQiUHWJFM6TkQaOFHBUSsgVFTOKkjjUljT6RknhooleAM1LWaCcwq4KhJGWjYvUiteKa0iU8wj+MInSJJG0QNEC/dZGTKDzPE9z9AfQjqtHTKgplwbzhBlXaaJU771ElkuozABYlgNUFTN13KmDcAIaq+CpcPqM5xmnQ0CTIzlL8wJKT9C0BJnFlaMLe/v4SHOXlDlQoXC1o9o7nRc89Xe1ls2sXkUZT6aiWoSJrCzki97grFarlm08EdkpcbJWtNnVdd95DtuDUz/oeqFZ2/wSDJzl273n8nx0d47ORldn55fv7kN7gKz60K1FuQHadiE9DPXcyyakw9CVmbA9qL27B1nLugkZ9b7SgwLvA/Ugm9aHb0Jv9J+a+LTb93vwc5r4XrvT9gLaDwIy8DAJ+v1e119zCBBADpiDerCEtdcSOMARuweMitojiwPdVDjeBGjpLmFjxOMG1SeV0dK8806av33Wtvufieglu92osrFs1fnnKEI97qtg30v6RfGo34n6Ay+Ij+PEi467gd87xoR6x7Tf7tFe3Ce9tv8TVOS1d3XmOHiFpAmjvPn+Wk1si6kx8z5R7YFqS1QXFtZbcK2k9PC1E0THb5wgh5NW4HkfSVuf4EW2lgDZSTbaOEi+pfCitkMB4YxJzYw3ldDweJ8i9gBZKeJPg3JTEJvg/4se/F96+P/rodvbSbXGy3nNapKKmOlrVEMVpjNTORKLr/frjxwmiOar1cO2TvaKeZ9y9kin/gZScir/LT2rm/U7mw1qamf9pmcnrX66h/oq8sHk81nuJGQn15LBmltxSdX1vnkfX04dA3vqDKeOSAWdOq2po7xCRS5tBg8AV09o23JlxmWObXi7MVzHxnghtackMxoDM7X1hSXUUrD2Q3yB3KMilfrGJUVjU5LtIlUXogqnqQrbOrUm1kGvdHLLmqdX72CnV/eX+A5x/QnrCwIcTdD7DqjIh38AC3+FCJkXAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=31c9248493c90750fd58f257dd03d6ae"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=11c9248493c90750fd58f257dd03d60a^sys_idNOT IN2dc9248493c90750fd58f257dd03d69f,65c9248493c90750fd58f257dd03d69c,adc9248493c90750fd58f257dd03d699,e1c9248493c90750fd58f257dd03d69e"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b3ee8f7693540750fd58f257dd03d6ac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned>approval_result</outputs_assigned>
+        <parent_ui_id>7fd19aff-5156-435d-9556-8715cd4c02ee</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:36</sys_created_on>
+        <sys_id>2dc9248493c90750fd58f257dd03d69f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:06</sys_updated_on>
+        <ui_id>7f64932b-c25b-43fe-ab64-1965e0f578c1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51U247aMBD9Fz8DggRI4A2xrLRVW1aU8lJVkWM7YNWxs7YDSxH/3plcALGttNtHnxn7XGaSEzGlL0rv1mbmnNxqMv1xIpKTKaEDNgmG8XASskk/GvUzPoqzYBRx3g/5OB6RDtE0F9hZFNbsqUqscKXyUIBDiZXV4tNivl48AMSlKxQ9bt5W2E4qbgVS/+yQglp41QtLpqe7kj8WIlE0FQoemO+MZAKuv1dse/Gt2n/aQEIosJbKWI66Bh0iXr3QXAB1RpUTHZJTzak39nhBrKB8qdUV2Ent4TWCza9O/oanwwD7MgEWmahrl2PSJFbDtQZXjad1Mnt+Xi03VYZt4DdQI7Z/7lxv3KT+lxG19s6QNRcZhRDm/0s7+DBtgLS1zWXhpYGhkxCHQFPVZMOMKnP9tR4XuYhsdwqQ0kFuosDZYNhN8tm3nTms2mAfpa4Im6IyjKrLiXpvZVp69HwipVzfrUCNfL5fQqFEDoxJDksk9TbBTZIVC4jOe1sFh16mzAHU4WfWowwt9mBnaO8R8IcK3lAr0e4XeAYuI913LV9K8YRLzsMoiLNJ1GXjYdodxmHQTaN40KV0THkcReM4HpNztULJS4mm6pCaOJIqUmxwzMrCz0DCXjTOMXyp8U9Qf2v7Rklz5IJJB4LXiD3d9PEjfD2S3UIHY3+h1St2/gPH3pxKZwQAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f3ee8f7693540750fd58f257dd03d69d</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned>approval_result</outputs_assigned>
+        <parent_ui_id>99b5dad0-ea0a-4a18-8bab-f0ea79bc8255</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:36</sys_created_on>
+        <sys_id>65c9248493c90750fd58f257dd03d69c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:06</sys_updated_on>
+        <ui_id>699c370c-e295-4f66-87ac-f2d95505e503</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51U247aMBD9Fz8DggRI4A2xrLRVW1aU8rKqIsd2wKpjZ20HliL+vTO5AGVbqe2jz3jmXDzJiZjSF6V3azNzTm41mb6ciORkSuiATYJhPJyEbNKPRv2Mj+IsGEWc90M+jkekQzTNBd4sCmv2VCVWuFJ5KMChxMrs+Xm13CweAOLSFYoeN+8rbCcVtwKpv3VIQS1M9cKS6emu5I+FSBRNhYIB852RTED734ptG9+r/aMNJIQCa6mM5ahr0CHizQvNBVBnVDnRITnVnHpjjxfECsqXWl2BndQephG8/ObkDxgdBngvE2CRibp2OSZNYjVca3DV87RObjL8TeCN2P65c+1YLT4s5utfOm6g1t4ZsuYioxDC/H9pB/9MGyBtbXNZeGng0UmIj0BT1WTDjCpz/bl+LnIR2e4UIKWD3ESBb4NhN8lnX3bmsGqDfZS6ImyKyjCqLifqvZVp6dHziZRyfbcCNfLxfgmFEjkwJjkskdTbBDdJViwgOu9tFRx6mTIHUIefWY8ytNiDnaG9R8AfKnhDrUS7n2AMNCPdVy1fS/GES87DKIizSdRl42HaHcZh0E2jeNCldEx5HEXjOB6Tc7VCyWuJpuqQmjiSKlK84JiVhZ+BhL1onGP4UuOfoP7W9o2S5sgFkw4ErxF7urnHj/D1SHYLHYz9jlav2PknZYKoWGcEAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">73ee8f7693540750fd58f257dd03d69a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:35</sys_created_on>
+        <sys_id>adc9248493c90750fd58f257dd03d699</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:06</sys_updated_on>
+        <ui_id>99b5dad0-ea0a-4a18-8bab-f0ea79bc8255</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8lUJnWaBetuVb0CJAgbYBmiCXNhBWJGUTpUiVpOy4hv+9Sz1iI3HQosixN3Go3Z0ZzeoQ6M61nbN3+spasVbB6ttDGAjlMXw+BAoaHqwCqhUTTmhV9kAYbEF2/gIfmbCthP39CaEbIZnhY7cWDNY4boLV4dmV27e8lFBxiYW3zgi1xnLB8FQTqOOCxjRN5mlCSLLM4mqeVnHCUuCQ4ntT4fuJ3LtPPRK+ytrPQ9xOk7RhnlZMwoA/Oq4Yx9E1SMvDoAHFwGmzf0IMB3aj5AnYCOUGxQ08WvELeyd57l+sOWqkox1Px3K0anJJC8pvWk9wQBxUcrJQy65RXwYd3mReQyfdmcmdxX689aQ9i5FSfbvRu6/TwGuheoHjpdQU5NMJHNpQdY5b/2G45A02KhtoWzSnbI3eir4YuTTRWuIhqqXe4VCflAioJx6hRxBdI/6hh+/BCK/iM7bB4oFmBVbQsk8VtnMGJRx7W8qfnSc0CByllIMb+IKlRrTuCuds+cj6GL6M5FkaD4eE1rxIl/UsW5DFLCNFNitoArPlHApIFtmyyFmE3FAdyNI6cPx4/N4RkrIBxQS8iPRbtX2LvSggr/OY5Jf3Iptf2osLG/H6MiR/WAb/+f5yFwgh/5fhfBmELYdQj9r64f+8Cw8++MMEO+SGcSosErnz2MfpL+4v9hgAQc+hnTY/vIQTdvwNyCDpCQ8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d7aa0cdb93d00310fd58f257dd03d6da</block>
+        <comment/>
+        <connected_to>99b5dad0-ea0a-4a18-8bab-f0ea79bc8255</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:36</sys_created_on>
+        <sys_id>e1c9248493c90750fd58f257dd03d69e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:06</sys_updated_on>
+        <ui_id>7fd19aff-5156-435d-9556-8715cd4c02ee</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>leave_record</element>
+        <help/>
+        <hint/>
+        <label>leave_record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_11c9248493c90750fd58f257dd03d60a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:34</sys_created_on>
+        <sys_id>55c9248493c90750fd58f257dd03d642</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:17:34</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>approver</element>
+        <help/>
+        <hint/>
+        <label>approver</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_11c9248493c90750fd58f257dd03d60a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:35</sys_created_on>
+        <sys_id>9dc9248493c90750fd58f257dd03d656</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:17:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_11c9248493c90750fd58f257dd03d60a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>approval_result</element>
+        <help/>
+        <hint/>
+        <label>approval_result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_11c9248493c90750fd58f257dd03d60a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:17:35</sys_created_on>
+        <sys_id>29c9248493c90750fd58f257dd03d692</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:17:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_11c9248493c90750fd58f257dd03d60a^sys_idNOT IN29c9248493c90750fd58f257dd03d689,e5c9248493c90750fd58f257dd03d68c"/>
+    <sys_choice field="approval_result" table="var__m_sys_hub_flow_output_11c9248493c90750fd58f257dd03d60a">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>approval_result</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>APPROVED</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_11c9248493c90750fd58f257dd03d60a</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-19 09:17:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>29c9248493c90750fd58f257dd03d689</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-19 09:17:35</sys_updated_on>
+            <value>APPROVED</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>approval_result</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>REJECTED</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_11c9248493c90750fd58f257dd03d60a</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-19 09:17:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e5c9248493c90750fd58f257dd03d68c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-19 09:17:35</sys_updated_on>
+            <value>REJECTED</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=83719000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>c45bc3be93140750fd58f257dd03d65b</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>common_approval_for_leave_cancel</internal_name>
+        <label_cache>[{"name":"2cfe938f-4707-4094-9c2a-86a9a274895d.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"99b5dad0-ea0a-4a18-8bab-f0ea79bc8255":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.approver","label":"Input➛approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"2cfe938f-4707-4094-9c2a-86a9a274895d":["approval_conditions"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a3977f0d-cf06-4dea-ac82-36cb912869b8","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.leave_record","label":"Input➛leave_record","reference":"x_1973840_leave_leave_cancel","reference_display":"LEAVE CANCEL","type":"reference","base_type":"reference","column_name":"","usedInstances":{"a015df51-e500-41fe-8e6a-316940aa0e11":["record"],"2cfe938f-4707-4094-9c2a-86a9a274895d":["record"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"afd99eee-f150-4af3-9d8c-ac346a94065e","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master>true</master>
+        <name>Common Approval for Leave Cancel</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3e5a28c493c90750fd58f257dd03d624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:08</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_3e5a28c493c90750fd58f257dd03d624^id=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3e5a28c493c90750fd58f257dd03d624^sys_idNOT INbe5a28c493c90750fd58f257dd03d625"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3e5a28c493c90750fd58f257dd03d624</id>
+        <name>Common Approval for Leave Cancel</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:08</sys_created_on>
+        <sys_id>be5a28c493c90750fd58f257dd03d625</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:08</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=be5a28c493c90750fd58f257dd03d625"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3e5a28c493c90750fd58f257dd03d624^sys_idNOT IN365a28c493c90750fd58f257dd03d627,fe5a28c493c90750fd58f257dd03d656"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=afd99eee-f150-4af3-9d8c-ac346a94065e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_1973840_leave_leave_cancel</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>leave_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>leave_record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Common Approval for Leave Cancel">3e5a28c493c90750fd58f257dd03d624</model>
+        <model_id>3e5a28c493c90750fd58f257dd03d624</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3e5a28c493c90750fd58f257dd03d624</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_1973840_leave_leave_cancel">x_1973840_leave_leave_cancel</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:08</sys_created_on>
+        <sys_id>365a28c493c90750fd58f257dd03d627</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=365a28c493c90750fd58f257dd03d627"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a3977f0d-cf06-4dea-ac82-36cb912869b8</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approver</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>approver</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Common Approval for Leave Cancel">3e5a28c493c90750fd58f257dd03d624</model>
+        <model_id>3e5a28c493c90750fd58f257dd03d624</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3e5a28c493c90750fd58f257dd03d624</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:08</sys_created_on>
+        <sys_id>fe5a28c493c90750fd58f257dd03d656</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fe5a28c493c90750fd58f257dd03d656"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=3e5a28c493c90750fd58f257dd03d624^sys_idNOT IN075a28c493c90750fd58f257dd03d66b"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=d3728f97-c64b-4832-b781-aa6ad8776886</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approval_result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>approval_result</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Common Approval for Leave Cancel">3e5a28c493c90750fd58f257dd03d624</model>
+        <model_id>3e5a28c493c90750fd58f257dd03d624</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_3e5a28c493c90750fd58f257dd03d624</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:09</sys_created_on>
+        <sys_id>075a28c493c90750fd58f257dd03d66b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=075a28c493c90750fd58f257dd03d66b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=3e5a28c493c90750fd58f257dd03d624^sys_idNOT INeb5a28c493c90750fd58f257dd03d6c0"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">3e5a28c493c90750fd58f257dd03d624</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:11</sys_created_on>
+        <sys_id>eb5a28c493c90750fd58f257dd03d6c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:11</sys_updated_on>
+        <ui_id>2cfe938f-4707-4094-9c2a-86a9a274895d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YTVPjOBD9Kyof2WCcOAlO9pQiUDtbLFQRhguhXLIsE00psseyGbKp/PdtfdgxCWTDVubAMpeAWt3y69Z7Lcv3S4fFztA5DZIOHQw6XtT2PN/zgh7xAp9G/mn/1MfEc1qOwHMKnjklaR7D+AnzUhmWS1lGCU9/uJziJxoah9UKXGImM44Xd9YTLGTGeJxT4QzvH1pOhnNYtKC5M1xuTO2LiuOIcnC9qWBtwiwWmRrHKSnnVBQhq4yXNnJsZ9CXMcxAkILjtRz6XFARU8CRYC5py5ljEeMizRfOsMhLMOQUx9eCL2qPGROFyXOOnyX7Gx7sd5RfQiExYmtQD0NbH2NOxrjAE1iZFGVelytlhEpTkpgmuOTFWdNmHK6zgqXChBQ44lV0ysu5uDIFceoFGttRSgBBM5WnQm7SSiaz9MdNBfKCCV0RmyJPCeb1CBdFzqKyUHCWDuVUl3iOs4yJxzDL0yemgwHK3H3kMHAVU+CZkj0KFxOF24WqYvcC7GNtvsM5U0n8BctA8KrlyIU841jKdSpQw/B7qZCYxGwKoa6CKYGKIznLihE85YnWmI1R4bUcgf92OjonR1NxdDQiUHWJFM6TkQaOFHBUSsgVFTOKkjjUljT6RknhooleAM1LWaCcwq4KhJGWjYvUiteKa0iU8wj+MInSJJG0QNEC/dZGTKDzPE9z9AfQjqtHTKgplwbzhBlXaaJU771ElkuozABYlgNUFTN13KmDcAIaq+CpcPqM5xmnQ0CTIzlL8wJKT9C0BJnFlaMLe/v4SHOXlDlQoXC1o9o7nRc89Xe1ls2sXkUZT6aiWoSJrCzki97grFarlm08EdkpcbJWtNnVdd95DtuDUz/oeqFZ2/wSDJzl273n8nx0d47ORldn55fv7kN7gKz60K1FuQHadiE9DPXcyyakw9CVmbA9qL27B1nLugkZ9b7SgwLvA/Ugm9aHb0Jv9J+a+LTb93vwc5r4XrvT9gLaDwIy8DAJ+v1e119zCBBADpiDerCEtdcSOMARuweMitojiwPdVDjeBGjpLmFjxOMG1SeV0dK8806av33Wtvufieglu92osrFs1fnnKEI97qtg30v6RfGo34n6Ay+Ij+PEi467gd87xoR6x7Tf7tFe3Ce9tv8TVOS1d3XmOHiFpAmjvPn+Wk1si6kx8z5R7YFqS1QXFtZbcK2k9PC1E0THb5wgh5NW4HkfSVuf4EW2lgDZSTbaOEi+pfCitkMB4YxJzYw3ldDweJ8i9gBZKeJPg3JTEJvg/4se/F96+P/rodvbSbXGy3nNapKKmOlrVEMVpjNTORKLr/frjxwmiOar1cO2TvaKeZ9y9kin/gZScir/LT2rm/U7mw1qamf9pmcnrX66h/oq8sHk81nuJGQn15LBmltxSdX1vnkfX04dA3vqDKeOSAWdOq2po7xCRS5tBg8AV09o23JlxmWObXi7MVzHxnghtackMxoDM7X1hSXUUrD2Q3yB3KMilfrGJUVjU5LtIlUXogqnqQrbOrUm1kGvdHLLmqdX72CnV/eX+A5x/QnrCwIcTdD7DqjIh38AC3+FCJkXAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eb5a28c493c90750fd58f257dd03d6c0"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=3e5a28c493c90750fd58f257dd03d624^sys_idNOT IN575a28c493c90750fd58f257dd03d6bd,5b5a28c493c90750fd58f257dd03d6a2,935a28c493c90750fd58f257dd03d6a0,9f5a28c493c90750fd58f257dd03d6be"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d7aa0cdb93d00310fd58f257dd03d6da</block>
+        <comment/>
+        <connected_to>99b5dad0-ea0a-4a18-8bab-f0ea79bc8255</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">3e5a28c493c90750fd58f257dd03d624</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:10</sys_created_on>
+        <sys_id>575a28c493c90750fd58f257dd03d6bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:10</sys_updated_on>
+        <ui_id>7fd19aff-5156-435d-9556-8715cd4c02ee</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f3ee8f7693540750fd58f257dd03d69d</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">3e5a28c493c90750fd58f257dd03d624</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned>approval_result</outputs_assigned>
+        <parent_ui_id>99b5dad0-ea0a-4a18-8bab-f0ea79bc8255</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:10</sys_created_on>
+        <sys_id>5b5a28c493c90750fd58f257dd03d6a2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:10</sys_updated_on>
+        <ui_id>699c370c-e295-4f66-87ac-f2d95505e503</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51U247aMBD9Fz8HBARI4A0BK221LSuW8lJV0WA7YK3jZH2BpYh/7zgXoGUrtX3LnPF4zjkzzonkzhbOmlU+MUZsFRl/OxHByJhAl456/bg/CumoEw06KRvEaW8QMdYJ2TAekIAoyLg/WRQ634NMNDdOWkxg4Hxm8vy8XKznM4SYMIWE4/o+Q3dCMs196+8BKUDjrZZrMkYiCj8UyCehXrHo7vDfEpWw4fJDpn+UYI+FT9BdLiiv46f6mmkD5pp5ot2A8HfLFePIJwVpeEAyUAxsro8XRHNgCyWvwA7lVaoyeDfiB/YLe/5cylEh5VXuEia1hRWczsDCi9WOWqd5Y47nZcoZNpJvjP5gKrWAzjm4Viznn+bT1S8VN1Aj+Yz2M54CujX937bdf27b820rmYvCihz3gIR+OrCRjQm5dJn6Us2VXEg2i4eIM+glL/y8/ADqaaQvu/ywbMx+EKpsWCdlTkFeIrBWi42zXvOJOLH6bVcq5G5buOQZdkwy3DahtolfOVF2QdJZeysxaKcyPyA7/xbbQL3ENu4RtB8Qn5XwGrTwcj/jNVjs231V4s3xR/8aWBj14nQUteiwv2n147DX2kRxtwUwBBZH0TCOh+QcEHM0UwnGXI3CRUvenJdZ2VYblJQmlyVUi8JOkNSe1174cQjlfyDVg9zX3OqQcSoMSlh57PHmHDviwxP0Fjrk+tWLv2Lnn/mqzDueBAAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">73ee8f7693540750fd58f257dd03d69a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">3e5a28c493c90750fd58f257dd03d624</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:10</sys_created_on>
+        <sys_id>935a28c493c90750fd58f257dd03d6a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:10</sys_updated_on>
+        <ui_id>99b5dad0-ea0a-4a18-8bab-f0ea79bc8255</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjlH8kcR5KymFQbfCWvqyFXMty4mYLHmWnDQz+e+7sh0ntBlbWR/3Zh3pXp1zdA9uiW5s1VjzoK+MEWtFll+fPCKUw/C7JQpKTpaEaZULK7RKO8AjW5CN28DPXJhKwv7xhLCNkHnNh24V1FhjeU2W7YstkWNBQaGYJmzKwmAWBpQGi2iazcJsGuQhcAixoYSMSzy6OtL4cNsh3m/52X3lcGNrodbD+nbocn8EdZ07VlPqEf5suco58ilAGu6RElQOVtf7Eak55HdKnoCNULYXXMKzET/xwiCO3cGCo0Q2uDEu08GpHi6uwQJSaZht6tE4LRg3vTk5L6CRdnWO9QfuKie1L7GQyWO1lk2pPveOkLHB2cM0Bknwyil11Acdxf1G774cWd4I1bkybErNQI4rsOhd1ljHpyVc8hIbpSVUFTqaVrXeiq4YuZT+WuLCL6Te4aVuunxgjriPxoJ/g/h1Bz9CLZyKT9gGi3uaGRjB0m4SsR3axMnBI2ZvVhKMOYlEd9MfjaPYSx7Epb0/roTVorJXePOWDzoO3uvBPpvptg1YwZNwUUyiOZ1PIppEk4QFMFnMIIFgHi2SOPeRLeoFmRoLlh8O3xpKw7xHcZBeBeO92r4tXQnERTyl8eV0RbNL6bqQqzdGKvhDpNx7/mWiKKX/I/XPkRIm7YMwaOsuf8dEPbn49HeOXjNhkNqDwz4e/yhuY4/DJdg5tNP1dyfqhB1+AR3asrqbBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b3ee8f7693540750fd58f257dd03d6ac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Common Approval for Leave Cancel">3e5a28c493c90750fd58f257dd03d624</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned>approval_result</outputs_assigned>
+        <parent_ui_id>7fd19aff-5156-435d-9556-8715cd4c02ee</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:10</sys_created_on>
+        <sys_id>9f5a28c493c90750fd58f257dd03d6be</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:10</sys_updated_on>
+        <ui_id>7f64932b-c25b-43fe-ab64-1965e0f578c1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51U247aMBD9Fz8HBARI4A0BK221LSuW8rKqosF2wFrHyfoCSxH/3nEugMpWavvGnLEz5zLmRHJnC2fNKp8YI7aKjF9PRDAyJtClo14/7o9COupEg07KBnHaG0SMdUI2jAckIAoy7k8Whc73IBPNjZMWG1g431nOv8ynq/kMISZMIeG4vu/QnZBMcz/6R0AK0PhVyzUZIxGFPxTIJ6He8NLd4b8lKmHD5adM/yjBHgvfoLtcUF7XT/Vnpg2Ya+aJdgPCPyxXjCOfFKThAclAMbC5Pl4QzYEtlLwCO5RXqcrgw4ifOC/s+XMpR4WUV71LmdQWVnA6AwsvVjtqneaNOZ6XKTNsJE+en5eLdWl0k8oNVAvonIPrjZtoPsmxkXxG+xlPAd2a/u/Y7j+P7fmxlcxFYUWOe0BCnw5sZGNCLl2mvlW5kgvJZvEQcQa95IXPywdQp5G+7PLDsjH7QahyYN2UOQV5qcBaLTbOes0n4sTqt12pkLtt4ZJnODHJcNuE2iZ+5UQ5BUln7a3Eop3K/IDs/FtsA/US27hH0H5AfFbCa9DCy/2Kn8HLftx3Jd4df/SvgYVRL05HUYsO+5tWPw57rU0Ud1sAQ2BxFA3jeEjOATFHM5VgzNUoXLTk3XmZlW21QUlpcnmFalHYCZLa89oLH4dQ/g+kepD7mltdMk6FQQkrjz3enGNHfHiC3kKHXL958Vfs/Au7s5IengQAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>leave_record</element>
+        <help/>
+        <hint/>
+        <label>leave_record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3e5a28c493c90750fd58f257dd03d624</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:08</sys_created_on>
+        <sys_id>365a28c493c90750fd58f257dd03d652</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>approver</element>
+        <help/>
+        <hint/>
+        <label>approver</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3e5a28c493c90750fd58f257dd03d624</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:09</sys_created_on>
+        <sys_id>875a28c493c90750fd58f257dd03d663</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:09</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3e5a28c493c90750fd58f257dd03d624"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>approval_result</element>
+        <help/>
+        <hint/>
+        <label>approval_result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_3e5a28c493c90750fd58f257dd03d624</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:09</sys_created_on>
+        <sys_id>875a28c493c90750fd58f257dd03d67d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:09</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3e5a28c493c90750fd58f257dd03d624^sys_idNOT IN475a28c493c90750fd58f257dd03d674,875a28c493c90750fd58f257dd03d671"/>
+    <sys_choice field="approval_result" table="var__m_sys_hub_flow_output_3e5a28c493c90750fd58f257dd03d624">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>approval_result</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>REJECTED</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_3e5a28c493c90750fd58f257dd03d624</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-19 09:20:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>475a28c493c90750fd58f257dd03d674</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-19 09:20:09</sys_updated_on>
+            <value>REJECTED</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>approval_result</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>APPROVED</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_output_3e5a28c493c90750fd58f257dd03d624</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-05-19 09:20:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>875a28c493c90750fd58f257dd03d671</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-05-19 09:20:09</sys_updated_on>
+            <value>APPROVED</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>11c9248493c90750fd58f257dd03d60a</sys_id>
+        <latest_snapshot>3e5a28c493c90750fd58f257dd03d624</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch1-03-23-2026_03-31-2026_1137.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=11c9248493c90750fd58f257dd03d60a"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=11c9248493c90750fd58f257dd03d60a^sys_idNOT IN0c6a68c493c90750fd58f257dd03d637"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_subflow_plan","id":"0c6a68c493c90750fd58f257dd03d637","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id display_value="Common Approval for Leave Cancel">11c9248493c90750fd58f257dd03d60a</plan_id>
+        <snapshot>df6f3c1c930d8750fd58f257dd03d6be</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 09:20:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0c6a68c493c90750fd58f257dd03d637</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 09:20:13</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>

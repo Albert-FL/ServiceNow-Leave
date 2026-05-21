@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>package_private</access>
+        <acls/>
+        <active>false</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from>02c3a6d293340b10fd58f257dd03d678</copied_from>
+        <copied_from_name>年假扣除</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>copy_of_</internal_name>
+        <label_cache>[{"name":"subflow.record.cancel_hours","label":"Input➛record➛销假小时数","reference":"","reference_display":"销假小时数","type":"decimal","base_type":"decimal","parent_table_name":"x_1973840_leave_leave_cancel","column_name":"cancel_hours","usedInstances":{"087bde44-49af-47d8-9bdd-ff807ef2c5e1":["condition"],"4fabf92a-8a4f-4242-bbc2-b4b6b4969cf5":["used_hours"]}},{"name":"b4446d6d-37f7-4b1b-a307-d62139e167fb.Record.remaining_hours","label":"2 - Look Up Record➛Employee Year Leave Record➛剩余年假小时数","reference":"","reference_display":"剩余年假小时数","type":"decimal","base_type":"decimal","parent_table_name":"x_1973840_leave_employee_year_leave","column_name":"remaining_hours","usedInstances":{"087bde44-49af-47d8-9bdd-ff807ef2c5e1":["condition"]}},{"name":"flow_variable.year","label":"Flow Variables➛Year","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"b4446d6d-37f7-4b1b-a307-d62139e167fb":[null]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b8bba35a-6af7-4e2b-976d-7cf3b4204d89","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.record.leave_num.opened_by","label":"Input➛record➛请假番号➛申请人","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_per_leave","column_name":"opened_by","usedInstances":{"b4446d6d-37f7-4b1b-a307-d62139e167fb":[null]}},{"name":"subflow.is_gm","label":"Input➛is_GM","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"73023a7c-02d9-40ef-99ed-b0a3ca21a034":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1eddae9e-dbf3-4168-bc9a-eacf68a478f7"}},{"name":"subflow.record","label":"Input➛record","reference":"x_1973840_leave_leave_cancel","reference_display":"LEAVE CANCEL","type":"reference","base_type":"reference","column_name":"","usedInstances":{"0f564388-f613-4023-9396-97890e0de52a":["leave_record"],"f2f9d995-6d9e-4ee9-8736-d22b90477f57":["record"],"00cede0b-5091-4a6c-800c-3792736862ad":[null],"78d8afb4-58ce-4816-80fd-2b1c9e19a819":["record"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14a5b055-b096-4cca-8f61-4ee9906e0192","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.record.leave_num.project_id.project_id","label":"Input➛record➛请假番号➛项目名➛项目ID","reference":"","reference_display":"项目ID","type":"string","base_type":"string","parent_table_name":"x_1973840_leave_m_project","column_name":"project_id","usedInstances":{"00cede0b-5091-4a6c-800c-3792736862ad":[null]}},{"name":"00cede0b-5091-4a6c-800c-3792736862ad.Record.responsible_per_1","label":"5 - Look Up Record➛PROJECT RES MANA Record➛1级责任者","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_project_res_mana","column_name":"responsible_per_1","usedInstances":{"84b633cf-121c-40fe-8940-1fa35b2fae31":["l1-0"]}},{"name":"00cede0b-5091-4a6c-800c-3792736862ad.Record.responsible_per_2","label":"5 - Look Up Record➛PROJECT RES MANA Record➛2级责任者","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_project_res_mana","column_name":"responsible_per_2","usedInstances":{"84b633cf-121c-40fe-8940-1fa35b2fae31":["l2-1"]}},{"name":"b4446d6d-37f7-4b1b-a307-d62139e167fb.Record","label":"2 - Look Up Record➛Employee Year Leave Record","reference":"x_1973840_leave_employee_year_leave","reference_display":"Employee Year Leave Record","type":"reference","base_type":"reference","usedInstances":{"4fabf92a-8a4f-4242-bbc2-b4b6b4969cf5":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b4446d6d-37f7-4b1b-a307-d62139e167fb.Record.used_hours","label":"2 - Look Up Record➛Employee Year Leave Record➛已用年假小时数","reference":"","reference_display":"已用年假小时数","type":"decimal","base_type":"decimal","parent_table_name":"x_1973840_leave_employee_year_leave","column_name":"used_hours","usedInstances":{"4fabf92a-8a4f-4242-bbc2-b4b6b4969cf5":["used_hours"]}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Copy of 年假扣除</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d0add88893490750fd58f257dd03d6d2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Copy of 年假扣除</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name>sys_hub_flow_d0add88893490750fd58f257dd03d6d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:35:43</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>89df14cc93490750fd58f257dd03d6b6</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_variable_value action="DELETE" query="document_key=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_element_mapping action="DELETE" query="table=var__m_sys_hub_flow_output_d0add88893490750fd58f257dd03d6d2^id=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=d0add88893490750fd58f257dd03d6d2^sys_idNOT IN14add88893490750fd58f257dd03d6e0"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>d0add88893490750fd58f257dd03d6d2</id>
+        <name>Copy of 年假扣除</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:32</sys_created_on>
+        <sys_id>14add88893490750fd58f257dd03d6e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=14add88893490750fd58f257dd03d6e0"/>
+    <sys_hub_flow_input action="DELETE" query="model=d0add88893490750fd58f257dd03d6d2^sys_idNOT INf4ad1c8893490750fd58f257dd03d669"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=14a5b055-b096-4cca-8f61-4ee9906e0192</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_1973840_leave_leave_cancel</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</model>
+        <model_id>d0add88893490750fd58f257dd03d6d2</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d0add88893490750fd58f257dd03d6d2</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_1973840_leave_leave_cancel">x_1973840_leave_leave_cancel</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:34</sys_created_on>
+        <sys_id>f4ad1c8893490750fd58f257dd03d669</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=f4ad1c8893490750fd58f257dd03d669"/>
+    <sys_hub_flow_output action="DELETE" query="model=d0add88893490750fd58f257dd03d6d2^sys_idNOT INb0ad1c8893490750fd58f257dd03d676"/>
+    <sys_hub_flow_output action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=89a0754c-aace-48a6-896d-7362e49a46e9</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>false</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>al_cut_result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>AL_Cut_Result</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</model>
+        <model_id>d0add88893490750fd58f257dd03d6d2</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_d0add88893490750fd58f257dd03d6d2</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:34</sys_created_on>
+        <sys_id>b0ad1c8893490750fd58f257dd03d676</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:35:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=b0ad1c8893490750fd58f257dd03d676"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=d0add88893490750fd58f257dd03d6d2^sys_idNOT IN803f5c4c93490750fd58f257dd03d664,89ad1c8893490750fd58f257dd03d6b2,c5ad1c8893490750fd58f257dd03d6b5"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>087bde44-49af-47d8-9bdd-ff807ef2c5e1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:31:21</sys_created_on>
+        <sys_id>803f5c4c93490750fd58f257dd03d664</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:35:43</sys_updated_on>
+        <ui_id>4fabf92a-8a4f-4242-bbc2-b4b6b4969cf5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Wz28bRRT+V0Z7TO31ru3aiXOKlEZFgkZKoBKqq9Xszlt7YHZ2mZl140aW4ITgUDgEcaDix41DJSpUgTjx19iF/4I3s7uOk5YQVZEQEr6s5vm9733fe9+O/eDU48wbeX1gQbgTDpJe2Ot1g6C73Q/jQS8Ou6xHAUKv5UmaAWYqSHLF8DyjorSB09O43+8P2IC1e8N02O7HYdymvWDYZoNu2NuBcDBMY//I1S0WWMm4LgSd368BMJJMuWAKpDd68LDlFVRhLwPKG51e+srMC4gEjUFg4X6elBlIQ97aR4zr6miqjxohl4XZHnhmNXrEbRC/snzCoOXBiQHJANulVGhoeRmVjJpczb2RUSUGFFB2KMV8nTHl0lRKM3qi+WPE7wc2LwWUltRTWB+jekLNcHKewGFheC6riKGxaCaXizKT9yoJdraQ0lKYjdmWGvGgsJQtiYphejzNHx01/Q64dOpqtiJPqFifqDGKx6UBbdcBAtxQMloUXE6iQuUz7oqRSuZPBB78VOSPsKfmE+nTxPL2cUDUP8D4vgvfp4pbEe8gDBYvnPjoo9L2rWTUhCOn2QmO3KIwVSeKF2YPgWdQ01y0aiPHt68yQLJzvu8NzHMzn0ThzrC33Q8iAXQGEWSFyOcA0RyoqmKvGvhOnUTexyTydp30Zp5+17Ii9ypW11V0ofhvFNauvhCrTX37xky9/S+Zumb0H3P1P3k56F55mW1s2tlXb/gY58OiaV4qPS6DoMdS1q46AXvVv1cnv6GP7ZtDDZCqSevaihqAAw6C6ddIbIxcN4hmdYP1DX1jbg4Hgfv8f1HfyEVdCapiluG57ezpqlyvszWWW1t7SQJaE0uus+fYEsuWlBoFEjMFkrLIRfL4A0iMT44dAMlKbYgCUypJKHGG8YlFPLSeIbLMYnxwTfI01WBIPCe3QsIluaNUrshdNI+wLY6hmpEjM6NcuMs6dwvXpPYCKQskViikamvGnj/2CE3xlWno2XI4oehfGCEbRfQ0VwbnnZDqBWwSfVzoZALKT0qF+ze+S7QLc7qw667FqpWtUWywM5adDlk++W719LPlrz+/PPtx+duL5SefjqVtmAv2Hk7/rh3+5Z5RN4pEnn8YlUVU/Sfy68f5wnYd+urps9WzH/48+xhxl8+/WH39y+qr51WDhKJbxWvxdRk723FZlEY32FXBJvrLFz8tP/9++eWTP34/W37z7VjWMi9wv7XZaRf9qPHHl61fqsVi8fAvMVDeReMKAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=803f5c4c93490750fd58f257dd03d664"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>89ad1c8893490750fd58f257dd03d6b2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:31:20</sys_updated_on>
+        <ui_id>b4446d6d-37f7-4b1b-a307-d62139e167fb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VYbW/bOAz+K4Y/pzk7b0767bAuwIDdCmy9AYdeT5AtuRFOkTxZTpsG+e+jLMtJEydNk2zrPooixYfkQ1ry7cJnxL/0ySgYpaNRfxgFQbcbBINBN8FhHHcHSRzEuOe3fIGnFDQ1jjmF5QzzwqwfUTiKusNegDjFM4roNONyTimaU6ysDLQJyzOO518ro/eVkvcPKHkfK6VkwjhRVPiXt3ctP8MKPGqq/MvFxpaeZxRxHFMOZ90YQN4ng651cDDPjLeDMw7cEgl7tFTEYAlaPn3UVBAKrlLMc9ryp1gQrKWa1xJFMbkWfCWYMKHhRN8oP+bsCY4fBkYvpRBWQu1evURVwqw4mUiW0OtMMymsxAK1m5IXU/HJBmBSTVNccO1SDZIih/NoZjAbEBWi9MtEPnx2DsdMlOFVm1wmmNcrrLVicaFpbmpBOZ3CQWiKs4yJe5QpOWOlMWCZtu85LNoplw/gNGf3oo0TA7wNKcLtMcivSvFXrJiJ4i84BowBEONQbWSTnstClVmZoYQXebmhsMjtWf6yzBX6VhiUNuoqPmRTBAp5olim/wQDYJcNZdlyfO/vpchoRYlECsKMz3yN9I7k/xZgThaLvIhNwG1FE6BJ23aCKKZtCagoQfF8ufzPNIQzKNMzqzLQNjuggEuoVkWroqFvfprf41rx3XquDs1zo3FT8qumfCarmjI8W1P2guAXtaXJ/Jvrypf6zAbc3GxOWJJmVTRYNXXmsu7NkOzlDFnRI5dKI5votebcbpujCT1mlJNn35YDwDnja8NNL57vwlvxOTU+Nj4ynd/+I/Mm2QyACLL5ZoIzUX7jzcA7heY1b/t7qRGHGzwoy79ibSnDebLNXuxp6T0dP5TLujr+HgDSGX4BRN6NRdkA3I1jd3xF3e7ZqNvtvI66QJzbRY2+zlpDgt1VzpTO6T8ZfbypD+xaMwiXdzX13x3nM3ytz47xudGb3Vc15zqz7M7VDoKd+aK4o9laP7K7J2Ba+UO2WdEDI/dUr7w7LSL1A+b/N+1X7Kp7qAzv5EtnuPddEq9dOlmKplAnlsFN2N7tcoQVRaksBEHVHXhFG1O3lKlcV8rbM+Qz1YUSnoSW8/SEeqW2V2ufY7IcEJ0z/JB6LrwKQ+5BeF4ZnleH97pk7JhHvTNeDU+ZR2PMeJl6eMtk608JpaTaMZNeqNqe8h84sA4EFZ4V1OkTrYnvjZPtBay/xcP41KmTUBz3OngQdcMwCMKARMEwisLhIE4HOOqlq0ZDKBcJjEU4OQViwPHIEcFVNdgeLXY2Hv33BmbuH+PqiEPxOuMrKcyrtRNpzwCGOnsO8MshVfMilhKezWJFz/4vGxhv5QdPwW42c2NFH5uK9qM+5gX7W7BvBf1gSDGkQWcYkuRiGIXRRS8lg4sRwf0LPIr7UZfQpJce/32++w4uKsr0BhUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=89ad1c8893490750fd58f257dd03d6b2"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Send Notification">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Send Notification">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>e4493c88-7b0a-4b15-83fa-0154303d53d3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>c5ad1c8893490750fd58f257dd03d6b5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:31:21</sys_updated_on>
+        <ui_id>78d8afb4-58ce-4816-80fd-2b1c9e19a819</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/8WVy07cMBSGXwVlPRnFuUwSdoiLhEQHiVI2CEWOfQyWnAuJMzAdzaKbdoVa9VVaVe37lKp9i9pJ5hJgAFFENyP5xD7nP//xNz6eGJwa64ZLA0pDhiyGELKQ5SEbBRBATPyBD3Zg9IwUJ6B2FkCygqr1CItKByaTsoqZyC76zafpVH2kvMwFHh+1e1SEnHFBC0iN9eOTnpHjQqWTUBjrkxuf5DiHSOAYhDq4lZEqgVSu7W6pHI+VOjt9MNN6U7uuoda0zR5xHVSftB7UM+BSQkpBVWNYlNAzEpxSLLNiPI8UgOl+KhaBM57KptMEX5b8rcrv2HofA9UaaV2YL6PWoZk5GSewn0uepU1E4ljMnMtElaTDpgXtLTBcCbnkbVWqfJBrzVqELColiL0+yy4OZvV2eFp316oVGcFivsJSFjyuJJR6HBU/vMueJrx352BAQL0xwXnO09MoL7IRr+sp9Un/VKhFX98RJbPkp2kfE91qX5mK+zsqvlWHj3DBdd+vVBp1WNd8k/LzCnb14CmyfCe0iOnbnmO6FsFmHNDYxLHNPNcdBIMYGdPa4+i80u01brW+RLW1ta9RfR/U1pIUPJcbSswIWjemvRaJAN13zxx7ca2Wci6wuIxQ6DuBa0UC8AjaX4LVLMRtQPa2N4621zY3hpvbe0+G5VDrWBs2Oh7bQ+fwip5aXDqxlhb72WgJrP9DS6vo33Hp2NOlpTOZF4GFxHHMYghNFBNiuj4EZmBj3wTPIg6zHcvy2YOwPISIe//1Wno10kxyxgmuR7aABFM6QC4JQscKLd+zGPUCZns+pZZDB+DeBuX6x9frdx9+fr/6/e3Lr4+f/rz//GRc5sOevywPtzM7O+z2c3eXLTbFUp2WGud+apo/8Kc8MeW4hJGeHySYi6i5OStIutHDaqpWJe2ghhkDIoFGjIOg6v5E9ZmXfK+Wje6MQrGpStyicvkClCCjVmikQYtYViRY213XfCls3RCB79iBGQ5shS04nhlTxzGRwhgAA7Ppc7xxJ38BE9Zkk/gJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=c5ad1c8893490750fd58f257dd03d6b5"/>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=d0add88893490750fd58f257dd03d6d2^sys_idNOT IN01ad1c8893490750fd58f257dd03d698,05ad1c8893490750fd58f257dd03d694,c5ad1c8893490750fd58f257dd03d691,c5ad1c8893490750fd58f257dd03d696"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">3ab854cc93090750fd58f257dd03d622</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned>al_cut_result</outputs_assigned>
+        <parent_ui_id>e4493c88-7b0a-4b15-83fa-0154303d53d3</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>01ad1c8893490750fd58f257dd03d698</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:35:43</sys_updated_on>
+        <ui_id>d7617a21-d3d2-4c8d-9de6-279994b30643</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41T227aQBD9l30G6gRjbN5QI6RIaSOlNC9VZA27Y1h1vevsBUIR/95ZvJAIpVLfPGfncs6Z8YGZ4Lvg3dLMnZNrzWa/DkwKNmOrDMQNL8tqnFfZdJI1YlI2t5OpENlYFNOCDZiGFikTVM2Dry26oDzBW1Ah4hl9C+k6BfvnBDWgHBLMN1IJi3Hcy4B1YKmTR8tmh6snv++wVrBCRdVLG/DLIrX4X5Ln4vlD/ZVYPp1Z/oN8HBgbG6MQNAHGikjsZsDwzaMWSHNPMgasBS3AG7u/IBZBPGr1Dmyk9tSOxeQ3J/9Q7zyLeQ2SRo792yWsk189zDdGcnzsvDS6RzysVKrhRoVWf+9VRKexAZJw7XSC7z7fQ3A0ErsoK/JMpJsfG7N7OnNaSH1yID0qw0FdIvDeylXw6OLuglxe29dDD59tEBW2NLZuoeukXtedNVt5GkXi2tFaUTBqlNkRxXibI+DRiRF5DqMF4Xcn+BmsjLZ8ozZUHEf+1PI14H28kLICOoycDwE4DvMSimFZFWI4HRe3mFeQF1ix42kF9WuIynozkyd17zwlOG5l5+dEYYtJ/pEOVOr4+/THuk1MUiiQS0eElxG7/5An9nR8kn+Edsb+jlLfseNf77lacpwDAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">82f7c88c93850750fd58f257dd03d603</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>05ad1c8893490750fd58f257dd03d694</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:35:43</sys_updated_on>
+        <ui_id>087bde44-49af-47d8-9bdd-ff807ef2c5e1</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K8PPifFH4ix5KxuFwbZCW/qyFXMtXSdisuRJctLM5L/vyh9JaFM2xtjTXox1dD/Oub4Ht4FuXN04e6+vrBVrFay+PE4CoTxG722goMJgFTCtuHBCq7wDJsEWZOMv6JULW0vYP5wQthGSGxyq1WAox6EJVu2zK7evMZdQoKTEO2eEWlO64HQqIyjjJYtZmmRpEkXJ21lcZGkRJzwFhJTixsR3I7k3Hztk8ipr349wO3bShntacTQJ8Mmh4kitS5AWJ0EFioPTZn9EDAK/UfIEbIRyveIKnqz4QbWT+dwHlkga2TCO4zEfRjVOSQuGN7Un2CMOCjmOUMumUp97HX7IWEIj3dmQG0v1sPakPYuBUnm30bvbseG1UJ3A4VJqBvJ4AkdjKBqH1n8YlFhRobyCuqbh5LXRW9ElE5cqXEs6hKXUO2rqNyUE5omHNCMIrwl/38EPYIRX8YnKUHJPswArWN5tFZVzhiQcurHk3xtPqBc4SMn7aVCAZUbU7or6bHFgfZi8XMmzbWzbYjabZTzj03RRLqazIi6mkEaLKc+SOF1inC3KIrxFRl8+NFiBUF7sRjfGHg5fmyhKsXvytrVN4fVSWBfNgAYqx9CXe/9Pe/8Nhy1hXs7jaH7ZYbPsksMueOt1WyW/sJVfhN90VRRF/211bith894eg7au+R+76tFbqO9g+73hyIQlIvce+zD+D/zFnhZAsHNop803L+GEHX4CCnyctlkGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">79f7888c93850750fd58f257dd03d6fb</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</flow>
+        <flow_variables_assigned>year</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>c5ad1c8893490750fd58f257dd03d691</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:35:43</sys_updated_on>
+        <ui_id>ef417d81-e26e-4e3d-824e-48eba1bbb19f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1W224TMRD9FWufoCTbbZM0F54ilUIlaCUaKgGpIu96NjF47cWXpKHKvzOzl7QUCfHCW56yHo/PnHM8HuUhMsGXwbuZmTonlzqafL3rRFJTDL8fIs0LiCbRFriNOtGaq0BL/BTSlYpvbx8j2UoqYaHBKLnFox5sNHl4tuW3JSwUT0HhwUvtYQkELgUuecKFGI1G415/nAwHSS4Go/x0MBQi6Ykz4JjXnvxcc/qdIWHjSu5RjRXE4aQTwb0HLQCr5Fw56EQF14J7Y7f7iAUurrV6DKwQqFZX8HsnfyL2KEkSyswBBWWN9v1y0fjSWmJkBtell0bXEc9T1fplVCj0VU2fHIWcB+WfOBoc4kFJrIlGwym/WZnNx7bghdSVwGZTmYyr/Yp7b2UaPDi6hSBnz92pQ+//uAtQUGDNRcHLUurlorRmLas6SLuIlwoXca7MBvlR38Q8I40x+snjC4yfV+FbbiUJ/oAwTb1PWv4IcEl3nY7SlPcGvHvG82G3D6dpdzw8E91hlvfS/mnSF6NxtKvMXfwIJKu2qTFkUXuKCS6zsvRTpLBGed4GaGMku+oM/P1bVnR8NNdHR9MsA+cYCTieVooYKWLBoQnMr4DlYlFFTPoNMh+zmwqAFcF5ZsEHqxln1TOJGSFeU/sxHYoUf6RjJs8deJZu2asTJjV7Y62x7B12oqISN1D7WJFZc6nIPWaqBnKs6S0WSiRWWqRKZ+ZRPI8Yz/GttfToONzzolQwQTaWuZWxHu8kY/OQ4EtqE2PsjyVeeZwFi+3k4yqRLrXShVVfE1ajbI9CweO5JuSl8C2mhg17S51xzj28eIlJzTnMiZfg6cFemdkX3Ip2u90dzZO6P+pZ868D4DCTDjPpMJMOM+n/zCQBmXRYZEYyL9t/QrSxxWcts6ehjbHfqeMeY7tfMoUTWFMJAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">b6b854cc93090750fd58f257dd03d61e</block>
+        <comment/>
+        <connected_to>087bde44-49af-47d8-9bdd-ff807ef2c5e1</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>c5ad1c8893490750fd58f257dd03d696</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:35:43</sys_updated_on>
+        <ui_id>e4493c88-7b0a-4b15-83fa-0154303d53d3</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=d0add88893490750fd58f257dd03d6d2^sys_idNOT IN01ad1c8893490750fd58f257dd03d6ba,4dad1c8893490750fd58f257dd03d6b9,89ad1c8893490750fd58f257dd03d6b9,c5ad1c8893490750fd58f257dd03d6b9"/>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>d0add88893490750fd58f257dd03d6d2</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{b4446d6d-37f7-4b1b-a307-d62139e167fb.Record.used_hours}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>01ad1c8893490750fd58f257dd03d6ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:35</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>df7842d8-351f-44d8-a3e2-61b01c6127eb</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>d0add88893490750fd58f257dd03d6d2</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>c7b1b5d0-0c24-47c8-b6d9-8665291c87ed</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>4dad1c8893490750fd58f257dd03d6b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:35</sys_updated_on>
+        <transform_compositions>[{"id":"179b33040f333300f4166fe7c4767e75","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="sum">bd7b3bc00f333300f4166fe7c4767ebe</transform_definition_id>
+        <ui_id>a04d82e9-6288-4b2c-93b1-8f18d1a481ef</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>d0add88893490750fd58f257dd03d6d2</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>df7842d8-351f-44d8-a3e2-61b01c6127eb</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>89ad1c8893490750fd58f257dd03d6b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:35</sys_updated_on>
+        <transform_compositions>[{"id":"179b33040f333300f4166fe7c4767e75","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="sum">bd7b3bc00f333300f4166fe7c4767ebe</transform_definition_id>
+        <ui_id>57709909-0bd2-4d75-82ae-4a15ffcd2e87</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="DELETE">
+        <attached_to>d0add88893490750fd58f257dd03d6d2</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{subflow.record.cancel_hours}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>c5ad1c8893490750fd58f257dd03d6b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:35</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c7b1b5d0-0c24-47c8-b6d9-8665291c87ed</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="DELETE" query="model=d0add88893490750fd58f257dd03d6d2^sys_idNOT INa0add88893490750fd58f257dd03d6ea"/>
+    <sys_hub_flow_variable action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=b8bba35a-6af7-4e2b-976d-7cf3b4204d89</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>year</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Year</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Copy of 年假扣除">d0add88893490750fd58f257dd03d6d2</model>
+        <model_id>d0add88893490750fd58f257dd03d6d2</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_d0add88893490750fd58f257dd03d6d2</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:33</sys_created_on>
+        <sys_id>a0add88893490750fd58f257dd03d6ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="DELETE">
+        <element>record</element>
+        <help/>
+        <hint/>
+        <label>record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d0add88893490750fd58f257dd03d6d2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:34</sys_created_on>
+        <sys_id>f0ad1c8893490750fd58f257dd03d670</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:34</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_d0add88893490750fd58f257dd03d6d2"/>
+    <sys_documentation action="DELETE">
+        <element>al_cut_result</element>
+        <help/>
+        <hint/>
+        <label>AL_Cut_Result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_d0add88893490750fd58f257dd03d6d2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:24:35</sys_created_on>
+        <sys_id>01ad1c8893490750fd58f257dd03d67e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:24:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_d0add88893490750fd58f257dd03d6d2"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=d0add88893490750fd58f257dd03d6d2"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Leave">9a92e189935c4710fd58f257dd03d607</application>
+        <file_path/>
+        <instance_id>8f3e53fdeb04035cc040fddacad0cd2a</instance_id>
+        <instance_name>dev374500</instance_name>
+        <name>sys_hub_flow_d0add88893490750fd58f257dd03d6d2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;allow_high_security_roles&gt;false&lt;/allow_high_security_roles&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;29000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build/&gt;&lt;copied_from&gt;02c3a6d293340b10fd58f257dd03d678&lt;/copied_from&gt;&lt;copied_from_name&gt;年假扣除&lt;/copied_from_name&gt;&lt;description/&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;copy_of_&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"subflow.record.cancel_hours","label":"Input➛record➛销假小时数","reference":"","reference_display":"销假小时数","type":"decimal","base_type":"decimal","parent_table_name":"x_1973840_leave_leave_cancel","column_name":"cancel_hours","usedInstances":{"087bde44-49af-47d8-9bdd-ff807ef2c5e1":["condition"],"4fabf92a-8a4f-4242-bbc2-b4b6b4969cf5":["used_hours"]}},{"name":"b4446d6d-37f7-4b1b-a307-d62139e167fb.Record.remaining_hours","label":"2 - Look Up Record➛Employee Year Leave Record➛剩余年假小时数","reference":"","reference_display":"剩余年假小时数","type":"decimal","base_type":"decimal","parent_table_name":"x_1973840_leave_employee_year_leave","column_name":"remaining_hours","usedInstances":{"087bde44-49af-47d8-9bdd-ff807ef2c5e1":["condition"]}},{"name":"flow_variable.year","label":"Flow Variables➛Year","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","usedInstances":{"b4446d6d-37f7-4b1b-a307-d62139e167fb":[null]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b8bba35a-6af7-4e2b-976d-7cf3b4204d89","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.record.leave_num.opened_by","label":"Input➛record➛请假番号➛申请人","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_per_leave","column_name":"opened_by","usedInstances":{"b4446d6d-37f7-4b1b-a307-d62139e167fb":[null]}},{"name":"subflow.is_gm","label":"Input➛is_GM","reference":"","reference_display":"","type":"boolean","base_type":"boolean","column_name":"","choices":[],"usedInstances":{"73023a7c-02d9-40ef-99ed-b0a3ca21a034":["condition"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"1eddae9e-dbf3-4168-bc9a-eacf68a478f7"}},{"name":"subflow.record","label":"Input➛record","reference":"x_1973840_leave_leave_cancel","reference_display":"LEAVE CANCEL","type":"reference","base_type":"reference","column_name":"","usedInstances":{"0f564388-f613-4023-9396-97890e0de52a":["leave_record"],"f2f9d995-6d9e-4ee9-8736-d22b90477f57":["record"],"00cede0b-5091-4a6c-800c-3792736862ad":[null],"78d8afb4-58ce-4816-80fd-2b1c9e19a819":["record"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"14a5b055-b096-4cca-8f61-4ee9906e0192","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.record.leave_num.project_id.project_id","label":"Input➛record➛请假番号➛项目名➛项目ID","reference":"","reference_display":"项目ID","type":"string","base_type":"string","parent_table_name":"x_1973840_leave_m_project","column_name":"project_id","usedInstances":{"00cede0b-5091-4a6c-800c-3792736862ad":[null]}},{"name":"00cede0b-5091-4a6c-800c-3792736862ad.Record.responsible_per_1","label":"5 - Look Up Record➛PROJECT RES MANA Record➛1级责任者","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_project_res_mana","column_name":"responsible_per_1","usedInstances":{"84b633cf-121c-40fe-8940-1fa35b2fae31":["l1-0"]}},{"name":"00cede0b-5091-4a6c-800c-3792736862ad.Record.responsible_per_2","label":"5 - Look Up Record➛PROJECT RES MANA Record➛2级责任者","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1973840_leave_project_res_mana","column_name":"responsible_per_2","usedInstances":{"84b633cf-121c-40fe-8940-1fa35b2fae31":["l2-1"]}},{"name":"b4446d6d-37f7-4b1b-a307-d62139e167fb.Record","label":"2 - Look Up Record➛Employee Year Leave Record","reference":"x_1973840_leave_employee_year_leave","reference_display":"Employee Year Leave Record","type":"reference","base_type":"reference","usedInstances":{"4fabf92a-8a4f-4242-bbc2-b4b6b4969cf5":["record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b4446d6d-37f7-4b1b-a307-d62139e167fb.Record.used_hours","label":"2 - Look Up Record➛Employee Year Leave Record➛已用年假小时数","reference":"","reference_display":"已用年假小时数","type":"decimal","base_type":"decimal","parent_table_name":"x_1973840_leave_employee_year_leave","column_name":"used_hours","usedInstances":{"4fabf92a-8a4f-4242-bbc2-b4b6b4969cf5":["used_hours"]}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Copy of 年假扣除&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:32&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;d0add88893490750fd58f257dd03d6d2&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy of 年假扣除&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_d0add88893490750fd58f257dd03d6d2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:35:43&lt;/sys_updated_on&gt;&lt;type&gt;subflow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;version_record&gt;89df14cc93490750fd58f257dd03d6b6&lt;/version_record&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_d0add88893490750fd58f257dd03d6d2^id=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=d0add88893490750fd58f257dd03d6d2^sys_idNOT IN14add88893490750fd58f257dd03d6e0"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;d0add88893490750fd58f257dd03d6d2&lt;/id&gt;&lt;name&gt;Copy of 年假扣除&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:32&lt;/sys_created_on&gt;&lt;sys_id&gt;14add88893490750fd58f257dd03d6e0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:32&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=14add88893490750fd58f257dd03d6e0"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=d0add88893490750fd58f257dd03d6d2^sys_idNOT INf4ad1c8893490750fd58f257dd03d669"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=14a5b055-b096-4cca-8f61-4ee9906e0192&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table&gt;x_1973840_leave_leave_cancel&lt;/choice_table&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;record&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/model&gt;&lt;model_id&gt;d0add88893490750fd58f257dd03d6d2&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_d0add88893490750fd58f257dd03d6d2&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="x_1973840_leave_leave_cancel"&gt;x_1973840_leave_leave_cancel&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:34&lt;/sys_created_on&gt;&lt;sys_id&gt;f4ad1c8893490750fd58f257dd03d669&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:34&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f4ad1c8893490750fd58f257dd03d669"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=d0add88893490750fd58f257dd03d6d2^sys_idNOT INb0ad1c8893490750fd58f257dd03d676"/&gt;&lt;sys_hub_flow_output action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=89a0754c-aace-48a6-896d-7362e49a46e9&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;false&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;al_cut_result&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_link/&gt;&lt;internal_type display_value=""&gt;boolean&lt;/internal_type&gt;&lt;label&gt;AL_Cut_Result&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/model&gt;&lt;model_id&gt;d0add88893490750fd58f257dd03d6d2&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_output_d0add88893490750fd58f257dd03d6d2&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_output&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:34&lt;/sys_created_on&gt;&lt;sys_id&gt;b0ad1c8893490750fd58f257dd03d676&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:35:42&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_output&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b0ad1c8893490750fd58f257dd03d676"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=d0add88893490750fd58f257dd03d6d2^sys_idNOT IN803f5c4c93490750fd58f257dd03d664,89ad1c8893490750fd58f257dd03d6b2,c5ad1c8893490750fd58f257dd03d6b5"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;4&lt;/order&gt;&lt;parent_ui_id&gt;087bde44-49af-47d8-9bdd-ff807ef2c5e1&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:31:21&lt;/sys_created_on&gt;&lt;sys_id&gt;803f5c4c93490750fd58f257dd03d664&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;4fabf92a-8a4f-4242-bbc2-b4b6b4969cf5&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1Wz28bRRT+V0Z7TO31ru3aiXOKlEZFgkZKoBKqq9Xszlt7YHZ2mZl140aW4ITgUDgEcaDix41DJSpUgTjx19iF/4I3s7uOk5YQVZEQEr6s5vm9733fe9+O/eDU48wbeX1gQbgTDpJe2Ot1g6C73Q/jQS8Ou6xHAUKv5UmaAWYqSHLF8DyjorSB09O43+8P2IC1e8N02O7HYdymvWDYZoNu2NuBcDBMY//I1S0WWMm4LgSd368BMJJMuWAKpDd68LDlFVRhLwPKG51e+srMC4gEjUFg4X6elBlIQ97aR4zr6miqjxohl4XZHnhmNXrEbRC/snzCoOXBiQHJANulVGhoeRmVjJpczb2RUSUGFFB2KMV8nTHl0lRKM3qi+WPE7wc2LwWUltRTWB+jekLNcHKewGFheC6riKGxaCaXizKT9yoJdraQ0lKYjdmWGvGgsJQtiYphejzNHx01/Q64dOpqtiJPqFifqDGKx6UBbdcBAtxQMloUXE6iQuUz7oqRSuZPBB78VOSPsKfmE+nTxPL2cUDUP8D4vgvfp4pbEe8gDBYvnPjoo9L2rWTUhCOn2QmO3KIwVSeKF2YPgWdQ01y0aiPHt68yQLJzvu8NzHMzn0ThzrC33Q8iAXQGEWSFyOcA0RyoqmKvGvhOnUTexyTydp30Zp5+17Ii9ypW11V0ofhvFNauvhCrTX37xky9/S+Zumb0H3P1P3k56F55mW1s2tlXb/gY58OiaV4qPS6DoMdS1q46AXvVv1cnv6GP7ZtDDZCqSevaihqAAw6C6ddIbIxcN4hmdYP1DX1jbg4Hgfv8f1HfyEVdCapiluG57ezpqlyvszWWW1t7SQJaE0uus+fYEsuWlBoFEjMFkrLIRfL4A0iMT44dAMlKbYgCUypJKHGG8YlFPLSeIbLMYnxwTfI01WBIPCe3QsIluaNUrshdNI+wLY6hmpEjM6NcuMs6dwvXpPYCKQskViikamvGnj/2CE3xlWno2XI4oehfGCEbRfQ0VwbnnZDqBWwSfVzoZALKT0qF+ze+S7QLc7qw667FqpWtUWywM5adDlk++W719LPlrz+/PPtx+duL5SefjqVtmAv2Hk7/rh3+5Z5RN4pEnn8YlUVU/Sfy68f5wnYd+urps9WzH/48+xhxl8+/WH39y+qr51WDhKJbxWvxdRk723FZlEY32FXBJvrLFz8tP/9++eWTP34/W37z7VjWMi9wv7XZaRf9qPHHl61fqsVi8fAvMVDeReMKAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=803f5c4c93490750fd58f257dd03d664"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Look Up Record"&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/action_type&gt;&lt;action_type_parent display_value="Look Up Record"&gt;b93f42810b30030085c083eb37673a63&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;89ad1c8893490750fd58f257dd03d6b2&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:31:20&lt;/sys_updated_on&gt;&lt;ui_id&gt;b4446d6d-37f7-4b1b-a307-d62139e167fb&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/9VYbW/bOAz+K4Y/pzk7b0767bAuwIDdCmy9AYdeT5AtuRFOkTxZTpsG+e+jLMtJEydNk2zrPooixYfkQ1ry7cJnxL/0ySgYpaNRfxgFQbcbBINBN8FhHHcHSRzEuOe3fIGnFDQ1jjmF5QzzwqwfUTiKusNegDjFM4roNONyTimaU6ysDLQJyzOO518ro/eVkvcPKHkfK6VkwjhRVPiXt3ctP8MKPGqq/MvFxpaeZxRxHFMOZ90YQN4ng651cDDPjLeDMw7cEgl7tFTEYAlaPn3UVBAKrlLMc9ryp1gQrKWa1xJFMbkWfCWYMKHhRN8oP+bsCY4fBkYvpRBWQu1evURVwqw4mUiW0OtMMymsxAK1m5IXU/HJBmBSTVNccO1SDZIih/NoZjAbEBWi9MtEPnx2DsdMlOFVm1wmmNcrrLVicaFpbmpBOZ3CQWiKs4yJe5QpOWOlMWCZtu85LNoplw/gNGf3oo0TA7wNKcLtMcivSvFXrJiJ4i84BowBEONQbWSTnstClVmZoYQXebmhsMjtWf6yzBX6VhiUNuoqPmRTBAp5olim/wQDYJcNZdlyfO/vpchoRYlECsKMz3yN9I7k/xZgThaLvIhNwG1FE6BJ23aCKKZtCagoQfF8ufzPNIQzKNMzqzLQNjuggEuoVkWroqFvfprf41rx3XquDs1zo3FT8qumfCarmjI8W1P2guAXtaXJ/Jvrypf6zAbc3GxOWJJmVTRYNXXmsu7NkOzlDFnRI5dKI5votebcbpujCT1mlJNn35YDwDnja8NNL57vwlvxOTU+Nj4ynd/+I/Mm2QyACLL5ZoIzUX7jzcA7heY1b/t7qRGHGzwoy79ibSnDebLNXuxp6T0dP5TLujr+HgDSGX4BRN6NRdkA3I1jd3xF3e7ZqNvtvI66QJzbRY2+zlpDgt1VzpTO6T8ZfbypD+xaMwiXdzX13x3nM3ytz47xudGb3Vc15zqz7M7VDoKd+aK4o9laP7K7J2Ba+UO2WdEDI/dUr7w7LSL1A+b/N+1X7Kp7qAzv5EtnuPddEq9dOlmKplAnlsFN2N7tcoQVRaksBEHVHXhFG1O3lKlcV8rbM+Qz1YUSnoSW8/SEeqW2V2ufY7IcEJ0z/JB6LrwKQ+5BeF4ZnleH97pk7JhHvTNeDU+ZR2PMeJl6eMtk608JpaTaMZNeqNqe8h84sA4EFZ4V1OkTrYnvjZPtBay/xcP41KmTUBz3OngQdcMwCMKARMEwisLhIE4HOOqlq0ZDKBcJjEU4OQViwPHIEcFVNdgeLXY2Hv33BmbuH+PqiEPxOuMrKcyrtRNpzwCGOnsO8MshVfMilhKezWJFz/4vGxhv5QdPwW42c2NFH5uK9qM+5gX7W7BvBf1gSDGkQWcYkuRiGIXRRS8lg4sRwf0LPIr7UZfQpJce/32++w4uKsr0BhUAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=89ad1c8893490750fd58f257dd03d6b2"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Send Notification"&gt;0d8dd9f10f11101051218e8ebc767e27&lt;/action_type&gt;&lt;action_type_parent display_value="Send Notification"&gt;7eda5d710f11101051218e8ebc767ec1&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;0d8dd9f10f11101051218e8ebc767e27&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;6&lt;/order&gt;&lt;parent_ui_id&gt;e4493c88-7b0a-4b15-83fa-0154303d53d3&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;c5ad1c8893490750fd58f257dd03d6b5&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:31:21&lt;/sys_updated_on&gt;&lt;ui_id&gt;78d8afb4-58ce-4816-80fd-2b1c9e19a819&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/8WVy07cMBSGXwVlPRnFuUwSdoiLhEQHiVI2CEWOfQyWnAuJMzAdzaKbdoVa9VVaVe37lKp9i9pJ5hJgAFFENyP5xD7nP//xNz6eGJwa64ZLA0pDhiyGELKQ5SEbBRBATPyBD3Zg9IwUJ6B2FkCygqr1CItKByaTsoqZyC76zafpVH2kvMwFHh+1e1SEnHFBC0iN9eOTnpHjQqWTUBjrkxuf5DiHSOAYhDq4lZEqgVSu7W6pHI+VOjt9MNN6U7uuoda0zR5xHVSftB7UM+BSQkpBVWNYlNAzEpxSLLNiPI8UgOl+KhaBM57KptMEX5b8rcrv2HofA9UaaV2YL6PWoZk5GSewn0uepU1E4ljMnMtElaTDpgXtLTBcCbnkbVWqfJBrzVqELColiL0+yy4OZvV2eFp316oVGcFivsJSFjyuJJR6HBU/vMueJrx352BAQL0xwXnO09MoL7IRr+sp9Un/VKhFX98RJbPkp2kfE91qX5mK+zsqvlWHj3DBdd+vVBp1WNd8k/LzCnb14CmyfCe0iOnbnmO6FsFmHNDYxLHNPNcdBIMYGdPa4+i80u01brW+RLW1ta9RfR/U1pIUPJcbSswIWjemvRaJAN13zxx7ca2Wci6wuIxQ6DuBa0UC8AjaX4LVLMRtQPa2N4621zY3hpvbe0+G5VDrWBs2Oh7bQ+fwip5aXDqxlhb72WgJrP9DS6vo33Hp2NOlpTOZF4GFxHHMYghNFBNiuj4EZmBj3wTPIg6zHcvy2YOwPISIe//1Wno10kxyxgmuR7aABFM6QC4JQscKLd+zGPUCZns+pZZDB+DeBuX6x9frdx9+fr/6/e3Lr4+f/rz//GRc5sOevywPtzM7O+z2c3eXLTbFUp2WGud+apo/8Kc8MeW4hJGeHySYi6i5OStIutHDaqpWJe2ghhkDIoFGjIOg6v5E9ZmXfK+Wje6MQrGpStyicvkClCCjVmikQYtYViRY213XfCls3RCB79iBGQ5shS04nhlTxzGRwhgAA7Ppc7xxJ38BE9Zkk/gJAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=c5ad1c8893490750fd58f257dd03d6b5"/&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=d0add88893490750fd58f257dd03d6d2^sys_idNOT IN01ad1c8893490750fd58f257dd03d698,05ad1c8893490750fd58f257dd03d694,c5ad1c8893490750fd58f257dd03d691,c5ad1c8893490750fd58f257dd03d696"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;3ab854cc93090750fd58f257dd03d622&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Assign Subflow Outputs"&gt;df4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;7&lt;/order&gt;&lt;outputs_assigned&gt;al_cut_result&lt;/outputs_assigned&gt;&lt;parent_ui_id&gt;e4493c88-7b0a-4b15-83fa-0154303d53d3&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;01ad1c8893490750fd58f257dd03d698&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;d7617a21-d3d2-4c8d-9de6-279994b30643&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/41T227aQBD9l30G6gRjbN5QI6RIaSOlNC9VZA27Y1h1vevsBUIR/95ZvJAIpVLfPGfncs6Z8YGZ4Lvg3dLMnZNrzWa/DkwKNmOrDMQNL8tqnFfZdJI1YlI2t5OpENlYFNOCDZiGFikTVM2Dry26oDzBW1Ah4hl9C+k6BfvnBDWgHBLMN1IJi3Hcy4B1YKmTR8tmh6snv++wVrBCRdVLG/DLIrX4X5Ln4vlD/ZVYPp1Z/oN8HBgbG6MQNAHGikjsZsDwzaMWSHNPMgasBS3AG7u/IBZBPGr1Dmyk9tSOxeQ3J/9Q7zyLeQ2SRo792yWsk189zDdGcnzsvDS6RzysVKrhRoVWf+9VRKexAZJw7XSC7z7fQ3A0ErsoK/JMpJsfG7N7OnNaSH1yID0qw0FdIvDeylXw6OLuglxe29dDD59tEBW2NLZuoeukXtedNVt5GkXi2tFaUTBqlNkRxXibI+DRiRF5DqMF4Xcn+BmsjLZ8ozZUHEf+1PI14H28kLICOoycDwE4DvMSimFZFWI4HRe3mFeQF1ix42kF9WuIynozkyd17zwlOG5l5+dEYYtJ/pEOVOr4+/THuk1MUiiQS0eElxG7/5An9nR8kn+Edsb+jlLfseNf77lacpwDAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;82f7c88c93850750fd58f257dd03d603&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;3&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;05ad1c8893490750fd58f257dd03d694&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;087bde44-49af-47d8-9bdd-ff807ef2c5e1&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1VXWvbMBT9K8PPifFH4ix5KxuFwbZCW/qyFXMtXSdisuRJctLM5L/vyh9JaFM2xtjTXox1dD/Oub4Ht4FuXN04e6+vrBVrFay+PE4CoTxG722goMJgFTCtuHBCq7wDJsEWZOMv6JULW0vYP5wQthGSGxyq1WAox6EJVu2zK7evMZdQoKTEO2eEWlO64HQqIyjjJYtZmmRpEkXJ21lcZGkRJzwFhJTixsR3I7k3Hztk8ipr349wO3bShntacTQJ8Mmh4kitS5AWJ0EFioPTZn9EDAK/UfIEbIRyveIKnqz4QbWT+dwHlkga2TCO4zEfRjVOSQuGN7Un2CMOCjmOUMumUp97HX7IWEIj3dmQG0v1sPakPYuBUnm30bvbseG1UJ3A4VJqBvJ4AkdjKBqH1n8YlFhRobyCuqbh5LXRW9ElE5cqXEs6hKXUO2rqNyUE5omHNCMIrwl/38EPYIRX8YnKUHJPswArWN5tFZVzhiQcurHk3xtPqBc4SMn7aVCAZUbU7or6bHFgfZi8XMmzbWzbYjabZTzj03RRLqazIi6mkEaLKc+SOF1inC3KIrxFRl8+NFiBUF7sRjfGHg5fmyhKsXvytrVN4fVSWBfNgAYqx9CXe/9Pe/8Nhy1hXs7jaH7ZYbPsksMueOt1WyW/sJVfhN90VRRF/211bith894eg7au+R+76tFbqO9g+73hyIQlIvce+zD+D/zFnhZAsHNop803L+GEHX4CCnyctlkGAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;79f7888c93850750fd58f257dd03d6fb&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/flow&gt;&lt;flow_variables_assigned&gt;year&lt;/flow_variables_assigned&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Set Flow Variables"&gt;4f787d1e0f9b0010ecf0cc52ff767ea0&lt;/logic_definition&gt;&lt;order&gt;1&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;c5ad1c8893490750fd58f257dd03d691&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;ef417d81-e26e-4e3d-824e-48eba1bbb19f&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1W224TMRD9FWufoCTbbZM0F54ilUIlaCUaKgGpIu96NjF47cWXpKHKvzOzl7QUCfHCW56yHo/PnHM8HuUhMsGXwbuZmTonlzqafL3rRFJTDL8fIs0LiCbRFriNOtGaq0BL/BTSlYpvbx8j2UoqYaHBKLnFox5sNHl4tuW3JSwUT0HhwUvtYQkELgUuecKFGI1G415/nAwHSS4Go/x0MBQi6Ykz4JjXnvxcc/qdIWHjSu5RjRXE4aQTwb0HLQCr5Fw56EQF14J7Y7f7iAUurrV6DKwQqFZX8HsnfyL2KEkSyswBBWWN9v1y0fjSWmJkBtell0bXEc9T1fplVCj0VU2fHIWcB+WfOBoc4kFJrIlGwym/WZnNx7bghdSVwGZTmYyr/Yp7b2UaPDi6hSBnz92pQ+//uAtQUGDNRcHLUurlorRmLas6SLuIlwoXca7MBvlR38Q8I40x+snjC4yfV+FbbiUJ/oAwTb1PWv4IcEl3nY7SlPcGvHvG82G3D6dpdzw8E91hlvfS/mnSF6NxtKvMXfwIJKu2qTFkUXuKCS6zsvRTpLBGed4GaGMku+oM/P1bVnR8NNdHR9MsA+cYCTieVooYKWLBoQnMr4DlYlFFTPoNMh+zmwqAFcF5ZsEHqxln1TOJGSFeU/sxHYoUf6RjJs8deJZu2asTJjV7Y62x7B12oqISN1D7WJFZc6nIPWaqBnKs6S0WSiRWWqRKZ+ZRPI8Yz/GttfToONzzolQwQTaWuZWxHu8kY/OQ4EtqE2PsjyVeeZwFi+3k4yqRLrXShVVfE1ajbI9CweO5JuSl8C2mhg17S51xzj28eIlJzTnMiZfg6cFemdkX3Ip2u90dzZO6P+pZ868D4DCTDjPpMJMOM+n/zCQBmXRYZEYyL9t/QrSxxWcts6ehjbHfqeMeY7tfMoUTWFMJAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;b6b854cc93090750fd58f257dd03d61e&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;087bde44-49af-47d8-9bdd-ff807ef2c5e1&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;5&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;c5ad1c8893490750fd58f257dd03d696&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:35:43&lt;/sys_updated_on&gt;&lt;ui_id&gt;e4493c88-7b0a-4b15-83fa-0154303d53d3&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=d0add88893490750fd58f257dd03d6d2^sys_idNOT IN01ad1c8893490750fd58f257dd03d6ba,4dad1c8893490750fd58f257dd03d6b9,89ad1c8893490750fd58f257dd03d6b9,c5ad1c8893490750fd58f257dd03d6b9"/&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;d0add88893490750fd58f257dd03d6d2&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{b4446d6d-37f7-4b1b-a307-d62139e167fb.Record.used_hours}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;01ad1c8893490750fd58f257dd03d6ba&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:35&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;df7842d8-351f-44d8-a3e2-61b01c6127eb&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;d0add88893490750fd58f257dd03d6d2&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;1&lt;/order&gt;&lt;prescription/&gt;&lt;source_ui_id&gt;c7b1b5d0-0c24-47c8-b6d9-8665291c87ed&lt;/source_ui_id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;4dad1c8893490750fd58f257dd03d6b9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:35&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[{"id":"179b33040f333300f4166fe7c4767e75","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]&lt;/transform_compositions&gt;&lt;transform_definition_id display_value="sum"&gt;bd7b3bc00f333300f4166fe7c4767ebe&lt;/transform_definition_id&gt;&lt;ui_id&gt;a04d82e9-6288-4b2c-93b1-8f18d1a481ef&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;d0add88893490750fd58f257dd03d6d2&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;1&lt;/order&gt;&lt;prescription/&gt;&lt;source_ui_id&gt;df7842d8-351f-44d8-a3e2-61b01c6127eb&lt;/source_ui_id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;89ad1c8893490750fd58f257dd03d6b9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:35&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[{"id":"179b33040f333300f4166fe7c4767e75","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]&lt;/transform_compositions&gt;&lt;transform_definition_id display_value="sum"&gt;bd7b3bc00f333300f4166fe7c4767ebe&lt;/transform_definition_id&gt;&lt;ui_id&gt;57709909-0bd2-4d75-82ae-4a15ffcd2e87&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_pill_compound action="INSERT_OR_UPDATE"&gt;&lt;attached_to&gt;d0add88893490750fd58f257dd03d6d2&lt;/attached_to&gt;&lt;extra_info/&gt;&lt;order&gt;0&lt;/order&gt;&lt;prescription&gt;{{subflow.record.cancel_hours}}&lt;/prescription&gt;&lt;source_ui_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;c5ad1c8893490750fd58f257dd03d6b9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:35&lt;/sys_updated_on&gt;&lt;transform_compositions&gt;[]&lt;/transform_compositions&gt;&lt;transform_definition_id/&gt;&lt;ui_id&gt;c7b1b5d0-0c24-47c8-b6d9-8665291c87ed&lt;/ui_id&gt;&lt;/sys_hub_pill_compound&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=d0add88893490750fd58f257dd03d6d2^sys_idNOT INa0add88893490750fd58f257dd03d6ea"/&gt;&lt;sys_hub_flow_variable action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=b8bba35a-6af7-4e2b-976d-7cf3b4204d89&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;year&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Integer"&gt;integer&lt;/internal_type&gt;&lt;label&gt;Year&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;8000&lt;/max_length&gt;&lt;model display_value="Copy of 年假扣除"&gt;d0add88893490750fd58f257dd03d6d2&lt;/model&gt;&lt;model_id&gt;d0add88893490750fd58f257dd03d6d2&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_variable_d0add88893490750fd58f257dd03d6d2&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;1&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_only_option/&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_variable&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:33&lt;/sys_created_on&gt;&lt;sys_id&gt;a0add88893490750fd58f257dd03d6ea&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:33&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_variable&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;record&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_d0add88893490750fd58f257dd03d6d2&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:34&lt;/sys_created_on&gt;&lt;sys_id&gt;f0ad1c8893490750fd58f257dd03d670&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:34&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;al_cut_result&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;AL_Cut_Result&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_output_d0add88893490750fd58f257dd03d6d2&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-05-19 08:24:35&lt;/sys_created_on&gt;&lt;sys_id&gt;01ad1c8893490750fd58f257dd03d67e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Leave" source="x_1973840_leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Leave"&gt;9a92e189935c4710fd58f257dd03d607&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-05-19 08:24:35&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=d0add88893490750fd58f257dd03d6d2"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-554649894</payload_hash>
+        <record_name>Copy of 年假扣除</record_name>
+        <reverted_from/>
+        <source>7c3b7c1393980310fd58f257dd03d6e3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:35:44</sys_created_on>
+        <sys_id>5830600093890750fd58f257dd03d6a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19e3f606d630000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:35:44</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>94306000ed8907505e31f0a2f82bffa2</update_guid>
+        <update_guid_history>94306000ed8907505e31f0a2f82bffa2:-554649894,a8df14cc6449075081992c21f8c9300e:1749993129,013f9c4ca649075092cfe13b74d65d28:-1458634981,4ffe544c22490750cab617eb0a21d9fb:140840859,15ad1c88e4490750bb8282a133a794dc:57633957,28add888fc4907500493b8b854aabee6:-1975469569</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-05-19 08:38:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>57c64f7379064df0987d9c7380d583d1</sys_id>
+        <sys_metadata>d0add88893490750fd58f257dd03d6d2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of 年假扣除</sys_name>
+        <sys_package display_value="Leave" source="x_1973840_leave">9a92e189935c4710fd58f257dd03d607</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Leave">9a92e189935c4710fd58f257dd03d607</sys_scope>
+        <sys_scope_delete display_value="">6fd8fb188d9e4c688e615a663e2b9440</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_d0add88893490750fd58f257dd03d6d2</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_d0add88893490750fd58f257dd03d6d2">5830600093890750fd58f257dd03d6a3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-05-19 08:38:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
